@@ -1,0 +1,14 @@
+{
+  "aboutPage": "Pour modifier cette page, modifiez le fichier {{fileName}} dans le dossier routes.",
+  "started": "Pour commencer, modifiez le fichier {{fileName}}.",
+  "count": "Compteur : {{count}}",
+  "increaseCount": "Augmenter le compteur",
+  "decreaseCount": "Diminuer le compteur",
+  "subscribe": "S’abonner par e-mail",
+  "footnote": "Une note de bas de page peut être ajoutée ici",
+  "home": "Accueil",
+  "query": "Démo de requête",
+  "dataLoading_one": "Données chargées avec succès. {{count}} élément dans la requête.",
+  "dataLoading_other": "Données chargées avec succès. {{count}} éléments dans la requête."
+
+}
