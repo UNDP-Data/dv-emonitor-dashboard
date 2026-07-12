@@ -1,24 +1,26 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import { I18nextProvider } from 'react-i18next';
 import {
-  Outlet,
-  RouterProvider,
   createRootRoute,
   createRoute,
   createRouter,
+  Outlet,
+  RouterProvider,
 } from '@tanstack/react-router';
-
-import * as TanStackQueryProvider from './integration/tanstack-query';
-import HeaderEl from './components/Header';
-import FooterEl from './components/Footer';
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import { I18nextProvider } from 'react-i18next';
 import App from './App';
-import createTanStackQueryDemoRoute from './routes/queryDemo';
-import i18n from './i18n';
+import FooterEl from './components/Footer';
+import HeaderEl from './components/Header';
 import { DEFAULT_LANGUAGE, LANGUAGES } from './constants';
+import i18n from './i18n';
+import * as TanStackQueryProvider from './integration/tanstack-query';
+import createAboutRoute from './routes/aboutPage';
+import createResourceRoute from './routes/resourcesPage';
 
 import './styles/fonts.css';
 import './styles/style.css';
+import createProjectRoute from './routes/Projects';
+import createProjectPageRoute from './routes/Projects/projectPage';
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,
@@ -29,7 +31,7 @@ const localeRoute = createRoute({
   path: '/{-$locale}',
   beforeLoad: async ({ params }) => {
     const locale =
-      params.locale && LANGUAGES.map(d => d.id).includes(params.locale)
+      params.locale && LANGUAGES.map((d) => d.id).includes(params.locale)
         ? params.locale
         : DEFAULT_LANGUAGE;
 
@@ -38,9 +40,9 @@ const localeRoute = createRoute({
     return { locale };
   },
   component: () => (
-    <div className='flex flex-col gap-0 min-h-screen'>
+    <div className='flex min-h-screen flex-col gap-0'>
       <HeaderEl />
-      <main className='grow-1 flex flex-col justify-center'>
+      <main className='flex grow-1 flex-col justify-center'>
         <div className='flex flex-col justify-center'>
           <Outlet />
         </div>
@@ -59,7 +61,10 @@ const indexRoute = createRoute({
 const routeTree = rootRoute.addChildren([
   localeRoute.addChildren([
     indexRoute,
-    createTanStackQueryDemoRoute(localeRoute),
+    createAboutRoute(localeRoute),
+    createResourceRoute(localeRoute),
+    createProjectRoute(localeRoute),
+    createProjectPageRoute(localeRoute),
   ]),
 ]);
 

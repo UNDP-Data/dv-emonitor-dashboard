@@ -1,8 +1,4 @@
-import {
-  Footer,
-  FooterLogoUnit,
-  FooterCopyrightUnit,
-} from '@undp/design-system-react/Footer';
+import { Footer, FooterCopyrightUnit, FooterLogoUnit } from '@undp/design-system-react/Footer';
 import { useTranslation } from 'react-i18next';
 
 export default function FooterEl() {

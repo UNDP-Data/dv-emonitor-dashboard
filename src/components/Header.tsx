@@ -1,3 +1,10 @@
+import { Link, useParams } from '@tanstack/react-router';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@undp/design-system-react/DropdownMenu';
 import {
   Header,
   HeaderActions,
@@ -5,17 +12,11 @@ import {
   HeaderMainNavUnit,
   HeaderMenuUnit,
 } from '@undp/design-system-react/Header';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@undp/design-system-react/DropdownMenu';
-import { Link, useParams } from '@tanstack/react-router';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
+import { P } from '@undp/design-system-react/Typography';
 import { useTranslation } from 'react-i18next';
-
-import { LanguageSwitcherIcon, ChevronDown } from '@/Icons';
 import { DEFAULT_LANGUAGE, LANGUAGES } from '@/constants';
+import { ChevronDown, LanguageSwitcherIcon } from '@/Icons';
 
 export default function HeaderEl() {
   const params = useParams({ strict: false });
@@ -24,6 +25,13 @@ export default function HeaderEl() {
       ? params.locale
       : DEFAULT_LANGUAGE;
   const { t } = useTranslation();
+  const projectCards = t('projectCards', { returnObjects: true }) as {
+    title: string;
+    id: string;
+    text: string;
+    image: string;
+    url: string;
+  }[];
   return (
     <Header>
       <HeaderLogoUnit
@@ -33,7 +41,27 @@ export default function HeaderEl() {
       <HeaderMainNavUnit>
         <HeaderMenuUnit>
           <Link to='/{-$locale}'>{t('home')}</Link>
-          <Link to='/{-$locale}/query-demo'>{t('query')}</Link>
+          <HoverCard openDelay={0} closeDelay={60}>
+            <HoverCardTrigger>{t('projects')}</HoverCardTrigger>
+            <HoverCardContent side='bottom' align='center' className='p-0'>
+              <div className='flex flex-col px-0 py-2'>
+                {projectCards.map((card) => (
+                  <Link
+                    to='/{-$locale}/projects/$projectId'
+                    params={{ projectId: card.id }}
+                    key={card.id}
+                    className='w-full p-3 hover:bg-primary-gray-300 hover:text-primary-blue-600'
+                  >
+                    <P size='sm' marginBottom='none'>
+                      {card.title}
+                    </P>
+                  </Link>
+                ))}
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+          <Link to='/{-$locale}/resources'>{t('resources')}</Link>
+          <Link to='/{-$locale}/about'>{t('about')}</Link>
         </HeaderMenuUnit>
         <HeaderActions>
           <DropdownMenu>

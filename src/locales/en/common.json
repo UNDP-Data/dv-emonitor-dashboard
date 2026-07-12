@@ -1,13 +1,47 @@
 {
-  "aboutPage": "To edit this page, edit the {{fileName}} file in the routes folder.",
-  "started":"To get started, edit the {{fileName}} file.",
-  "count":"Count: {{count}}",
-  "increaseCount":"Increase counter",
-  "decreaseCount":"Decrease counter",
+  "pageTitle": "Placeholder for a title",
+  "pageTitleSub":"eMonitor+",
+  "aboutTitle":"About",
+  "aboutText":"Lorem ipsum dolor sit amet consectetur. Faucibus venenatis lorem nunc egestas. Nisl faucibus mi eget ac cras amet a. Facilisi arcu duis dapibus elementum arcu. Pulvinar tortor egestas tortor orci.",
+  "readMore":"Read more",
+  "featured":"Featured",
+  "stories":"stories",
+  "storyCards":[
+    {"title":"Story 1","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor."},
+    {"title":"Story 2","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor."},
+    {"title":"Story 3","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor."},
+    {"title":"Story 4","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor."}
+  ],
+  "projects":"Projects",
+  "projectCards":[
+    {"title":"UNDP Defenders Project", "id":"Project_1","text":"Supporting Women's Leadership for a Just, Healthy Planet","image":"/imgs/projects-01.webp", "url":"https://www.undp.org/"},
+    {"title":"Project 2","id":"Project_2","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.","image":"/imgs/projects-02.webp", "url":"https://www.undp.org/"},
+    {"title":"Project 3","id":"Project_3","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.","image":"/imgs/projects-03.webp", "url":"https://www.undp.org/"},
+    {"title":"Project 4","id":"Project_4","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.","image":"/imgs/projects-04.webp", "url":"https://www.undp.org/"}
+  ],
+  "keyStats": "Key Stats",
+  "keyStatsCards": [
+    {"value":"25%","text":"Lorem ipsum dolor sit amet","title":"people"},
+    {"value":"34M","text":"Lorem ipsum dolor sit amet","title":"people"},
+    {"value":"47%","text":"Lorem ipsum dolor sit amet","title":"people"},
+    {"value":"29.5K","text":"Lorem ipsum dolor sit amet","title":"people"},
+    {"value":"47%","text":"Lorem ipsum dolor sit amet","title":"people"},
+    {"value":"29.5K","text":"Lorem ipsum dolor sit amet","title":"people"}
+  ],
+  "resourceCards":[
+    {"title":"Resource 1", "text":"PDF (830kb)","image":"/imgs/resource-01.webp", "url":"https://www.undp.org/"},
+    {"title":"Resource 2","text":"PDF (830kb)","image":"/imgs/resource-02.webp", "url":"https://www.undp.org/"},
+    {"title":"Resource 3","text":"PDF (830kb)","image":"/imgs/resource-03.webp", "url":"https://www.undp.org/"},
+    {"title":"Resource 4","text":"PDF (830kb)","image":"/imgs/resource-04.webp", "url":"https://www.undp.org/"}
+  ],
+  "quote":"[A placeholder for quote] Lorem ipsum dolor sit amet consectetur. Accumsan volutpat id hac tincidunt rhoncus sollicitudin amet vel ut. Non suspendisse pellentesque tincidunt at. Cras habitant libero sed in nec senectus interdum eu ultrices.", 
+  "mapTitle":"Projects by country",
+  "filterByProjects":"Filter by project",
   "subscribe":"Subscribe to email",
   "footnote":"Footnote can be added here",
   "home":"Home",
-  "query":"Query demo",
+  "resources":"Resources",
+  "about":"About",
   "dataLoading_one": "Data loaded successfully. {{count}} element in the query.",
   "dataLoading_other": "Data loaded successfully. {{count}} elements in the query."
 }

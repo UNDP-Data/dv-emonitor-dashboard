@@ -10,14 +10,14 @@ type Store = {
   actions: Actions;
 };
 
-export const useCounterStore = create<Store>(set => ({
+export const useCounterStore = create<Store>((set) => ({
   count: 0,
   actions: {
-    increment: (d = 1) => set(state => ({ count: state.count + d })),
-    decrement: (d = 1) => set(state => ({ count: state.count - d })),
+    increment: (d = 1) => set((state) => ({ count: state.count + d })),
+    decrement: (d = 1) => set((state) => ({ count: state.count - d })),
   },
 }));
 
-export const useCounter = () => useCounterStore(s => s.count);
+export const useCounter = () => useCounterStore((s) => s.count);
 
-export const useCounterActions = () => useCounterStore(s => s.actions);
+export const useCounterActions = () => useCounterStore((s) => s.actions);
