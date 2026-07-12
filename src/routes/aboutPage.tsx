@@ -60,7 +60,7 @@ export function About() {
   );
 }
 
-export default function createTanStackQueryDemoRoute(parentRoute: AnyRoute) {
+export default function createAboutRoute(parentRoute: AnyRoute) {
   return createRoute({
     path: '/about',
     component: About,

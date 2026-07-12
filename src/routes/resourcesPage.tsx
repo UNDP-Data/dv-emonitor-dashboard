@@ -46,7 +46,7 @@ export function Resource() {
   );
 }
 
-export default function createAboutRoute(parentRoute: AnyRoute) {
+export default function createResourceRoute(parentRoute: AnyRoute) {
   return createRoute({
     path: '/resources',
     component: Resource,

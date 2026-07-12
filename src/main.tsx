@@ -15,12 +15,12 @@ import { DEFAULT_LANGUAGE, LANGUAGES } from './constants';
 import i18n from './i18n';
 import * as TanStackQueryProvider from './integration/tanstack-query';
 import createAboutRoute from './routes/aboutPage';
+import createProjectRoute from './routes/Projects';
+import createProjectPageRoute from './routes/Projects/projectPage';
 import createResourceRoute from './routes/resourcesPage';
 
 import './styles/fonts.css';
 import './styles/style.css';
-import createProjectRoute from './routes/Projects';
-import createProjectPageRoute from './routes/Projects/projectPage';
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,
