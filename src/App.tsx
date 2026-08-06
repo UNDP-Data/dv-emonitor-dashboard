@@ -165,7 +165,7 @@ function App() {
         className='flex w-3/4 flex-col gap-10 bg-accent-yellow px-4 py-20 sm:px-6 lg:px-20'
       >
         <H4>{t('quote')}</H4>
-        <Blockquote>— Name Surname</Blockquote>
+        <Blockquote>— John Doe</Blockquote>
       </section>
       <Spacer size='8xl' />
       <section id='map-viz' className='bg-primary-gray-300 p-4 sm:p-6 lg:p-8'>
