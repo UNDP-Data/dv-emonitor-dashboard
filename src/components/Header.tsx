@@ -66,7 +66,7 @@ export default function HeaderEl() {
         <HeaderActions>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className='flex h-9 cursor-pointer items-center justify-between gap-2 whitespace-nowrap bg-transparent p-0 font-semibold text-primary-blue-600 text-sm uppercase hover:text-primary-blue-400 disabled:cursor-not-allowed disabled:opacity-50 data-[placeholder]:text-muted-foreground dark:text-primary-white dark:hover:text-primary-white rtl:[direction:rtl] [&>span]:line-clamp-1 [&[data-state=open]>.chevron-down]:rotate-180'>
+              <div className='flex h-9 cursor-pointer items-center justify-between gap-2 whitespace-nowrap bg-transparent p-0 font-semibold text-secondary text-sm uppercase hover:text-blue-400 disabled:cursor-not-allowed disabled:opacity-50 data-placeholder:text-muted-foreground dark:text-primary-white dark:hover:text-primary-white rtl:[direction:rtl] [&>span]:line-clamp-1 [&[data-state=open]>.chevron-down]:rotate-180'>
                 <LanguageSwitcherIcon />
                 {LANGUAGES.find((d) => d.id === locale)?.label}
                 <ChevronDown />

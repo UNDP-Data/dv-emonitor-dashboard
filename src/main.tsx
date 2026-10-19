@@ -42,7 +42,7 @@ const localeRoute = createRoute({
   component: () => (
     <div className='flex min-h-screen flex-col gap-0'>
       <HeaderEl />
-      <main className='flex grow-1 flex-col justify-center'>
+      <main className='flex grow flex-col justify-center'>
         <div className='flex flex-col justify-center'>
           <Outlet />
         </div>

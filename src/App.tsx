@@ -47,18 +47,18 @@ function App() {
   return (
     <div className='flex flex-col antialiased'>
       <PageHeader
-        className='h-auto px-0 sm:px-2 md:h-[calc(100vh_-_115px)]'
+        className='h-auto px-0 sm:px-2 md:h-[calc(100vh-115px)]'
         backgroundImage='imgs/header_img.webp'
         contentMode='dark'
       >
-        <PageHeaderContent className='max-w-[100%] sm:max-w-[50%]'>
+        <PageHeaderContent className='max-w-full sm:max-w-[50%]'>
           <H5>{t('pageTitleSub')}</H5>
           <H1 size='sm'>{t('pageTitle')}</H1>
         </PageHeaderContent>
       </PageHeader>
       <section id='about'>
         <Banner
-          backgroundColor='black'
+          backgroundColor='foreground'
           bodyGap='base'
           bodyMaxWidth='full'
           padding='none'
@@ -121,7 +121,7 @@ function App() {
             <StatCard
               hoverColor='yellow'
               size='full'
-              className='col-span-1 min-h-[180px] sm:min-h-[240px] md:col-span-2'
+              className='col-span-1 min-h-45 sm:min-h-60 md:col-span-2'
             >
               <StatCardValue>{t('keyStatsCards.5.value')}</StatCardValue>
               <StatCardTitle>{t('keyStatsCards.5.title')}</StatCardTitle>
@@ -140,7 +140,12 @@ function App() {
           {projectCards.map((card) => (
             <CarouselItem size='xs' key={card.title}>
               <Link to='/projects/$projectId' params={{ projectId: card.id }}>
-                <Card className='h-full' backgroundColor='white' size='full' variant='with-image'>
+                <Card
+                  className='h-full'
+                  backgroundColor='background'
+                  size='full'
+                  variant='with-image'
+                >
                   <CardHeader>
                     <CardImage src={card.image} />
                     <CardTitle>{card.title}</CardTitle>
@@ -171,10 +176,10 @@ function App() {
       <section id='map-viz' className='bg-primary-gray-300 p-4 sm:p-6 lg:p-8'>
         <div className='mx-auto w-full max-w-[1920px]'>
           <div className='mb-8 flex flex-wrap items-end justify-between gap-4'>
-            <H2 marginBottom='none' className='min-w-[240px] grow'>
+            <H2 marginBottom='none' className='min-w-60 grow'>
               {t('mapTitle')}
             </H2>
-            <div className='flex min-w-[240px] grow flex-col gap-2'>
+            <div className='flex min-w-60 grow flex-col gap-2'>
               <P size='sm' marginBottom='none'>
                 {t('filterByProjects')}
               </P>
@@ -188,6 +193,7 @@ function App() {
                 isClearable
                 placeholder='All projects'
                 onChange={(value) => {
+                  // biome-ignore lint/suspicious/noConsole: Temporary need to be removed in the future
                   console.log(value);
                 }}
               />
@@ -217,16 +223,14 @@ function App() {
                   long: 20,
                 },
               ]}
-              colors='#0FABA2'
-              mapBorderColor='#fff'
-              mapNoDataColor='#fff'
+              showCostalBorder
             />
           </div>
         </div>
       </section>
       <Spacer size='8xl' />
       <section id='featured-stories' className='px-4 sm:px-6 lg:px-8'>
-        <div className='mx-auto grid max-w-[1920px] grid-cols-1 gap-1 gap-6 md:grid-cols-3'>
+        <div className='mx-auto grid max-w-[1920px] grid-cols-1 gap-6 md:grid-cols-3'>
           <div className='flex items-start p-8 md:col-start-1 md:row-start-1 md:p-12'>
             <H2 className='font-bold md:text-5xl'>
               {t('featured')}
@@ -236,9 +240,9 @@ function App() {
           </div>
           <a target='_blank' href='https://www.undp.org/' rel='noopener'>
             <FeaturedCard
-              backgroundColor='gray'
+              backgroundColor='surface'
               size='full'
-              className='min-h-[400px] md:col-start-2 md:row-start-1'
+              className='min-h-100 md:col-start-2 md:row-start-1'
             >
               <FeaturedCardTitle>{t('storyCards.0.title')}</FeaturedCardTitle>
               <FeaturedCardDescription>{t('storyCards.0.text')}</FeaturedCardDescription>
@@ -252,9 +256,9 @@ function App() {
 
           <a target='_blank' href='https://www.undp.org/' rel='noopener'>
             <FeaturedCard
-              backgroundColor='gray'
+              backgroundColor='surface'
               size='full'
-              className='min-h-[400px] md:col-start-2 md:row-start-1'
+              className='min-h-100 md:col-start-2 md:row-start-1'
             >
               <FeaturedCardTitle>{t('storyCards.1.title')}</FeaturedCardTitle>
               <FeaturedCardDescription>{t('storyCards.1.text')}</FeaturedCardDescription>
@@ -272,9 +276,9 @@ function App() {
             rel='noopener'
           >
             <FeaturedCard
-              backgroundColor='gray'
+              backgroundColor='surface'
               size='full'
-              className='min-h-[400px] md:col-start-2 md:row-start-1'
+              className='min-h-100 md:col-start-2 md:row-start-1'
             >
               <FeaturedCardTitle>{t('storyCards.2.title')}</FeaturedCardTitle>
               <FeaturedCardDescription>{t('storyCards.2.text')}</FeaturedCardDescription>
@@ -288,9 +292,9 @@ function App() {
 
           <a target='_blank' href='https://www.undp.org/' rel='noopener'>
             <FeaturedCard
-              backgroundColor='gray'
+              backgroundColor='surface'
               size='full'
-              className='min-h-[400px] md:col-start-2 md:row-start-1'
+              className='min-h-100 md:col-start-2 md:row-start-1'
             >
               <FeaturedCardTitle>{t('storyCards.3.title')}</FeaturedCardTitle>
               <FeaturedCardDescription>{t('storyCards.3.text')}</FeaturedCardDescription>

@@ -47,7 +47,7 @@ export function ProjectsPage() {
   return (
     <div className='w-full antialiased'>
       <PageHeader
-        className='h-auto px-0 sm:px-2 md:h-[calc(100vh_-_115px)]'
+        className='h-auto px-0 sm:px-2 md:h-[calc(100vh-115px)]'
         backgroundImage='/imgs/header_img.webp'
         contentMode='light'
         variant='secondary'
@@ -59,7 +59,7 @@ export function ProjectsPage() {
       </PageHeader>
       <section id='about'>
         <Banner
-          backgroundColor='black'
+          backgroundColor='foreground'
           bodyGap='base'
           bodyMaxWidth='full'
           padding='none'
@@ -161,7 +161,7 @@ export function ProjectsPage() {
                       </Grid>
                     </div>
                   ),
-                  viz: <div className='h-full min-h-[320px] w-full bg-primary-gray-300' />,
+                  viz: <div className='h-full min-h-80 w-full bg-primary-gray-300' />,
                 },
                 {
                   content: (

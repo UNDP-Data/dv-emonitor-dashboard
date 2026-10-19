@@ -31,7 +31,12 @@ export function ProjectsListing() {
         {projectCards.map((card) => (
           <GridItem key={card.title}>
             <Link to='/{-$locale}/projects/$projectId' params={{ projectId: card.id }}>
-              <Card className='h-full' backgroundColor='white' size='full' variant='with-image'>
+              <Card
+                className='h-full'
+                backgroundColor='background'
+                size='full'
+                variant='with-image'
+              >
                 <CardHeader>
                   <CardImage src={card.image} />
                   <CardTitle>{card.title}</CardTitle>
