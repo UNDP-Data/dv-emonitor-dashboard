@@ -1,5 +1,4 @@
-import type { AnyRoute } from '@tanstack/react-router';
-import { createRoute } from '@tanstack/react-router';
+import { createLazyRoute } from '@tanstack/react-router';
 import { Button } from '@undp/design-system-react/Button';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import {
@@ -46,10 +45,6 @@ export function Resource() {
   );
 }
 
-export default function createResourceRoute(parentRoute: AnyRoute) {
-  return createRoute({
-    path: '/resources',
-    component: Resource,
-    getParentRoute: () => parentRoute,
-  });
-}
+export const Route = createLazyRoute('/resources')({
+  component: Resource,
+});

@@ -1,5 +1,4 @@
-import type { AnyRoute } from '@tanstack/react-router';
-import { createRoute } from '@tanstack/react-router';
+import { createLazyRoute } from '@tanstack/react-router';
 import {
   Accordion,
   AccordionContent,
@@ -443,10 +442,6 @@ export function ProjectsPage() {
   );
 }
 
-export default function createProjectPageRoute(parentRoute: AnyRoute) {
-  return createRoute({
-    path: '/projects/$projectId',
-    component: ProjectsPage,
-    getParentRoute: () => parentRoute,
-  });
-}
+export const Route = createLazyRoute('/projects/$projectId')({
+  component: ProjectsPage,
+});

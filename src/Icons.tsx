@@ -1,12 +1,7 @@
 export function LanguageSwitcherIcon() {
   return (
-    <svg
-      width='25'
-      height='26'
-      viewBox='0 0 25 26'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-    >
+    <svg width='25' height='26' viewBox='0 0 25 26' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <title>Language Switcher Icon</title>
       <g>
         <path
           d='M16.599 23.688C17.7895 22.3987 18.4193 20.6895 18.35 18.936H0.75V0.75H23.88V15.468L23.875 15.474C23.875 15.521 23.875 15.568 23.875 15.616C23.905 20.278 17.206 24.488 16.175 24.488C15.921 24.488 16.004 24.24 16.599 23.688Z'
@@ -20,11 +15,7 @@ export function LanguageSwitcherIcon() {
           strokeLinecap='round'
           strokeLinejoin='round'
         />
-        <path
-          d='M15.0576 10.6704H18.9863'
-          stroke='currentColor'
-          strokeWidth='1.5'
-        />
+        <path d='M15.0576 10.6704H18.9863' stroke='currentColor' strokeWidth='1.5' />
         <path
           d='M4.13086 6.76706H10.6748'
           stroke='currentColor'
@@ -66,8 +57,9 @@ export function ChevronDown() {
       stroke-width='2'
       stroke-linecap='round'
       stroke-linejoin='round'
-      className='transition-transform duration-200 chevron-down-icon chevron-down'
+      className='chevron-down-icon chevron-down transition-transform duration-200'
     >
+      <title>Chevron Down</title>
       <path d='m6 9 6 6 6-6' />
     </svg>
   );

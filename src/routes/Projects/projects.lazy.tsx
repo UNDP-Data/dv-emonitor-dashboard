@@ -1,5 +1,4 @@
-import type { AnyRoute } from '@tanstack/react-router';
-import { createRoute, Link } from '@tanstack/react-router';
+import { createLazyRoute, Link } from '@tanstack/react-router';
 import { Button } from '@undp/design-system-react/Button';
 import {
   Card,
@@ -58,10 +57,6 @@ export function ProjectsListing() {
   );
 }
 
-export default function createProjectRoute(parentRoute: AnyRoute) {
-  return createRoute({
-    path: '/projects',
-    component: ProjectsListing,
-    getParentRoute: () => parentRoute,
-  });
-}
+export const Route = createLazyRoute('/projects')({
+  component: ProjectsListing,
+});
