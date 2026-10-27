@@ -25,7 +25,6 @@ import {
   BreadcrumbSeparator,
 } from '@undp/design-system-react/Breadcrumb';
 import { Button } from '@undp/design-system-react/Button';
-import { DropdownSelect } from '@undp/design-system-react/DropdownSelect';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { PageHeader, PageHeaderContent } from '@undp/design-system-react/PageHeader';
 import {
@@ -42,13 +41,13 @@ import { Spacer } from '@undp/design-system-react/Spacer';
 import { Spinner } from '@undp/design-system-react/Spinner';
 import { StatCard, StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
 import { Switch } from '@undp/design-system-react/Switch';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@undp/design-system-react/Tabs';
 import { H1, H2, H3, H4, H5, P } from '@undp/design-system-react/Typography';
 import { VizCarousel } from '@undp/design-system-react/VizCarousel';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DEFENDER_COUNTRIES } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
+import { Dashboard } from './Dashboard';
 
 function useCountryData() {
   return useQuery({
@@ -226,7 +225,7 @@ export function ProjectsPage() {
                 ) : (
                   <SimpleBarGraph
                     data={transformDataForGraph(countryData ?? [], 'barChart', [
-                      { columnId: 'isocode', chartConfigId: 'label' },
+                      { columnId: 'country_name', chartConfigId: 'label' },
                       {
                         columnId:
                           TFGBVTab === 'ai_assisted'
@@ -305,7 +304,12 @@ export function ProjectsPage() {
                   <GridItem noOfColSpan={1}>
                     <div className='flex h-full min-h-95 flex-col bg-surface p-6'>
                       <div className='flex w-full items-center justify-between gap-4'>
-                        <P weight='bold' size='base' className='text-contet-secondary'>
+                        <P
+                          weight='bold'
+                          size='base'
+                          className='text-content-secondary'
+                          marginBottom='none'
+                        >
                           Examples of attacks
                         </P>
                         <div className='flex items-center gap-2'>
@@ -382,7 +386,7 @@ export function ProjectsPage() {
                       ) : (
                         <StackedBarGraph
                           data={transformDataForGraph(countryData ?? [], 'stackedBarChart', [
-                            { columnId: 'isocode', chartConfigId: 'label' },
+                            { columnId: 'country_name', chartConfigId: 'label' },
                             {
                               columnId: ['behavior_inorganic', 'behavior_organic'],
                               chartConfigId: 'size',
@@ -497,7 +501,7 @@ export function ProjectsPage() {
                 slides={countryData.map((el) => ({
                   content: (
                     <div className='flex flex-col'>
-                      <H4 weight='medium'>{el.isocode}</H4>
+                      <H4 weight='medium'>{el.country_name}</H4>
                       <P marginBottom='none'>{el.country_snapshot}</P>
                       <Spacer size='2xl' />
                       <Grid noOfCol={2}>
@@ -523,7 +527,7 @@ export function ProjectsPage() {
                   viz: (
                     <div
                       className='aspect-video h-full w-full bg-center bg-cover'
-                      style={{ backgroundImage: `url(/imgs/CountryImage/${el.isocode}.webp)` }}
+                      style={{ backgroundImage: `url(/imgs/CountryImage/${el.iso_code}.webp)` }}
                     />
                   ),
                 }))}
@@ -536,35 +540,19 @@ export function ProjectsPage() {
       <Spacer size='8xl' />
       <section id='explore-data' className='mx-auto w-full bg-surface'>
         <Spacer size='8xl' />
-        <div className='mx-auto w-full max-w-[1920px]'>
-          <H5>Key findings</H5>
-          <div className='flex items-center gap-2'>
-            <H3 marginBottom='none'>Explore data for</H3>
-            <DropdownSelect
-              variant='light'
-              defaultValue={{ label: 'Iran', value: 'Iran' }}
-              options={[
-                { label: 'Iran', value: 'Iran' },
-                { label: 'Iraq', value: 'Iraq' },
-                { label: 'Moldova', value: 'Moldova' },
-              ]}
-            />
+        {isCountryDataError ? (
+          <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
+            <P className='text-error'>Error loading country data</P>
           </div>
-          <Spacer size='2xl' />
-
-          <Tabs color='red' defaultValue='tab 1'>
-            <TabsList>
-              <TabsTrigger value='tab 1'>General analysis</TabsTrigger>
-              <TabsTrigger value='tab 2'>TFGBV analysis</TabsTrigger>
-            </TabsList>
-            <TabsContent value='tab 1'>
-              <div>General analysis</div>
-            </TabsContent>
-            <TabsContent value='tab 2'>
-              <div>TFGBV analysis</div>
-            </TabsContent>
-          </Tabs>
-        </div>
+        ) : isCountryDataLoading || !countryData ? (
+          <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
+            <Spinner />
+          </div>
+        ) : (
+          <Dashboard
+            countryList={countryData.map((d) => ({ label: d.country_name, value: d.iso_code }))}
+          />
+        )}
         <Spacer size='8xl' />
       </section>
       <Spacer size='8xl' />

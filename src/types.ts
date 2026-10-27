@@ -1,5 +1,6 @@
 export interface DefenderCountriesDataRow {
-  isocode: string;
+  iso_code: string;
+  country_name: string;
   total_posts: number;
   tfgbv_posts_ai_assisted: number;
   tfgbv_posts_human_validated: number;
