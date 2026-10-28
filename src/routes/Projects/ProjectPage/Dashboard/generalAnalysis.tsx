@@ -1,12 +1,55 @@
 import { SimpleBarGraph } from '@undp/data-viz/BarGraph';
 import { DonutChart } from '@undp/data-viz/DonutChart';
 import { SimpleLineChart } from '@undp/data-viz/SimpleLineChart';
+import { numberFormattingFunction } from '@undp/data-viz/utils';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
 import { H6 } from '@undp/design-system-react/Typography';
+import { useMemo } from 'react';
+import {
+  useAnalysisType,
+  useContainsHateSpeech,
+  useFromDate,
+  useIsTFGBV,
+  useSelectedAffiliation,
+  useSelectedCountry,
+  useToDate,
+} from './store/filters';
+import { useCountryMessagesData } from './useCountryMessagesData';
 
 export function GeneralAnalysisDashboard() {
+  const selectedCountry = useSelectedCountry();
+  const analysisType = useAnalysisType();
+  const fromDate = useFromDate();
+  const toDate = useToDate();
+  const containsHateSpeech = useContainsHateSpeech();
+  const isTFGBV = useIsTFGBV();
+  const selectedAffiliation = useSelectedAffiliation();
+  const { data, isLoading, isError } = useCountryMessagesData(selectedCountry.value, analysisType);
+
+  const filteredData = useMemo(() => {
+    if (!data) return undefined;
+    const affiliationSet = new Set(selectedAffiliation.map((d) => d.value));
+    const filterByAffiliation = affiliationSet.size > 0;
+
+    return data.formattedData.filter(
+      (item) =>
+        (!fromDate || item.date >= fromDate) &&
+        (!toDate || item.date <= toDate) &&
+        (!containsHateSpeech || item.is_hate_speech) &&
+        (!isTFGBV || item.is_tfgbv) &&
+        (!filterByAffiliation ||
+          (item.target_affiliation !== undefined && affiliationSet.has(item.target_affiliation))),
+    );
+  }, [data, fromDate, toDate, containsHateSpeech, isTFGBV, selectedAffiliation]);
+
+  if (isError) {
+    return <div className='flex h-120 items-center justify-center'>Error loading data</div>;
+  }
+  if (isLoading || !filteredData || !data) {
+    return <div className='flex h-120 items-center justify-center'>Loading...</div>;
+  }
   return (
     <>
       <section>
@@ -15,7 +58,6 @@ export function GeneralAnalysisDashboard() {
         </H6>
         <Spacer size='xl' />
         <Grid
-          gap='32px'
           noOfCol={{
             base: 1,
             md: 2,
@@ -27,13 +69,15 @@ export function GeneralAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='flex h-auto flex-col md:h-120'>
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>52</StatCardValue>
-                <StatCardDescription>Defenders</StatCardDescription>
+                <StatCardValue>{numberFormattingFunction(filteredData.length)}</StatCardValue>
+                <StatCardDescription>Collected posts/tweets</StatCardDescription>
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>52</StatCardValue>
-                <StatCardDescription>Defenders</StatCardDescription>
+                <StatCardValue>
+                  {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
+                </StatCardValue>
+                <StatCardDescription>Posts contain hate speech</StatCardDescription>
               </div>
             </div>
           </GridItem>
@@ -48,40 +92,10 @@ export function GeneralAnalysisDashboard() {
           >
             <div className='h-auto md:h-120'>
               <SimpleLineChart
-                data={[
-                  {
-                    date: '2020',
-                    y: 3,
-                  },
-                  {
-                    date: '2021',
-                    y: 8,
-                  },
-                  {
-                    date: '2022',
-                    y: 11,
-                  },
-                  {
-                    date: '2023',
-                    y: 19,
-                  },
-                  {
-                    date: '2024',
-                    y: 3,
-                  },
-                  {
-                    date: '2025',
-                    y: 8,
-                  },
-                  {
-                    date: '2026',
-                    y: 11,
-                  },
-                  {
-                    date: '2027',
-                    y: 19,
-                  },
-                ]}
+                data={[...new Set(filteredData.map((d) => d.date_string))].map((el) => ({
+                  date: el,
+                  y: filteredData.filter((d) => d.date_string === el).length,
+                }))}
                 backgroundColor='var(--background)'
                 graphTitle='Data collected over time'
                 showValues={false}
@@ -89,6 +103,7 @@ export function GeneralAnalysisDashboard() {
                 animate={false}
                 fillArea={true}
                 lineColor='#A9B7CB'
+                dateFormat='yyyy-MM-dd'
               />
             </div>
           </GridItem>
@@ -101,33 +116,22 @@ export function GeneralAnalysisDashboard() {
         </H6>
         <Spacer size='xl' />
         <Grid
-          gap='32px'
           noOfCol={{
             base: 1,
             md: 3,
           }}
         >
           <GridItem noOfColSpan={1}>
-            <div className='h-auto md:h-120'>
+            <div className='h-auto md:h-140'>
               <DonutChart
-                data={[
-                  {
-                    label: '< 100 followers',
-                    size: 3,
-                  },
-                  {
-                    label: '100 - 1K followers',
-                    size: 8,
-                  },
-                  {
-                    label: '1K - 5K followers',
-                    size: 11,
-                  },
-                  {
-                    label: ' > 5K followers',
-                    size: 19,
-                  },
-                ]}
+                data={data.lookupData
+                  .filter((d) => d.column === 'no_of_followers')
+                  .map((d) => {
+                    return {
+                      label: d.name,
+                      size: filteredData.filter((f) => f?.no_of_followers === d.name).length,
+                    };
+                  })}
                 backgroundColor='var(--background)'
                 graphTitle='Virality potential of authors'
                 animate={false}
@@ -137,61 +141,50 @@ export function GeneralAnalysisDashboard() {
             </div>
           </GridItem>
           <GridItem noOfColSpan={1}>
-            <div className='h-auto md:h-120'>
+            <div className='h-auto md:h-140'>
               <SimpleLineChart
                 data={[
-                  {
-                    date: '2020',
-                    y: 3,
-                  },
-                  {
-                    date: '2021',
-                    y: 8,
-                  },
-                  {
-                    date: '2022',
-                    y: 11,
-                  },
-                  {
-                    date: '2023',
-                    y: 19,
-                  },
-                  {
-                    date: '2024',
-                    y: 3,
-                  },
-                  {
-                    date: '2025',
-                    y: 8,
-                  },
-                  {
-                    date: '2026',
-                    y: 11,
-                  },
-                  {
-                    date: '2027',
-                    y: 19,
-                  },
-                ]}
+                  ...new Set(
+                    filteredData.filter((d) => d.is_event_related).map((d) => d.month_year),
+                  ),
+                ].map((el) => ({
+                  date: el,
+                  y: filteredData.filter((d) => d.month_year === el).length,
+                }))}
                 backgroundColor='var(--background)'
                 graphTitle='Event-related posts per month'
                 showValues
                 showDots
                 animate={false}
                 fillArea={false}
+                dateFormat='M-yyyy'
+                noOfXTicks={4}
               />
             </div>
           </GridItem>
           <GridItem noOfColSpan={1}>
-            <div className='flex h-auto flex-col md:h-120'>
+            <div className='flex h-auto flex-col md:h-140'>
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>52</StatCardValue>
-                <StatCardDescription>Defenders</StatCardDescription>
+                <StatCardValue>
+                  {numberFormattingFunction(new Set(filteredData.map((d) => d.author)).size)}
+                </StatCardValue>
+                <StatCardDescription>Unique authors</StatCardDescription>
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>52</StatCardValue>
-                <StatCardDescription>Defenders</StatCardDescription>
+                <StatCardValue>
+                  {numberFormattingFunction(
+                    filteredData.reduce((acc, d) => acc + (d.total_engagement || 0), 0),
+                  )}
+                </StatCardValue>
+                <StatCardDescription>Total engagement</StatCardDescription>
+              </div>
+              <Spacer size='xl' />
+              <div className='flex grow flex-col justify-center bg-background p-6'>
+                <StatCardValue>
+                  {numberFormattingFunction(filteredData.filter((f) => f.is_event_related).length)}
+                </StatCardValue>
+                <StatCardDescription>Posts related to real-life events</StatCardDescription>
               </div>
             </div>
           </GridItem>
@@ -204,7 +197,6 @@ export function GeneralAnalysisDashboard() {
         </H6>
         <Spacer size='xl' />
         <Grid
-          gap='32px'
           noOfCol={{
             base: 1,
             md: 2,
@@ -216,29 +208,19 @@ export function GeneralAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <DonutChart
-                data={[
-                  {
-                    label: 'Negative',
-                    size: 3,
-                  },
-                  {
-                    label: 'Positive',
-                    size: 11,
-                  },
-                  {
-                    label: 'Neutral',
-                    size: 8,
-                  },
-                  {
-                    label: 'Not available',
-                    size: 19,
-                  },
-                ]}
+                data={data.lookupData
+                  .filter((d) => d.column === 'overall_sentiment')
+                  .map((d) => {
+                    return {
+                      label: d.name,
+                      size: filteredData.filter((f) => f.overall_sentiment === d.name).length,
+                    };
+                  })}
                 backgroundColor='var(--background)'
                 graphTitle='Overall sentiment'
                 animate={false}
                 strokeWidth={50}
-                colors={['#776992', '#E2BC3B', '#F4EEE7', '#FAFAFA']}
+                colors={['#776992', '#E2BC3B', '#F4EEE7']}
               />
             </div>
           </GridItem>
@@ -253,40 +235,14 @@ export function GeneralAnalysisDashboard() {
           >
             <div className='h-auto md:h-120'>
               <SimpleBarGraph
-                data={[
-                  {
-                    label: '2020 Q1',
-                    size: 3,
-                  },
-                  {
-                    label: '2020 Q2',
-                    size: 8,
-                  },
-                  {
-                    label: '2020 Q3',
-                    size: 11,
-                  },
-                  {
-                    label: '2020 Q4',
-                    size: 19,
-                  },
-                  {
-                    label: '2021 Q1',
-                    size: 3,
-                  },
-                  {
-                    label: '2022 Q2',
-                    size: 8,
-                  },
-                  {
-                    label: '2023 Q3',
-                    size: 11,
-                  },
-                  {
-                    label: '2024 Q4',
-                    size: 19,
-                  },
-                ]}
+                data={data.lookupData
+                  .filter((d) => d.column === 'topic')
+                  .map((d) => {
+                    return {
+                      label: d.name,
+                      size: filteredData.filter((f) => f.topic === d.name).length,
+                    };
+                  })}
                 backgroundColor='var(--background)'
                 graphTitle='Most common topics'
                 animate={false}

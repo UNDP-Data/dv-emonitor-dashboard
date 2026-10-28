@@ -1,4 +1,3 @@
-import { Button } from '@undp/design-system-react/Button';
 import { DateRangePicker } from '@undp/design-system-react/DateRangePicker';
 import { DropdownSelect } from '@undp/design-system-react/DropdownSelect';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
@@ -7,20 +6,37 @@ import { Spacer } from '@undp/design-system-react/Spacer';
 import { Switch } from '@undp/design-system-react/Switch';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@undp/design-system-react/Tabs';
 import { H3, H5, H6, P } from '@undp/design-system-react/Typography';
-import { Minus, Plus } from 'lucide-react';
-import { useState } from 'react';
+import { AFFILIATIONS } from '@/constants';
 import { GeneralAnalysisDashboard } from './generalAnalysis';
+import {
+  useAnalysisType,
+  useContainsHateSpeech,
+  useFilterActions,
+  useFromDate,
+  useIsTFGBV,
+  useSelectedAffiliation,
+  useSelectedCountry,
+  useToDate,
+} from './store/filters.ts';
 import { TFGBVAnalysisDashboard } from './tfgbvAnalysis';
 
 export function Dashboard({ countryList }: { countryList: { value: string; label: string }[] }) {
-  const [selectedCountry, setSelectedCountry] = useState(countryList[0]);
-  const [analysisType, setAnalysisType] = useState<'human' | 'ai'>('human');
-  const [dataRange, setDataRange] = useState<[Date | undefined, Date | undefined]>([
-    undefined,
-    undefined,
-  ]);
-  const [onlyContainsHateSpeech, setOnlyContainsHateSpeech] = useState(false);
-  const [isFiltersExpanded, setIsFiltersExpanded] = useState(innerWidth > 620);
+  const selectedCountry = useSelectedCountry();
+  const analysisType = useAnalysisType();
+  const fromDate = useFromDate();
+  const toDate = useToDate();
+  const containsHateSpeech = useContainsHateSpeech();
+  const isTFGBV = useIsTFGBV();
+  const selectedAffiliation = useSelectedAffiliation();
+  const {
+    setAnalysisType,
+    setContainsHateSpeech,
+    setIsTFGBV,
+    setSelectedAffiliation,
+    setSelectedCountry,
+    setFromDate,
+    setToDate,
+  } = useFilterActions();
   return (
     <div className='mx-auto w-full max-w-[1920px]'>
       <H5>Data Explorer</H5>
@@ -64,68 +80,78 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
                   Filter data
                 </H6>
               </div>
-              <Button
-                padding='none'
-                variant='icon'
-                className='bg-transparent'
-                endIcon='none'
-                onClick={() => setIsFiltersExpanded(!isFiltersExpanded)}
-              >
-                {!isFiltersExpanded ? <Plus /> : <Minus />}
-              </Button>
             </div>
-            <div className={isFiltersExpanded ? '' : 'hidden'}>
-              <Spacer size='lg' />
-              <div className='flex w-full flex-col flex-wrap items-center gap-4'>
-                <div className='w-full'>
-                  <P size='sm' marginBottom='3xs' weight='bold'>
-                    Type of analysis
-                  </P>
-                  <SegmentedControl
-                    options={[
-                      { value: 'human', label: 'Human-validated' },
-                      { value: 'ai', label: 'AI-assisted' },
-                    ]}
-                    onValueChange={(val) => setAnalysisType(val as 'human' | 'ai')}
-                    value={analysisType}
-                    variant='light'
-                  />
-                </div>
-                <div className='w-full'>
-                  <P size='sm' marginBottom='3xs' weight='bold'>
-                    Date
-                  </P>
-                  <DateRangePicker
-                    inputSize='base'
-                    numberOfMonths={2}
-                    rounded='base'
-                    variant='light'
-                    value={{ from: dataRange[0], to: dataRange[1] }}
-                    onValueChange={(d) => {
-                      setDataRange([d.from, d.to]);
-                    }}
-                  />
-                </div>
-                <div className='flex w-full items-center justify-between'>
-                  <P size='sm' marginBottom='none' weight='bold'>
-                    Contains hate speech
-                  </P>
-                  <Switch
-                    size='small'
-                    checked={onlyContainsHateSpeech}
-                    onCheckedChange={(checked) => setOnlyContainsHateSpeech(checked)}
-                  />
-                </div>
-                <div className='flex w-full items-center justify-between'>
-                  <P size='sm' marginBottom='3xs' weight='bold'>
-                    TFGBV related
-                  </P>
-                  <Switch
-                    size='small'
-                    checked={onlyContainsHateSpeech}
-                    onCheckedChange={(checked) => setOnlyContainsHateSpeech(checked)}
-                  />
-                </div>
+            <Spacer size='lg' />
+            <div className='flex w-full flex-col flex-wrap items-center gap-4'>
+              <div className='w-full'>
+                <P size='sm' marginBottom='3xs' weight='bold'>
+                  Type of analysis
+                </P>
+                <SegmentedControl
+                  className='w-full'
+                  classNames={{
+                    items: 'grow',
+                  }}
+                  options={[
+                    { value: 'human', label: 'Human-validated' },
+                    { value: 'ai', label: 'AI-assisted' },
+                  ]}
+                  onValueChange={(val) => setAnalysisType(val as 'human' | 'ai')}
+                  value={analysisType}
+                  variant='light'
+                />
+              </div>
+              <div className='w-full'>
+                <P size='sm' marginBottom='3xs'>
+                  Date
+                </P>
+                <DateRangePicker
+                  inputSize='base'
+                  numberOfMonths={2}
+                  rounded='base'
+                  variant='light'
+                  value={{ from: fromDate, to: toDate }}
+                  onValueChange={(d) => {
+                    setFromDate(d.from);
+                    setToDate(d.to);
+                  }}
+                />
+              </div>
+              <div className='flex w-full items-center justify-between'>
+                <P size='sm' marginBottom='none' weight='bold'>
+                  Contains hate speech
+                </P>
+                <Switch
+                  size='small'
+                  checked={containsHateSpeech}
+                  onCheckedChange={(checked) => setContainsHateSpeech(checked)}
+                />
+              </div>
+              <div className='flex w-full items-center justify-between'>
+                <P size='sm' marginBottom='3xs' weight='bold'>
+                  TFGBV related
+                </P>
+                <Switch
+                  size='small'
+                  checked={isTFGBV}
+                  onCheckedChange={(checked) => setIsTFGBV(checked)}
+                />
+              </div>
+              <div className='w-full'>
+                <P size='sm' marginBottom='3xs'>
+                  Affiliation of the target
+                </P>
+                <DropdownSelect
+                  options={AFFILIATIONS.map((d) => ({ value: d, label: d }))}
+                  value={selectedAffiliation}
+                  onChange={(v) => setSelectedAffiliation(v as { label: string; value: string }[])}
+                  isSearchable={false}
+                  isClearable
+                  placeholder='Select an affiliation'
+                  variant='light'
+                  showCheck
+                  isMulti
+                />
               </div>
             </div>
           </div>

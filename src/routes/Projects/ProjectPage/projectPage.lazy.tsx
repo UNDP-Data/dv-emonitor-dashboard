@@ -39,7 +39,7 @@ import { SegmentedControl } from '@undp/design-system-react/SegmentedControl';
 import { Separator } from '@undp/design-system-react/Separator';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { Spinner } from '@undp/design-system-react/Spinner';
-import { StatCard, StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
+import { StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
 import { Switch } from '@undp/design-system-react/Switch';
 import { H1, H2, H3, H4, H5, P } from '@undp/design-system-react/Typography';
 import { VizCarousel } from '@undp/design-system-react/VizCarousel';
@@ -51,20 +51,34 @@ import { Dashboard } from './Dashboard';
 
 function useCountryData() {
   return useQuery({
-    queryKey: ['satisfaction-public-services-16-6-2'],
+    queryKey: ['country-data'],
     queryFn: () =>
       fetchAndParseCSV('/data/defenders/data.csv') as Promise<DefenderCountriesDataRow[]>,
   });
 }
 function useTargetAffiliationData() {
   return useQuery({
-    queryKey: ['targetAffiliation'],
+    queryKey: ['target-affiliation-data'],
     queryFn: () =>
       fetchAndParseCSV('/data/defenders/targetAffiliation.csv') as Promise<
         DefenderCountriesDataRow[]
       >,
   });
 }
+
+const ATTACK_TWEETS = [
+  {
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing  do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    dateTime: 'Jun 2 • 08:14',
+  },
+  {
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing  do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    dateTime: 'Jun 2 • 08:14',
+  },
+];
+
 export function ProjectsPage() {
   const {
     data: countryData,
@@ -124,24 +138,29 @@ export function ProjectsPage() {
           bodyMaxWidth='full'
           padding='none'
           sidebarWidth='base'
-          className='px-4 py-16 sm:px-12 sm:py-24 lg:px-32 lg:py-60'
+          className='px-4 py-16 sm:px-12 sm:py-24 lg:px-32 lg:py-35'
         >
           <BannerBody>
             <BannerBodySidebar>
               <H2>{t('aboutTitle')}</H2>
             </BannerBodySidebar>
             <BannerBodyContent>
-              <H4>
+              <H5>
                 Technology-facilitated gender-based violence (TFGBV) is a governance and human
                 rights issue requiring coordinated national and global responses. Across the five
                 project countries — Indonesia, Iraq, Kenya, the Philippines and Uganda — UNDP’s
                 eMonitor+ reveals that TFGBV is systemic, targeted and increasing. This page shows
                 how UNDP transforms data into evidence for protection, accountability and policy
                 reform.
-              </H4>
+              </H5>
               <div className='flex flex-wrap gap-4'>
                 {DEFENDER_COUNTRIES.map((country) => (
-                  <Badge key={country.id} variant='outline' color='background' className='px-5'>
+                  <Badge
+                    key={country.id}
+                    variant='outline'
+                    color='background'
+                    className='px-5 py-2.5 text-h4-xs md:text-h4-sm lg:text-h4'
+                  >
                     {country.name}
                   </Badge>
                 ))}
@@ -153,39 +172,43 @@ export function ProjectsPage() {
       <Spacer size='8xl' />
       <section id='stats' className='mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8'>
         <H5>Overview</H5>
-        <H3>TFGBV is widespread and viral — and women environment defenders are widely targeted</H3>
-        <P>
-          TFGBV generates high levels of engagement and mobilises large numbers of unique users.
-          Combining AI-assisted detection with human vetting, UNDP built an evidence base that
-          country teams now use for advocacy.
-        </P>
-        <Grid gap='24px' noOfCol={{ base: 1, md: 3, lg: 4, xl: 5 }}>
+        <div className='max-w-5xl'>
+          <H3>
+            TFGBV is widespread and viral — and women environment defenders are widely targeted
+          </H3>
+          <P>
+            TFGBV generates high levels of engagement and mobilises large numbers of unique users.
+            Combining AI-assisted detection with human vetting, UNDP built an evidence base that
+            country teams now use for advocacy.
+          </P>
+        </div>
+        <Grid gap='24px' noOfCol={{ base: 1, md: 3 }}>
           <GridItem noOfColSpan={1}>
-            <div className='flex flex-col gap-4'>
-              <StatCard hoverColor='yellow'>
+            <div className='flex h-full flex-col gap-4'>
+              <div className='flex grow flex-col justify-center bg-surface p-6'>
                 <StatCardValue>255K</StatCardValue>
                 <StatCardDescription>
                   <strong>Social media posts analysed</strong> across five countries, coming from
                   close to 80,000 unique authors.
                 </StatCardDescription>
-              </StatCard>
-              <StatCard hoverColor='yellow'>
+              </div>
+              <div className='flex grow flex-col justify-center bg-surface p-6'>
                 <StatCardValue>40%</StatCardValue>
                 <StatCardDescription>
                   <strong>Contained some level of violence</strong> as identified with AI models
                   prompted by UNDP.
                 </StatCardDescription>
-              </StatCard>
-              <StatCard hoverColor='yellow'>
+              </div>
+              <div className='flex grow flex-col justify-center bg-surface p-6'>
                 <StatCardValue>4.5K</StatCardValue>
                 <StatCardDescription>
                   <strong>Incidents of violence against women</strong> environment defenders, vetted
                   and reported by trained monitors.
                 </StatCardDescription>
-              </StatCard>
+              </div>
             </div>
           </GridItem>
-          <GridItem noOfColSpan={{ base: 1, md: 2, lg: 3, xl: 4 }}>
+          <GridItem noOfColSpan={{ base: 1, md: 2 }}>
             <div className='flex h-full w-full flex-col gap-4 bg-surface p-6'>
               <div className='flex items-center justify-between gap-4'>
                 <P weight='bold' marginBottom='none'>
@@ -235,6 +258,7 @@ export function ProjectsPage() {
                       },
                     ])}
                     orientation='vertical'
+                    colors='var(--primary)'
                   />
                 )}
               </div>
@@ -259,9 +283,9 @@ export function ProjectsPage() {
         <Spacer size='8xl' />
         <div className='mx-auto w-full max-w-[1920px]'>
           <H5>Key findings</H5>
-          <H3 marginBottom='none'>
-            TFGBV against women environmental defenders is often targeted and tends to intensify
-            when during moments of high public visibility
+          <H3 marginBottom='none' className='max-w-5xl'>
+            TFGBV against women environment defenders intensifies at moments of high public
+            visibility
           </H3>
           <Spacer size='2xl' />
           <Accordion type='single' variant='secondary' collapsible defaultValue='item-1'>
@@ -310,7 +334,7 @@ export function ProjectsPage() {
                           className='text-content-secondary'
                           marginBottom='none'
                         >
-                          Examples of attacks
+                          Anonymised examples of attacks
                         </P>
                         <div className='flex items-center gap-2'>
                           <P size='sm' marginBottom='none'>
@@ -326,17 +350,38 @@ export function ProjectsPage() {
                           />
                         </div>
                       </div>
-                      <div className='flex grow items-center justify-center'>
-                        <P
-                          className='mx-auto w-full max-w-75 text-center text-content-tertiary'
-                          size='sm'
-                        >
-                          <strong>Sensitive content hidden</strong>
-                          <br />
-                          This section may contain offensive language. Switch the toggle to view the
-                          content.
-                        </P>
-                      </div>
+                      {showContent ? (
+                        <div className='flex flex-col items-center gap-4'>
+                          <Spacer size='2xl' />
+                          {ATTACK_TWEETS.map((tweet, i) => (
+                            <div
+                              // biome-ignore lint/suspicious/noArrayIndexKey: index is not going to change
+                              key={i}
+                              className='w-full rounded-lg border border-stroke bg-background p-4'
+                            >
+                              <P marginBottom='none'>{tweet.content}</P>
+                              <Spacer size='xl' />
+                              <Separator color='surface-md' />
+                              <Spacer size='xl' />
+                              <P className='text-content-tertiary' size='sm' marginBottom='none'>
+                                {tweet.dateTime}
+                              </P>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className='flex grow items-center justify-center'>
+                          <P
+                            className='mx-auto w-full max-w-75 text-center text-content-tertiary'
+                            size='sm'
+                          >
+                            <strong>Sensitive content hidden</strong>
+                            <br />
+                            This section may contain offensive language. Switch the toggle to view
+                            the content.
+                          </P>
+                        </div>
+                      )}
                     </div>
                   </GridItem>
                 </Grid>
@@ -472,7 +517,7 @@ export function ProjectsPage() {
             </AccordionItem>
           </Accordion>
           <Spacer size='2xl' />
-          <H4 marginBottom='none'>
+          <H4 marginBottom='none' className='max-w-5xl'>
             This analysis points to the need to{' '}
             <strong>prioritise protection for high risk groups</strong> at the intersection of
             gender, visibility, and activism and overcome TFGBV as barrier to women’s leadership and

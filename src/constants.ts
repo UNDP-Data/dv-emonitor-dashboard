@@ -15,7 +15,6 @@ export const LANGUAGES = [
 
 export const DEFAULT_LANGUAGE = 'en';
 
-
 export const DEFENDER_COUNTRIES = [
   {
     name: 'Indonesia',
@@ -37,4 +36,14 @@ export const DEFENDER_COUNTRIES = [
     name: 'Uganda',
     id: 'Uganda',
   },
+];
+
+export const AFFILIATIONS = [
+  'CSO representative',
+  'Politician',
+  'Journalist',
+  'WEHRD',
+  'Religious figure',
+  'Emerging voice / activist',
+  'Other',
 ];

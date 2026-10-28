@@ -14,7 +14,7 @@
   ],
   "projects":"Projects",
   "projectCards":[
-    {"title":"UNDP Defenders Project", "id":"Project_1","text":"Supporting Women's Leadership for a Just, Healthy Planet","image":"/imgs/projects-01.webp", "url":"https://www.undp.org/"},
+    {"title":"UNDP Defenders Project", "id":"defenders","text":"Supporting Women's Leadership for a Just, Healthy Planet","image":"/imgs/projects-01.webp", "url":"https://www.undp.org/"},
     {"title":"Project 2","id":"Project_2","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.","image":"/imgs/projects-02.webp", "url":"https://www.undp.org/"},
     {"title":"Project 3","id":"Project_3","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.","image":"/imgs/projects-03.webp", "url":"https://www.undp.org/"},
     {"title":"Project 4","id":"Project_4","text":"Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.","image":"/imgs/projects-04.webp", "url":"https://www.undp.org/"}

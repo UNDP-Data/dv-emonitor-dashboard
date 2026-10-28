@@ -1,0 +1,138 @@
+id,column,name
+0,no_of_followers,< 100 followers
+1,no_of_followers,100 - 1K followers
+2,no_of_followers,1K - 5K followers
+3,no_of_followers,> 5K followers
+0,overall_sentiment,Positive
+1,overall_sentiment,Negative
+2,overall_sentiment,Neutral
+0,topic,Politics
+1,topic,Environment
+2,topic,Social issues
+3,topic,Sports/Entertainment
+4,topic,Technology
+5,topic,Others
+0,target_gender,Women
+1,target_gender,Men
+2,target_gender,Others/unspecified
+0,incitement_techniques,Stereotyping
+1,incitement_techniques,Marginalisation and shaming
+2,incitement_techniques,Incitement of voilence
+3,incitement_techniques,Sexual and/or verbal abuse 
+4,incitement_techniques,Hostile political profile
+5,incitement_techniques,Nonconsensual image/video sharing 
+6,incitement_techniques,Others
+0,speech_intensity,Offensive language
+1,speech_intensity,Stereotyping
+2,speech_intensity,Dehumanising
+3,speech_intensity,Incitement
+4,speech_intensity,Explicit threat
+0,target_affiliation,CSO representative
+1,target_affiliation,Politician
+2,target_affiliation,Journalist
+3,target_affiliation,WEHRD
+4,target_affiliation,Religious figure
+5,target_affiliation,Emerging voice / activist
+6,target_affiliation,Other
+0,core_event,Election 1
+1,core_event,Protest 1
+2,core_event,Court ruling 1
+3,core_event,Policy announcement 1
+4,core_event,Debate 1
+5,core_event,Rally 1
+6,core_event,Scandal 1
+7,core_event,Strike 1
+8,core_event,Festival 1
+9,core_event,Disaster 1
+10,core_event,Election 2
+11,core_event,Protest 2
+12,core_event,Court ruling 2
+13,core_event,Policy announcement 2
+14,core_event,Debate 2
+15,core_event,Rally 2
+16,core_event,Scandal 2
+17,core_event,Strike 2
+18,core_event,Festival 2
+19,core_event,Disaster 2
+20,core_event,Election 3
+21,core_event,Protest 3
+22,core_event,Court ruling 3
+23,core_event,Policy announcement 3
+24,core_event,Debate 3
+25,core_event,Rally 3
+26,core_event,Scandal 3
+27,core_event,Strike 3
+28,core_event,Festival 3
+29,core_event,Disaster 3
+30,core_event,Election 4
+31,core_event,Protest 4
+32,core_event,Court ruling 4
+33,core_event,Policy announcement 4
+34,core_event,Debate 4
+35,core_event,Rally 4
+36,core_event,Scandal 4
+37,core_event,Strike 4
+38,core_event,Festival 4
+39,core_event,Disaster 4
+40,core_event,Election 5
+41,core_event,Protest 5
+42,core_event,Court ruling 5
+43,core_event,Policy announcement 5
+44,core_event,Debate 5
+45,core_event,Rally 5
+46,core_event,Scandal 5
+47,core_event,Strike 5
+48,core_event,Festival 5
+49,core_event,Disaster 5
+50,core_event,Election 6
+0,harmful_keyword,slur
+1,harmful_keyword,threat
+2,harmful_keyword,doxx
+3,harmful_keyword,insult
+4,harmful_keyword,stereotype
+5,harmful_keyword,dehumanise
+6,harmful_keyword,mock
+7,harmful_keyword,harass
+8,harmful_keyword,shame
+9,harmful_keyword,incite
+10,harmful_keyword,intimidate
+11,harmful_keyword,stalk
+12,harmful_keyword,troll
+13,harmful_keyword,bully
+14,harmful_keyword,humiliate
+15,harmful_keyword,belittle
+16,harmful_keyword,demean
+17,harmful_keyword,ridicule
+18,harmful_keyword,taunt
+19,harmful_keyword,degrade
+20,harmful_keyword,objectify
+21,harmful_keyword,blackmail
+22,harmful_keyword,extort
+23,harmful_keyword,impersonate
+24,harmful_keyword,expose
+25,harmful_keyword,leak
+26,harmful_keyword,smear
+27,harmful_keyword,defame
+28,harmful_keyword,slander
+29,harmful_keyword,libel
+30,harmful_keyword,vilify
+31,harmful_keyword,demonise
+32,harmful_keyword,scapegoat
+33,harmful_keyword,ostracise
+34,harmful_keyword,silence
+35,harmful_keyword,discredit
+36,harmful_keyword,gaslight
+37,harmful_keyword,manipulate
+38,harmful_keyword,coerce
+39,harmful_keyword,menace
+40,harmful_keyword,provoke
+41,harmful_keyword,agitate
+42,harmful_keyword,radicalise
+43,harmful_keyword,propaganda
+44,harmful_keyword,misogyny
+45,harmful_keyword,hostility
+46,harmful_keyword,abuse
+47,harmful_keyword,exploit
+48,harmful_keyword,sextort
+49,harmful_keyword,deepfake
+50,harmful_keyword,brigade

@@ -14,12 +14,15 @@ import {
 } from '@undp/design-system-react/Header';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
 import { P } from '@undp/design-system-react/Typography';
+import { ChevronDown as ChevronDownLucide } from 'lucide-react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DEFAULT_LANGUAGE, LANGUAGES } from '@/constants';
 import { ChevronDown, LanguageSwitcherIcon } from '@/Icons';
 
 export default function HeaderEl() {
   const params = useParams({ strict: false });
+  const [open, setOpen] = useState(false);
   const locale =
     params.locale && LANGUAGES.map((d) => d.id).includes(params.locale)
       ? params.locale
@@ -41,8 +44,20 @@ export default function HeaderEl() {
       <HeaderMainNavUnit>
         <HeaderMenuUnit>
           <Link to='/{-$locale}'>{t('home')}</Link>
-          <HoverCard openDelay={0} closeDelay={60}>
-            <HoverCardTrigger>{t('projects')}</HoverCardTrigger>
+          <HoverCard open={open} onOpenChange={setOpen} openDelay={0} closeDelay={60}>
+            <HoverCardTrigger
+              onClick={(e) => {
+                e.preventDefault();
+                setOpen(true);
+              }}
+              className='flex items-center gap-2'
+            >
+              {t('projects')}
+              <ChevronDownLucide
+                size={20}
+                className={`text-primary transition-all ${open ? 'rotate-180' : ''}`}
+              />
+            </HoverCardTrigger>
             <HoverCardContent side='bottom' align='center' className='p-0'>
               <div className='flex flex-col px-0 py-2'>
                 {projectCards.map((card) => (
