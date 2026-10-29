@@ -73,7 +73,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
         }}
       >
         <GridItem noOfColSpan={1}>
-          <div className='undp-scrollbar sticky top-10 max-h-auto max-h-auto bg-background p-4 md:max-h-[calc(100vh-5rem)]'>
+          <div className='sticky top-10 bg-background p-4'>
             <div className='flex justify-between'>
               <div className='flex gap-4'>
                 <H6 marginBottom='none' className='mt-1'>
@@ -84,7 +84,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
             <Spacer size='lg' />
             <div className='flex w-full flex-col flex-wrap items-center gap-4'>
               <div className='w-full'>
-                <P size='sm' marginBottom='3xs' weight='bold'>
+                <P size='sm' marginBottom='3xs'>
                   Type of analysis
                 </P>
                 <SegmentedControl
@@ -118,7 +118,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
                 />
               </div>
               <div className='flex w-full items-center justify-between'>
-                <P size='sm' marginBottom='none' weight='bold'>
+                <P size='sm' marginBottom='none'>
                   Contains hate speech
                 </P>
                 <Switch
@@ -128,7 +128,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
                 />
               </div>
               <div className='flex w-full items-center justify-between'>
-                <P size='sm' marginBottom='3xs' weight='bold'>
+                <P size='sm' marginBottom='3xs'>
                   TFGBV related
                 </P>
                 <Switch

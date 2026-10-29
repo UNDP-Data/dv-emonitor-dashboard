@@ -159,7 +159,7 @@ export function ProjectsPage() {
                     key={country.id}
                     variant='outline'
                     color='background'
-                    className='px-5 py-2.5 text-h4-xs md:text-h4-sm lg:text-h4'
+                    className='px-5 py-2.5 text-h5-xs md:text-h5-sm lg:text-h5'
                   >
                     {country.name}
                   </Badge>
@@ -170,9 +170,9 @@ export function ProjectsPage() {
         </Banner>
       </section>
       <Spacer size='8xl' />
-      <section id='stats' className='mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8'>
-        <H5>Overview</H5>
+      <section id='stats' className='mx-auto w-full px-4 sm:px-12 lg:px-32'>
         <div className='max-w-5xl'>
+          <H5>Overview</H5>
           <H3>
             TFGBV is widespread and viral — and women environment defenders are widely targeted
           </H3>
@@ -211,7 +211,7 @@ export function ProjectsPage() {
           <GridItem noOfColSpan={{ base: 1, md: 2 }}>
             <div className='flex h-full w-full flex-col gap-4 bg-surface p-6'>
               <div className='flex items-center justify-between gap-4'>
-                <P weight='bold' marginBottom='none'>
+                <P size='xl' marginBottom='none'>
                   TFGBV cases, by country
                 </P>
                 <SegmentedControl
@@ -259,19 +259,28 @@ export function ProjectsPage() {
                     ])}
                     orientation='vertical'
                     colors='var(--primary)'
+                    showTicks={false}
                   />
                 )}
               </div>
               <div>
-                <P size='sm' weight='bold' className='uppercase'>
+                <Separator color='surface-lg' />
+                <Spacer size='xl' />
+                <Spacer size='sm' />
+                <P
+                  size='sm'
+                  weight='bold'
+                  marginBottom='2xs'
+                  className='text-content-secondary uppercase'
+                >
                   {TFGBVTab === 'human_validated'
                     ? 'How human vetting works'
                     : 'About ai-assisted detection'}
                 </P>
-                <P size='sm'>
+                <P size='sm' marginBottom='none' className='text-content-secondary'>
                   {TFGBVTab === 'human_validated'
                     ? 'Manual verification uses a standardised method for sub-sampling content, so the most relevant cases can be identified and studied qualitatively. It builds on the EU Foreign Information Manipulation and Interference methodology, expanded for this project. Vetted cases are also used to retrain the AI models.'
-                    : 'AIassisted detection uses machine-learning models to screen posts in real time, prioritising posts that are more likely to contain harmful content for human analysts. The system combines keyword-based identification with contextual understanding, allowing it to detect both explicit and coded language. AI-assisted detection is continuously refined through feedback loops that use human-validated results to improve the accuracy of the models.'}
+                    : 'AI assisted detection uses machine-learning models to screen posts in real time, prioritising posts that are more likely to contain harmful content for human analysts. The system combines keyword-based identification with contextual understanding, allowing it to detect both explicit and coded language.'}
                 </P>
               </div>
             </div>
@@ -279,7 +288,7 @@ export function ProjectsPage() {
         </Grid>
       </section>
       <Spacer size='8xl' />
-      <section id='key-findings' className='mx-auto w-full bg-surface px-4 sm:px-6 lg:px-8'>
+      <section id='key-findings' className='mx-auto w-full bg-surface px-4 sm:px-12 lg:px-32'>
         <Spacer size='8xl' />
         <div className='mx-auto w-full max-w-[1920px]'>
           <H5>Key findings</H5>
@@ -297,11 +306,11 @@ export function ProjectsPage() {
                 <Grid noOfCol={{ base: 1, md: 2 }}>
                   <GridItem noOfColSpan={1}>
                     <div className='flex flex-col'>
-                      <P size='xl' weight='semibold' className='text-secondary' marginBottom='none'>
+                      <H5 weight='semibold' className='text-secondary' marginBottom='none'>
                         There is strong evidence suggesting the use of TFGBV as a mechanism to push
                         women environment defenders towards self-censorship and to discredit their
                         work.
-                      </P>
+                      </H5>
                       <Spacer size='2xl' />
                       <P marginBottom='none'>
                         About{' '}
@@ -328,12 +337,7 @@ export function ProjectsPage() {
                   <GridItem noOfColSpan={1}>
                     <div className='flex h-full min-h-95 flex-col bg-surface p-6'>
                       <div className='flex w-full items-center justify-between gap-4'>
-                        <P
-                          weight='bold'
-                          size='base'
-                          className='text-content-secondary'
-                          marginBottom='none'
-                        >
+                        <P size='xl' marginBottom='none'>
                           Anonymised examples of attacks
                         </P>
                         <div className='flex items-center gap-2'>
@@ -359,7 +363,9 @@ export function ProjectsPage() {
                               key={i}
                               className='w-full rounded-lg border border-stroke bg-background p-4'
                             >
-                              <P marginBottom='none'>{tweet.content}</P>
+                              <P marginBottom='none' size='base'>
+                                {tweet.content}
+                              </P>
                               <Spacer size='xl' />
                               <Separator color='surface-md' />
                               <Spacer size='xl' />
@@ -395,10 +401,10 @@ export function ProjectsPage() {
                 <Grid noOfCol={{ base: 1, md: 2 }}>
                   <GridItem noOfColSpan={1}>
                     <div className='flex flex-col'>
-                      <P size='xl' weight='semibold' className='text-secondary' marginBottom='none'>
+                      <H5 weight='semibold' className='text-secondary' marginBottom='none'>
                         TFGBV is enhanced through coordinated strategies of inorganic content
                         production, distribution, and engagement.
-                      </P>
+                      </H5>
                       <Spacer size='2xl' />
                       <P marginBottom='none'>
                         <span className='font-bold text-secondary'>
@@ -462,10 +468,10 @@ export function ProjectsPage() {
                 <Grid noOfCol={{ base: 1, md: 2 }}>
                   <GridItem noOfColSpan={1}>
                     <div className='flex flex-col'>
-                      <P size='xl' weight='semibold' className='text-secondary' marginBottom='none'>
+                      <H5 weight='semibold' className='text-secondary' marginBottom='none'>
                         TFGBV is used to discredit established women environment defenders and
                         intimidate newer voices, making advocacy harder to sustain.
-                      </P>
+                      </H5>
                       <Spacer size='2xl' />
                       <P marginBottom='none'>
                         <span className='font-bold text-secondary'>
@@ -516,7 +522,7 @@ export function ProjectsPage() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          <Spacer size='2xl' />
+          <Spacer size='3xl' />
           <H4 marginBottom='none' className='max-w-5xl'>
             This analysis points to the need to{' '}
             <strong>prioritise protection for high risk groups</strong> at the intersection of
@@ -527,10 +533,12 @@ export function ProjectsPage() {
         <Spacer size='8xl' />
       </section>
       <Spacer size='8xl' />
-      <section id='country-snapshots' className='mx-auto w-full bg-primary-gray-200 py-12'>
-        <div className='mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8'>
+      <section id='country-snapshots' className='mx-auto w-full px-4 sm:px-12 lg:px-32'>
+        <div className='mx-auto max-w-[1920px]'>
           <H5>Country snapshots</H5>
-          <H3>TFGBV patterns are consistent across countries, but the intensity varies</H3>
+          <H3 className='max-w-5xl'>
+            TFGBV patterns are consistent across countries, but the intensity varies
+          </H3>
           <div className='w-full bg-surface p-6'>
             {isCountryDataError ? (
               <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
@@ -583,7 +591,7 @@ export function ProjectsPage() {
         </div>
       </section>
       <Spacer size='8xl' />
-      <section id='explore-data' className='mx-auto w-full bg-surface'>
+      <section id='explore-data' className='mx-auto w-full bg-surface px-4 py-12 sm:px-12 lg:px-32'>
         <Spacer size='8xl' />
         {isCountryDataError ? (
           <div className='flex h-full w-full flex-col items-center justify-center gap-4'>

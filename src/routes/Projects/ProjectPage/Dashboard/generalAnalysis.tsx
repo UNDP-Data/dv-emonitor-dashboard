@@ -5,7 +5,7 @@ import { numberFormattingFunction } from '@undp/data-viz/utils';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
-import { H6 } from '@undp/design-system-react/Typography';
+import { H5, H6 } from '@undp/design-system-react/Typography';
 import { useMemo } from 'react';
 import {
   useAnalysisType,
@@ -70,14 +70,16 @@ export function GeneralAnalysisDashboard() {
             <div className='flex h-auto flex-col md:h-120'>
               <div className='flex grow flex-col justify-center bg-background p-6'>
                 <StatCardValue>{numberFormattingFunction(filteredData.length)}</StatCardValue>
-                <StatCardDescription>Collected posts/tweets</StatCardDescription>
+                <StatCardDescription className='mb-0!'>Collected posts/tweets</StatCardDescription>
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
                 <StatCardValue>
                   {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
                 </StatCardValue>
-                <StatCardDescription>Posts contain hate speech</StatCardDescription>
+                <StatCardDescription className='mb-0!'>
+                  Posts contain hate speech
+                </StatCardDescription>
               </div>
             </div>
           </GridItem>
@@ -122,7 +124,7 @@ export function GeneralAnalysisDashboard() {
           }}
         >
           <GridItem noOfColSpan={1}>
-            <div className='h-auto md:h-140'>
+            <div className='h-auto md:h-120'>
               <DonutChart
                 data={data.lookupData
                   .filter((d) => d.column === 'no_of_followers')
@@ -141,7 +143,7 @@ export function GeneralAnalysisDashboard() {
             </div>
           </GridItem>
           <GridItem noOfColSpan={1}>
-            <div className='h-auto md:h-140'>
+            <div className='h-auto md:h-120'>
               <SimpleLineChart
                 data={[
                   ...new Set(
@@ -163,28 +165,30 @@ export function GeneralAnalysisDashboard() {
             </div>
           </GridItem>
           <GridItem noOfColSpan={1}>
-            <div className='flex h-auto flex-col md:h-140'>
+            <div className='flex h-auto flex-col md:h-120'>
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>
+                <H5 weight='bold' marginBottom='xs'>
                   {numberFormattingFunction(new Set(filteredData.map((d) => d.author)).size)}
-                </StatCardValue>
-                <StatCardDescription>Unique authors</StatCardDescription>
+                </H5>
+                <StatCardDescription className='mb-0!'>Unique authors</StatCardDescription>
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>
+                <H5 weight='bold' marginBottom='xs'>
                   {numberFormattingFunction(
                     filteredData.reduce((acc, d) => acc + (d.total_engagement || 0), 0),
                   )}
-                </StatCardValue>
-                <StatCardDescription>Total engagement</StatCardDescription>
+                </H5>
+                <StatCardDescription className='mb-0!'>Total engagement</StatCardDescription>
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>
+                <H5 weight='bold' marginBottom='xs'>
                   {numberFormattingFunction(filteredData.filter((f) => f.is_event_related).length)}
-                </StatCardValue>
-                <StatCardDescription>Posts related to real-life events</StatCardDescription>
+                </H5>
+                <StatCardDescription className='mb-0!'>
+                  Posts related to real-life events
+                </StatCardDescription>
               </div>
             </div>
           </GridItem>
@@ -201,7 +205,6 @@ export function GeneralAnalysisDashboard() {
             base: 1,
             md: 2,
             lg: 3,
-            xl: 4,
             sm: 1,
           }}
         >
@@ -229,7 +232,6 @@ export function GeneralAnalysisDashboard() {
               base: 1,
               md: 1,
               lg: 2,
-              xl: 3,
               sm: 1,
             }}
           >
