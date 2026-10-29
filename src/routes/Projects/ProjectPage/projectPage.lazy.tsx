@@ -591,42 +591,46 @@ export function ProjectsPage() {
         </div>
       </section>
       <Spacer size='8xl' />
-      <section id='explore-data' className='mx-auto w-full bg-surface px-4 py-12 sm:px-12 lg:px-32'>
+      <section id='explore-data' className='mx-auto w-full bg-surface px-4 sm:px-12 lg:px-32'>
         <Spacer size='8xl' />
-        {isCountryDataError ? (
-          <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
-            <P className='text-error'>Error loading country data</P>
-          </div>
-        ) : isCountryDataLoading || !countryData ? (
-          <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
-            <Spinner />
-          </div>
-        ) : (
-          <Dashboard
-            countryList={countryData.map((d) => ({ label: d.country_name, value: d.iso_code }))}
-          />
-        )}
+        <div id='resources' className='mx-auto w-full max-w-[1920px]'>
+          {isCountryDataError ? (
+            <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
+              <P className='text-error'>Error loading country data</P>
+            </div>
+          ) : isCountryDataLoading || !countryData ? (
+            <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
+              <Spinner />
+            </div>
+          ) : (
+            <Dashboard
+              countryList={countryData.map((d) => ({ label: d.country_name, value: d.iso_code }))}
+            />
+          )}
+        </div>
         <Spacer size='8xl' />
       </section>
       <Spacer size='8xl' />
-      <section id='resources' className='mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8'>
-        <H3>Resources</H3>
-        <Grid noOfCol={{ base: 1, sm: 2, md: 4, lg: 6 }}>
-          {resourceCards.map((card) => (
-            <GridItem key={card.title}>
-              <ResourceCard href={card.url}>
-                <ResourceCardImage imageSrc={card.image} aspectRatio='portrait' />
-                <ResourceCardContent>
-                  <ResourceCardTitle>{card.title}</ResourceCardTitle>
-                  <ResourceCardDescription>{card.text}</ResourceCardDescription>
-                </ResourceCardContent>
-                <ResourceCardFooter>
-                  <Button variant='link'>{t('readMore')}</Button>
-                </ResourceCardFooter>
-              </ResourceCard>
-            </GridItem>
-          ))}
-        </Grid>
+      <section id='resources' className='mx-auto w-full px-4 sm:px-12 lg:px-32'>
+        <div id='resources' className='mx-auto w-full max-w-[1920px]'>
+          <H3>Resources</H3>
+          <Grid noOfCol={{ base: 1, sm: 2, md: 4, lg: 6 }}>
+            {resourceCards.map((card) => (
+              <GridItem key={card.title}>
+                <ResourceCard href={card.url}>
+                  <ResourceCardImage imageSrc={card.image} aspectRatio='portrait' />
+                  <ResourceCardContent>
+                    <ResourceCardTitle>{card.title}</ResourceCardTitle>
+                    <ResourceCardDescription>{card.text}</ResourceCardDescription>
+                  </ResourceCardContent>
+                  <ResourceCardFooter>
+                    <Button variant='link'>{t('readMore')}</Button>
+                  </ResourceCardFooter>
+                </ResourceCard>
+              </GridItem>
+            ))}
+          </Grid>
+        </div>
       </section>
       <Spacer size='8xl' />
     </div>

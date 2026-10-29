@@ -4,7 +4,7 @@ import { SimpleLineChart } from '@undp/data-viz/SimpleLineChart';
 import { numberFormattingFunction } from '@undp/data-viz/utils';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { Spacer } from '@undp/design-system-react/Spacer';
-import { StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
+import { StatCardDescription } from '@undp/design-system-react/StatCard';
 import { H5, H6 } from '@undp/design-system-react/Typography';
 import { useMemo } from 'react';
 import {
@@ -69,14 +69,16 @@ export function GeneralAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='flex h-auto flex-col md:h-120'>
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>{numberFormattingFunction(filteredData.length)}</StatCardValue>
+                <H5 weight='bold' marginBottom='xs'>
+                  {numberFormattingFunction(filteredData.length)}
+                </H5>
                 <StatCardDescription className='mb-0!'>Collected posts/tweets</StatCardDescription>
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <StatCardValue>
+                <H5 weight='bold' marginBottom='xs'>
                   {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
-                </StatCardValue>
+                </H5>
                 <StatCardDescription className='mb-0!'>
                   Posts contain hate speech
                 </StatCardDescription>
