@@ -46,7 +46,7 @@ import { VizCarousel } from '@undp/design-system-react/VizCarousel';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/Section';
-import { DEFENDER_COUNTRIES } from '@/constants';
+import { DEFENDER_COUNTRIES, DEFENDER_FUNDING_PARTNERS } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
 import { Dashboard } from './Dashboard';
 
@@ -153,18 +153,39 @@ export function ProjectsPage() {
               reveals that TFGBV is systemic, targeted and increasing. This page shows how UNDP
               transforms data into evidence for protection, accountability and policy reform.
             </H5>
-            <div className='flex flex-wrap gap-4'>
+            <Spacer size='xl' />
+            <P size='xs' weight='semibold' marginBottom='xs' className='uppercase tracking-wider'>
+              Project countries
+            </P>
+            <div className='flex flex-wrap gap-2'>
               {DEFENDER_COUNTRIES.map((country) => (
                 <Badge
                   key={country.id}
                   variant='outline'
                   color='background'
-                  className='px-5 py-2.5 text-h5-xs md:text-h5-sm lg:text-h5'
+                  className='px-4 py-1.5'
                 >
                   {country.name}
                 </Badge>
               ))}
             </div>
+            <Spacer size='2xl' />
+            <Separator color='background' thickness='xs' className='opacity-30' />
+            <Spacer size='2xl' />
+            <P size='xs' weight='semibold' marginBottom='2xs' className='uppercase tracking-wider'>
+              Funding partners
+            </P>
+            <div className='flex flex-wrap items-center gap-3'>
+              {DEFENDER_FUNDING_PARTNERS.map((partner) => (
+                <img key={partner.name} src={partner.flag} alt={partner.name} className='h-12' />
+              ))}
+            </div>
+            <Spacer size='sm' />
+            <P size='lg' marginBottom='none'>
+              Thanks to Denmark, Luxembourg and the Republic of Korea, partners to UNDP’s 
+              Governance, Peacebuilding, Crisis and Resilience (GCPR) Funding Window, for making
+              this work possible.
+            </P>
           </BannerBodyContent>
         </BannerBody>
       </Banner>

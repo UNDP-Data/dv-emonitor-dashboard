@@ -38,6 +38,21 @@ export const DEFENDER_COUNTRIES = [
   },
 ];
 
+export const DEFENDER_FUNDING_PARTNERS = [
+  {
+    name: 'Denmark',
+    flag: '/imgs/Partners/DK.svg',
+  },
+  {
+    name: 'Luxembourg',
+    flag: '/imgs/Partners/LU.svg',
+  },
+  {
+    name: 'Republic of Korea',
+    flag: '/imgs/Partners/KR.svg',
+  },
+];
+
 export const AFFILIATIONS = [
   'CSO representative',
   'Politician',
