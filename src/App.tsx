@@ -1,5 +1,4 @@
 import { Link } from '@tanstack/react-router';
-import { DotDensityMap } from '@undp/data-viz/DotDensityMap';
 import {
   Banner,
   BannerBody,
@@ -16,7 +15,6 @@ import {
   CardTitle,
 } from '@undp/design-system-react/Card';
 import { Carousel, CarouselItem } from '@undp/design-system-react/Carousel';
-import { DropdownSelect } from '@undp/design-system-react/DropdownSelect';
 import {
   FeaturedCard,
   FeaturedCardDescription,
@@ -33,7 +31,16 @@ import {
   StatCardValue,
 } from '@undp/design-system-react/StatCard';
 import { Blockquote, H1, H2, H4, H5, P } from '@undp/design-system-react/Typography';
+import { lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
+
+const DotDensityMap = lazy(() =>
+  import('@undp/data-viz/DotDensityMap').then((m) => ({ default: m.DotDensityMap })),
+);
+
+const DropdownSelect = lazy(() =>
+  import('@undp/design-system-react/DropdownSelect').then((m) => ({ default: m.DropdownSelect })),
+);
 
 function App() {
   const { t } = useTranslation();
@@ -183,48 +190,52 @@ function App() {
               <P size='sm' marginBottom='none'>
                 {t('filterByProjects')}
               </P>
-              <DropdownSelect
-                className='w-full'
-                options={projectCards.map((card) => ({
-                  label: card.title,
-                  value: card.id,
-                }))}
-                variant='light'
-                isClearable
-                placeholder='All projects'
-                onChange={(value) => {
-                  // biome-ignore lint/suspicious/noConsole: Temporary need to be removed in the future
-                  console.log(value);
-                }}
-              />
+              <Suspense fallback={<div className='h-12 w-full animate-pulse bg-surface' />}>
+                <DropdownSelect
+                  className='w-full'
+                  options={projectCards.map((card) => ({
+                    label: card.title,
+                    value: card.id,
+                  }))}
+                  variant='light'
+                  isClearable
+                  placeholder='All projects'
+                  onChange={(value) => {
+                    // biome-ignore lint/suspicious/noConsole: Temporary need to be removed in the future
+                    console.log(value);
+                  }}
+                />
+              </Suspense>
             </div>
           </div>
           <div className='h-[75vh] w-full'>
-            <DotDensityMap
-              data={[
-                {
-                  lat: 20,
-                  long: 10,
-                },
-                {
-                  lat: 25,
-                  long: 26,
-                },
-                {
-                  lat: 0,
-                  long: 0,
-                },
-                {
-                  lat: 15,
-                  long: 5,
-                },
-                {
-                  lat: 10,
-                  long: 20,
-                },
-              ]}
-              showCostalBorder
-            />
+            <Suspense fallback={<div className='h-full w-full animate-pulse bg-surface' />}>
+              <DotDensityMap
+                data={[
+                  {
+                    lat: 20,
+                    long: 10,
+                  },
+                  {
+                    lat: 25,
+                    long: 26,
+                  },
+                  {
+                    lat: 0,
+                    long: 0,
+                  },
+                  {
+                    lat: 15,
+                    long: 5,
+                  },
+                  {
+                    lat: 10,
+                    long: 20,
+                  },
+                ]}
+                showCostalBorder
+              />
+            </Suspense>
           </div>
         </div>
       </section>

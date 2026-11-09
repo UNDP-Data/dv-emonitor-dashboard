@@ -10,19 +10,16 @@ import {
   HeaderActions,
   HeaderLogoUnit,
   HeaderMainNavUnit,
+  HeaderMenuDropdown,
+  HeaderMenuLink,
   HeaderMenuUnit,
 } from '@undp/design-system-react/Header';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
-import { P } from '@undp/design-system-react/Typography';
-import { ChevronDown as ChevronDownLucide } from 'lucide-react';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DEFAULT_LANGUAGE, LANGUAGES } from '@/constants';
 import { ChevronDown, LanguageSwitcherIcon } from '@/Icons';
 
 export default function HeaderEl() {
   const params = useParams({ strict: false });
-  const [open, setOpen] = useState(false);
   const locale =
     params.locale && LANGUAGES.map((d) => d.id).includes(params.locale)
       ? params.locale
@@ -43,40 +40,27 @@ export default function HeaderEl() {
       />
       <HeaderMainNavUnit>
         <HeaderMenuUnit>
-          <Link to='/{-$locale}'>{t('home')}</Link>
-          <HoverCard open={open} onOpenChange={setOpen} openDelay={0} closeDelay={60}>
-            <HoverCardTrigger
-              onClick={(e) => {
-                e.preventDefault();
-                setOpen(true);
-              }}
-              className='flex items-center gap-2'
-            >
-              {t('projects')}
-              <ChevronDownLucide
-                size={20}
-                className={`text-primary transition-all ${open ? 'rotate-180' : ''}`}
-              />
-            </HoverCardTrigger>
-            <HoverCardContent side='bottom' align='center' className='p-0'>
-              <div className='flex flex-col px-0 py-2'>
-                {projectCards.map((card) => (
-                  <Link
-                    to='/{-$locale}/projects/$projectId'
-                    params={{ projectId: card.id }}
-                    key={card.id}
-                    className='w-full p-3 hover:bg-primary-gray-300 hover:text-primary-blue-600'
-                  >
-                    <P size='sm' marginBottom='none'>
-                      {card.title}
-                    </P>
-                  </Link>
-                ))}
-              </div>
-            </HoverCardContent>
-          </HoverCard>
-          <Link to='/{-$locale}/resources'>{t('resources')}</Link>
-          <Link to='/{-$locale}/about'>{t('about')}</Link>
+          <HeaderMenuLink href={locale === DEFAULT_LANGUAGE ? '/' : `/${locale}`}>
+            {t('home')}
+          </HeaderMenuLink>
+          <HeaderMenuDropdown
+            label={t('projects')}
+            items={projectCards.map((project) => ({
+              label: project.title,
+              href:
+                locale === DEFAULT_LANGUAGE
+                  ? `/projects/${project.id}`
+                  : `/${locale}/projects/${project.id}`,
+            }))}
+          />
+          <HeaderMenuLink
+            href={locale === DEFAULT_LANGUAGE ? '/resources' : `/${locale}/resources`}
+          >
+            {t('resources')}
+          </HeaderMenuLink>
+          <HeaderMenuLink href={locale === DEFAULT_LANGUAGE ? '/about' : `/${locale}/about`}>
+            {t('about')}
+          </HeaderMenuLink>
         </HeaderMenuUnit>
         <HeaderActions>
           <DropdownMenu>

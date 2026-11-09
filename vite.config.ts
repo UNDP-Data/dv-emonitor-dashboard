@@ -1,9 +1,9 @@
-import path from 'path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-import postcssNested from 'postcss-nested';
 import tailwindcss from '@tailwindcss/postcss';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import postcssNested from 'postcss-nested';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
@@ -37,7 +37,7 @@ export default defineConfig({
               return unit === 'rem' ? value * 16 : value;
             }
 
-            root.walkAtRules(rule => {
+            root.walkAtRules((rule) => {
               if (rule.name !== 'media' && rule.name !== 'container') return;
 
               const pxValue = extractMinWidth(rule.params);
@@ -80,10 +80,8 @@ export default defineConfig({
     cssCodeSplit: false,
     rollupOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes('node_modules/react')) return 'react';
-          if (id.includes('@undp/design-system-react')) return 'undp-design-system';
-          if (id.includes('@undp/data-viz')) return 'undp-data-viz';
+        codeSplitting: {
+          groups: [{ name: 'react', test: /node_modules[\\/]react/ }],
         },
         chunkFileNames: '[name]-[hash].js',
         assetFileNames: '[name].[ext]',
@@ -100,5 +98,5 @@ export default defineConfig({
       optionsSuccessStatus: 204,
     },
   },
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
+  resolve: { alias: { '@': path.resolve(import.meta.dirname, './src') } },
 });
