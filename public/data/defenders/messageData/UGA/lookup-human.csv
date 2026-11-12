@@ -1,0 +1,356 @@
+id,column,name
+1,core_event,Martha Karua a lawyer to the former presidential candidate of uganda Dr. Kiiza Besigye being denied entry into Uganda and her releasing a statement that she will not return to Uganda until the president changes
+2,core_event,"The arrest of Erias Lukwago, former Lord Mayor for Kampala city and lawyer to former presidential candidate Dr. Kiiza Besigye"
+3,core_event,The former speaker of parliament Hon Anita Among getting very sick
+4,core_event,After the public receiving news of the former speaker of parliament (Anita Among) being really sick with a blood clot in her leg
+5,core_event,"The arrest of the former Kampala City Lord mayor, Erias Lukwago"
+6,core_event,"The abduction of the former Lord Mayor of Kampala City, Erias Lukwago"
+7,core_event,"The separation between Kampala socialite, (former miss Uganda) and her husband after one year of marriage."
+8,core_event,The abduction of the former Lord Mayor of Kampala City Hon Erias Lukwago
+9,core_event,Mourning of someone who was brutally murdered
+10,core_event,"Faridah Nakazibwe, a renown journalist in kampala posting a shopping list highlighting her house maids broken english."
+11,core_event,A trending video on social media showing a teacher got involved in physical altercation with a female student at the school’s dormitory.
+12,core_event,Death of Sydney Gongodyo
+13,core_event,Agather Atuhaire a Ugandan journalist was held at Amsterdam airport and tagged as a fraudster because immigration assumed her passport wasnt hers.
+14,core_event,Gang rape of a Colombian tourist in Italy
+15,core_event,Police rescue operation against online sex exploitation ring
+16,core_event,"Sheila Gashumba, a socialite in Kampala commenting on the rejection of Dr. Muganga rejection by parliament committee as minister internal affairs because of his many nationalities and her comparing him to the New York current mayor, Mamdani"
+17,core_event,"Keko, a Ugandan artist revealing on an interview that she was in a relationship with a fellow female artist for two years."
+18,core_event,Keko a Ugandan artist revealing that she was in relationship with a fellow female artist for two years
+19,core_event,Sheebah denial of ever being in a relationship with Keko
+20,core_event,"corruption allegations against the former speaker of parliament, Hon. Anita Among"
+21,core_event,Sheeba celebrating the birth of her baby after saying she doesnt want to get married.
+22,core_event,"The opening of criminal charges against the former speaker of parliament, Hon. Anita Among"
+23,core_event,"Opening of criminal charges against the former speaker of parliament, Hon. Anita Among"
+24,core_event,Allegations of cheating and physical abuse
+25,core_event,"A man in Mityana killed his wife, Sherina Namatovu"
+26,core_event,CEc meeting invitation by President Museveni
+27,core_event,"The opening of corruption case against the former speaker of parliament, Hon Anite Among"
+28,core_event,Speaker of Parliament on corruption
+29,core_event,HER POLITICAL ACTIVISM. SHE ALSO AN ACTIVIST FIGHTING AGAINST CORRUPTION
+30,core_event,Kadaga's actions regarding the regime
+31,core_event,The arrest of Hon. Justine Nameere shortly after her swearing in ceremony as minister
+32,core_event,"The alleged opening of corruption case against the former speaker of parliament, Hon Anite Among"
+33,core_event,political funeral of Anita Among because of opening of alleged corruption charges
+34,core_event,After UN Women sharing this post on their twitter account; Let women be. Let women lead. Let women thrive. Let women speak up. Let women represent. Let women live peacefully. Let women express themselves. Let women control their bodies.
+35,core_event,"Leaking of information that allegedly led to the exposure and opening of the corruption charges against the former speaker of parliament, Hon. Anita Among"
+36,core_event,"Leaking of information that led to the opening of corruption charges against the former speaker of parliament, Hon Anita Among"
+37,core_event,"Opening of corruption charges against the former speaker of parliament, Hon Anita Among"
+38,core_event,"Leaking of information leading to opening of alleged corruption charges against the former speaker of parliament, Anita Among"
+39,core_event,"The arrest of the previous speaker of parliament, Hon. Anita Among"
+40,core_event,"The former speaker of parliament, Hon. Anita Among buying a 3.4bi;llion roys royce"
+41,core_event,"Investigation into the corruption case of Hon. Anita Among, the former speaker of parliament"
+42,core_event,"The investigation into the alleged corruption of the former speaker of parliament, Hon. Anite Among"
+43,core_event,"Release of information that led to the implication of the opening of the corruption charges against the former spear of parliament, Hon. Anita Among"
+44,core_event,"A press interview by Sheeba, (a musician) who revealed that she wouldnt mind being a 3 or 4th wife."
+45,core_event,Sheebah (an artist) sharing contradictory information on her podcast that she is okay being a fourth or tenth wife after saying she doesnt need a man in in her life.
+46,core_event,Deborah Samuel Yakubu lynching
+47,core_event,A 23 year old young woman carried out tubal ligation
+48,core_event,Grenade attack on wife in Buhweju District
+49,core_event,Nakawa container full of dollars scandal
+50,core_event,Alleged rape incident in Kazo district
+51,core_event,Anita Among buying a Royce Rolls in Uganda
+52,core_event,Passing of the Sovereignty Bill
+53,core_event,xxxxxx
+54,core_event,Campaigning for political positions
+55,core_event,Kyanja Airbnb leaked videos
+56,core_event,Live TV show discussion
+57,core_event,Violent assault incident
+58,core_event,Christine Nampeera clip
+59,core_event,undefined
+60,core_event,Elections
+61,core_event,Funeral of Major General Francis Takirwa
+62,core_event,Arrest of Male Mabirizi for alleged hate speech
+63,core_event,Public reckoning over ties between Isaac Ssemakadde and Yvonne Babirye & Cynthia Nakato
+64,core_event,Nomination nullification of candidate Elizabeth Kakwanzi Acen
+65,core_event,January 15 elections
+66,core_event,peaceful anti-corruption demonstration
+67,core_event,Military drills and border conflict
+68,core_event,Appointment of a Minister of Ethics and intergrity
+69,core_event,Arrest of Agathar Atuhaire
+70,core_event,babab
+71,core_event,L'evenement national de la partidas
+72,core_event,xxx
+1,harmful_keyword,Silly
+2,harmful_keyword,torture
+3,harmful_keyword,Unclear
+4,harmful_keyword,kill
+5,harmful_keyword,rape
+6,harmful_keyword,Hate
+7,harmful_keyword,remove
+8,harmful_keyword,abductor
+9,harmful_keyword,abuser
+10,harmful_keyword,Demons
+11,harmful_keyword,Fiends
+12,harmful_keyword,Hellions
+13,harmful_keyword,Imps
+14,harmful_keyword,Devil-worshippers
+15,harmful_keyword,Occultists
+16,harmful_keyword,Cultists
+17,harmful_keyword,Stealers
+18,harmful_keyword,Pilferers
+19,harmful_keyword,Burglars
+20,harmful_keyword,Pickpockets
+21,harmful_keyword,Swindlers
+22,harmful_keyword,Muggers
+23,harmful_keyword,Highwaymen
+24,harmful_keyword,Looters
+25,harmful_keyword,Outlaws
+26,harmful_keyword,War-makers
+27,harmful_keyword,Aggressors
+28,harmful_keyword,Militarists
+29,harmful_keyword,Hawks
+30,harmful_keyword,Belligerents
+31,harmful_keyword,Instigators
+32,harmful_keyword,Maniacs
+33,harmful_keyword,bitch
+34,harmful_keyword,Congratulations
+35,harmful_keyword,feminists
+36,harmful_keyword,Idiots
+37,harmful_keyword,Muswaza
+38,harmful_keyword,murder
+39,harmful_keyword,thief
+40,harmful_keyword,NUISANCE
+41,harmful_keyword,Idiot
+42,harmful_keyword,disgusting
+43,harmful_keyword,attack
+44,harmful_keyword,xxxx;yyyyy;tttt
+45,harmful_keyword,stupid
+46,harmful_keyword,undefined
+47,harmful_keyword,dumbest
+48,harmful_keyword,abuse
+49,harmful_keyword,"""idiots"""
+50,harmful_keyword,idoit
+51,harmful_keyword,Prostitute
+52,harmful_keyword,sons
+53,harmful_keyword,old
+54,harmful_keyword,ugly
+55,harmful_keyword,"""Twat"""
+56,harmful_keyword,bitches
+57,harmful_keyword,hoes
+58,harmful_keyword,"""prostitute"""
+59,harmful_keyword,albino
+60,harmful_keyword,ugliest
+61,harmful_keyword,money
+62,harmful_keyword,karma
+63,harmful_keyword,terrorist
+64,harmful_keyword,Mafia
+65,harmful_keyword,"""feminist"""
+66,harmful_keyword,Twerking
+67,harmful_keyword,kkkkkkk
+68,harmful_keyword,scumbug
+1,harmful_phrases,some feminists clap for misandrists
+2,harmful_phrases,what have we ugandans benefitted from 40yrs of nrm is power apart from killing
+3,harmful_phrases,robbing and violation of human rights on daily basis ? Shut up you thief
+4,harmful_phrases,Youre the most abusers of human rights
+5,harmful_phrases,Ape with poor mindset like this idiot. Go suck yo moms' P***y
+6,harmful_phrases,Fake gender
+7,harmful_phrases,marrying a whore
+8,harmful_phrases,she spent most of her life in parliament in fake politics and passing useless laws to enrich herself
+9,harmful_phrases,fake Human Rights Platform
+10,harmful_phrases,politician who pretends to fight for human rights of Ugandans
+11,harmful_phrases,you have evil mind that even those who follow you may find disgusting and inhumane
+12,harmful_phrases,cannibalism mind
+13,harmful_phrases,fat women
+14,harmful_phrases,pretending gender
+15,harmful_phrases,Absolute power corrupted her completely
+16,harmful_phrases,beaten and violated
+17,harmful_phrases,hacked to death
+18,harmful_phrases,"""homosexual acts"""
+19,harmful_phrases,Father figure under feminist threat
+20,harmful_phrases,paid to push an agenda. institutions that fuel online gender wars.
+21,harmful_phrases,Weekend marriage is not for the weak
+22,harmful_phrases,women don’t have the capacity to raise children
+23,harmful_phrases,she’s fake crying
+24,harmful_phrases,low class feminist
+25,harmful_phrases,Your apology is as fake as the picture. All you wanted was a few clicks for a few coins
+26,harmful_phrases,which class are you talking about? broke girl with a fake lifestyle. Madam feminist you don't know the meaning of equality
+27,harmful_phrases,u are a stupid idiot
+28,harmful_phrases,cant you use your head for atleast a few minute
+29,harmful_phrases,Dumb ass
+30,harmful_phrases,A prostitute selling their sumbi?Are you dumb?
+31,harmful_phrases,mukazi mukulu oli mu bino bya kisilu
+32,harmful_phrases,hahahaha... Money will kill this gender
+33,harmful_phrases,selling their expired private parts
+34,harmful_phrases,Disgusting idiots
+35,harmful_phrases,toxic imbecile. justifying your toxic traumas
+36,harmful_phrases,Stop 😭 the nonsense you are paradingThey will come for youAre you bigger than AAA
+37,harmful_phrases,Kadaga and other once all powerful rich Musevenism crusaders? Where are they now? One can't even be allowed to address a village meeting. It would attract treason 4 her.This happened just days when she had passed the infamous Sovereignty bill on gun point..
+38,harmful_phrases,"ou don't need to be trans to be ""fReE"" it's just pushing a sissy ass agenda"
+39,harmful_phrases,""" it's just pushing a sissy ass agenda"
+40,harmful_phrases,Conflict profiteers
+41,harmful_phrases,Weapon suppliers
+42,harmful_phrases,Ugly Insecure Bitch
+43,harmful_phrases,misogynist masking as a feminist or gender scholar.
+44,harmful_phrases,Isn't she a lesbian
+45,harmful_phrases,Why don't you treat your patients of homosexuality? Because they're also sick
+46,harmful_phrases,statement is gay
+47,harmful_phrases,That statement is gay
+48,harmful_phrases,Giving up is gay
+49,harmful_phrases,Why are you gay
+50,harmful_phrases,You are just as useless as your empty brain …. Focus on being Gay
+51,harmful_phrases,Brown gay hands typed this
+52,harmful_phrases,this is gay behaviour which has been encouraged by whores which leads to feminization to aquire women and low IQ alphas to run through
+53,harmful_phrases,Mwena mulinga amatako kuma Nyoko
+54,harmful_phrases,Gender that can translate snake language
+55,harmful_phrases,fake gender that one
+56,harmful_phrases,She's a pretender
+57,harmful_phrases,she wants dick
+58,harmful_phrases,involving your brain before you Tweet Dog urine
+59,harmful_phrases,communicate with a snake
+60,harmful_phrases,Fake ones thing like you. the fake.
+61,harmful_phrases,kneeling in feminist inboxes
+62,harmful_phrases,brainless and spineless fellow
+63,harmful_phrases,plenty of noise but absolutely no substance
+64,harmful_phrases,lacks the courage and capacity to do anything meaningful
+65,harmful_phrases,stop posting Nosense
+66,harmful_phrases,every body is tired of you.....posting Nosense
+67,harmful_phrases,hypocrite lady
+68,harmful_phrases,That gender is psychopathic
+69,harmful_phrases,INSULTING YOU is her right
+70,harmful_phrases,fake activists” who think a post makes her a matron saint.
+71,harmful_phrases,automatically stupid
+72,harmful_phrases,You are just dense
+73,harmful_phrases,your need to throw insults prohibits your comprehension. You must be a perpetrator of violence.
+74,harmful_phrases,snake gender.
+75,harmful_phrases,That gender can't do shit
+76,harmful_phrases,that gender is full of shit
+77,harmful_phrases,act stupid
+78,harmful_phrases,owa shisha
+79,harmful_phrases,Olinga emana
+80,harmful_phrases,Fake feminist
+81,harmful_phrases,ArrestAnitaAmong Now
+82,harmful_phrases,Most feminists are ugly at heart. Stone-cold hearts. Hypocrites!
+83,harmful_phrases,What satisfies that gender doesn’t exist
+84,harmful_phrases,who will marry these women who don’t respect their bodies?
+85,harmful_phrases,Obusiru kayonka buyonke
+86,harmful_phrases,high end whore with no accountability
+87,harmful_phrases,stupid feminist thag
+88,harmful_phrases,feminists who wish even death to men
+89,harmful_phrases,non virgins/ fat women u call thick
+90,harmful_phrases,you got what you wanted. The death of romance.
+91,harmful_phrases,look at some people and feel like vomiting
+92,harmful_phrases,female gender we no longer give respect to ourselves
+93,harmful_phrases,That gender just holds expensive phones
+94,harmful_phrases,but they completely can't use them. The only thing they use them for is to take nudes and post food
+95,harmful_phrases,Meg is a street rat. Hoes will always be hoes
+96,harmful_phrases,the man gender will win. Chose to submit
+97,harmful_phrases,we get a good wife
+98,harmful_phrases,chose to become a hoe
+99,harmful_phrases,we get free p**sy
+100,harmful_phrases,entitled whore feminist
+101,harmful_phrases,Rich miserable influencers posing as feminists
+102,harmful_phrases,This is sheer nonsense
+103,harmful_phrases,kadaga is a witch n wanted to bewitch even AAA
+104,harmful_phrases,all women becoming prostitutes entitled and feminist
+105,harmful_phrases,old people don't know when to shut up until they are humiliated
+106,harmful_phrases,You idiot
+107,harmful_phrases,gender nonsense
+108,harmful_phrases,repeatedly attacke
+109,harmful_phrases,cheating and physical abuse
+110,harmful_phrases,The main issue she is corrupt
+111,harmful_phrases,killer and think of any bad u know.
+112,harmful_phrases,Sometimes snakes require different sticks and tactics to kill.
+113,harmful_phrases,snakes require different sticks and tactics to kill
+114,harmful_phrases,Look at this hell of a knob!
+115,harmful_phrases,slut shaming
+116,harmful_phrases,FAKE EDUCATION PAPERS
+117,harmful_phrases,SHUT UP - TO SILENCE HER
+118,harmful_phrases,stupid people would get knowledgeable
+119,harmful_phrases,The idiot
+120,harmful_phrases,whore who needs attention
+121,harmful_phrases,Now you have exposed AAA but why don't you talk of others ...the very people who come from your area having a long nose like yours
+122,harmful_phrases,Shut up
+123,harmful_phrases,Why can’t some women take a good look in the mirror and see they caused this problem themselves? Why do they always blame men?
+124,harmful_phrases,When it comes to the rhetoric of wanting to kill the opposite gender as a whole
+125,harmful_phrases,who posts about it more?
+126,harmful_phrases,learn to shut up
+127,harmful_phrases,pushed like a rat
+128,harmful_phrases,need a lot of guidance how to shut up
+129,harmful_phrases,Anita Among should be subjected to mob justice
+130,harmful_phrases,She diverted most of the media budget to the same TV station now airing her political funeral LIVE.
+131,harmful_phrases,can't even define what a woman is
+132,harmful_phrases,pushing for men masquerading as women to be in women spaces.
+133,harmful_phrases,fighting for abortion rights
+134,harmful_phrases,pushing for men masquerading as women to be in women spaces
+135,harmful_phrases,She just sounds paid
+136,harmful_phrases,The girl is just a lunatic.
+137,harmful_phrases,she is corrupt
+138,harmful_phrases,killer and think of any bad u know
+139,harmful_phrases,UN_Women It's mind boggling that an org that supposedly fights for women's rights can't even define what a woman is. The same org is pushing for men masquerading as women to be in women spaces.. Fighting for abortion rights
+140,harmful_phrases,bogus institution
+141,harmful_phrases,feminists are merely rabid
+142,harmful_phrases,they think the world revolves around their feelings
+143,harmful_phrases,Fuck her ass.
+144,harmful_phrases,Radical misandrist. Feminists are just too soft
+145,harmful_phrases,Women can lead nothing. Women have no ability to fight for any cause. They only fight for themselves.
+146,harmful_phrases,A bitch....a fukin bitch
+147,harmful_phrases,you're becoming a nuisance!
+148,harmful_phrases,Fuck your rainbow fascism
+149,harmful_phrases,Who told you @AAgather that stupid people would get knowledgeable even when they are taken to the best schools
+150,harmful_phrases,stupid people
+151,harmful_phrases,Trans ideology is a pedophile's dream
+152,harmful_phrases,Fuck your rainbow fascism!
+153,harmful_phrases,Twaala kuri ebyiino.
+154,harmful_phrases,Sheeebah won't heal from think she is a feminist at she likes dick
+155,harmful_phrases,armed people
+156,harmful_phrases,Tonight is the second time armed people are trailing me.
+157,harmful_phrases,Loose sense
+158,harmful_phrases,i bet you're over 30 and no body's son has proposed a life commitment with you!
+159,harmful_phrases,Fake feminists
+160,harmful_phrases,toxic misandrist feminists who are already in the database of TASO and suffering from past traumas
+161,harmful_phrases,Women being whores now when u look at this girl admit Ing she wants to chew
+162,harmful_phrases,mabaati thief
+163,harmful_phrases,"""Was lynched and set ablaze"""
+164,harmful_phrases,"""respect their bodies"""
+165,harmful_phrases,toxic single mothers
+166,harmful_phrases,shit gavment
+167,harmful_phrases,Radical feminists
+168,harmful_phrases,broke woman
+169,harmful_phrases,Not applicable
+170,harmful_phrases,"""weird ka voice"""
+171,harmful_phrases,HUSBAND SNATCHER
+172,harmful_phrases,is there any manipulation in the content such as the use of generative ai or other techniques
+173,harmful_phrases,"is there any manipulation in the content such as thWhat's not normal are these inbred retards that call activists ""corned beef"" cause thate use of generative ai or other techniques"
+174,harmful_phrases,stupid as fuck
+175,harmful_phrases,stupid fat
+176,harmful_phrases,radical feminist
+177,harmful_phrases,"""fake feminist"""
+178,harmful_phrases,toxic delusional feminist
+179,harmful_phrases,FAKE FEMINIST and HUSBAND SNATCHER
+180,harmful_phrases,you’re a sick man a devil
+181,harmful_phrases,? So let her shut up. She started it
+182,harmful_phrases,let her enjoy the options we have for her.
+183,harmful_phrases,STUPID chickens
+184,harmful_phrases,Don't be stupid
+185,harmful_phrases,she was abducted period ! Wabula herdsmen brains kika
+186,harmful_phrases,young malaya
+187,harmful_phrases,If an idiot can cum inside you what does that make youAren't you more of an idiot than him?
+188,harmful_phrases,e fact that you opened your legs for the broke idiot
+189,harmful_phrases,means you're an idiot too and broke as well
+190,harmful_phrases,onka Empunzi ne cow dung mentality!!!
+191,harmful_phrases,You are useless cowards
+192,harmful_phrases,Olowoza gwo gamba ategela wali a ku yitawo emyaka nga 30 and she will be 50 and used like the American feminists she is copying then she will buy a trained dog to fuck her till she dies
+193,harmful_phrases,That's why generally women are to be led. A society dominated by them is a dead one.
+194,harmful_phrases,stupid woman
+195,harmful_phrases,"""smelly coochie"""
+196,harmful_phrases,ugly bitch
+197,harmful_phrases,"""ugly b¡tches"""
+198,harmful_phrases,"""crazy bitch"""
+199,harmful_phrases,muhaya (malaya)
+200,harmful_phrases,"""Ugly girls"""
+201,harmful_phrases,toxic feminists
+202,harmful_phrases,"""Small Penis"""
+203,harmful_phrases,You hate strong young boys
+204,harmful_phrases,fake eyebrows
+205,harmful_phrases,useful idiot
+206,harmful_phrases,"""bleached woman"""
+207,harmful_phrases,agent of imperialists
+208,harmful_phrases,you are like bandits
+209,harmful_phrases,sewer rat
+210,harmful_phrases,soon wiping his ass
+211,harmful_phrases,parasite amongst lumpens
+212,harmful_phrases,"""cow mentality"""
+213,harmful_phrases,fuck yourselves and piss on your graves
+214,harmful_phrases,toxic femnists
+215,harmful_phrases,women of today lack morals

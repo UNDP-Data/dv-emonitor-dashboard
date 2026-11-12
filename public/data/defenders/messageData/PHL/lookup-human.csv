@@ -1,0 +1,231 @@
+id,column,name
+1,core_event,Leni Robredo praising Marcos housing effort
+2,core_event,Tacloban shooting Gore Box
+3,core_event,Sara Duterte impeachment trial
+4,core_event,School shooting
+5,core_event,Drowning of Ateneo Basketball Players
+6,core_event,Alex Eala Tennis
+7,core_event,Fight in a Jeepney
+8,core_event,Sara Duterte speech
+9,core_event,jeepney fight
+10,core_event,Claire Castro Press briefing
+11,core_event,House prosecution team press conference
+12,core_event,resigned Ateneo men’s basketball coach Tab Baldwin
+13,core_event,Chief Justice Corona impeachment
+14,core_event,Ateneo Basketball player death
+15,core_event,Cancellation of Senate after arrest of Sen Estrada
+16,core_event,Senate
+17,core_event,Robin Padilla saying Dela Rosa should serve senate via online session
+18,core_event,Kiko Pangilitan visit Albay Farmers
+19,core_event,Marcoleta Questioning Sen. Risa Hontiveros's expertise
+20,core_event,Risa Hontiveros use of index cards
+21,core_event,Bato dela Rosa ICC warrant
+22,core_event,Senate & Bato controversy
+23,core_event,Risa Hontiveros interview on ToniTalks
+24,core_event,Toboso 19 Massacre
+25,core_event,Winnie Monsod Protest
+26,core_event,Pia Cayetano breakdown in Senate
+27,core_event,Kara David Birthday
+28,core_event,Pia Cayetano breakdown
+29,core_event,Military Kills 19
+30,core_event,Death of UP Cebu Alumnus
+31,core_event,Death of Alyssa Alano
+32,core_event,Coachella
+33,core_event,Leila de Lima
+34,core_event,Duterte ICC pre-trial proceedings
+35,core_event,2025 flood control corruption scandal
+36,core_event,May 2025 Midterm Elections
+37,core_event,Gabriela Women’s Party Rep. Sarah Elago being assigned as assistant minority leader
+38,core_event,sen. escudero stepping down as senate president
+39,core_event,Drug war era
+40,core_event,Mob rule
+41,core_event,Harassment and threats against Mangyan-Iraya indigenous community by Pieceland Corporation
+42,core_event,2025 Senatorial Elections
+43,core_event,Duterte in the ICC
+44,core_event,Duterte hearing ICC postponed
+45,core_event,Gabriela among greenest partylists
+46,core_event,"De Lima files bill vs confidential fund abuse, red-tagging"
+47,core_event,2022 election
+48,core_event,"2020_1124 - Hearings of Committee on National Defense and Security, Peace, Unification and Reconciliation"
+49,core_event,Historic people power ousting of Marcos
+50,core_event,Protests in Indonesia in 2024
+1,harmful_keyword,NPA
+2,harmful_keyword,salot
+3,harmful_keyword,pinkshit
+4,harmful_keyword,Puta
+5,harmful_keyword,TANGA
+6,harmful_keyword,kumunista
+7,harmful_keyword,pokpok
+8,harmful_keyword,cornbeef
+9,harmful_keyword,8080
+10,harmful_keyword,putanginamo
+11,harmful_keyword,boang
+12,harmful_keyword,hayup
+13,harmful_keyword,ADIK
+14,harmful_keyword,CHEATER
+15,harmful_keyword,GAGO
+16,harmful_keyword,Mamatay
+17,harmful_keyword,bobo
+18,harmful_keyword,terorista
+19,harmful_keyword,umay
+20,harmful_keyword,pawoke
+21,harmful_keyword,palpak
+22,harmful_keyword,dds
+23,harmful_keyword,Doxing
+24,harmful_keyword,Palamunin
+25,harmful_keyword,tangina
+26,harmful_keyword,Delibog
+27,harmful_keyword,bitch
+28,harmful_keyword,die
+29,harmful_keyword,whore
+30,harmful_keyword,Gaga
+31,harmful_keyword,GA_O
+32,harmful_keyword,"""prostitute"""
+33,harmful_keyword,burn
+34,harmful_keyword,witch
+35,harmful_keyword,prostitute
+36,harmful_keyword,CPP
+37,harmful_keyword,NDF
+38,harmful_keyword,ddshits
+39,harmful_keyword,kabet
+40,harmful_keyword,KORNBIP
+41,harmful_keyword,KOMUNISTA
+42,harmful_keyword,alpot
+43,harmful_keyword,Saba
+44,harmful_keyword,vVvamax
+45,harmful_keyword,CORNBEEP
+46,harmful_keyword,communist
+47,harmful_keyword,Cornstar
+48,harmful_keyword,Hoes
+49,harmful_keyword,Cults
+50,harmful_keyword,“incest
+51,harmful_keyword,losyang
+52,harmful_keyword,drama
+53,harmful_keyword,undefined
+54,harmful_keyword,(n/a)
+55,harmful_keyword,retarded
+56,harmful_keyword,jugjugera
+57,harmful_keyword,malandi
+58,harmful_keyword,gurang
+59,harmful_keyword,malibog
+60,harmful_keyword,Unclear
+61,harmful_keyword,kabit
+62,harmful_keyword,kulong
+63,harmful_keyword,pakantot
+64,harmful_keyword,baboy
+65,harmful_keyword,manyak
+66,harmful_keyword,landi
+67,harmful_keyword,maharot
+68,harmful_keyword,burat
+69,harmful_keyword,disgusting
+70,harmful_keyword,nobody
+71,harmful_keyword,lutang
+72,harmful_keyword,kidnapper
+73,harmful_keyword,ulol
+74,harmful_keyword,unggoy
+75,harmful_keyword,kamote
+76,harmful_keyword,boba
+77,harmful_keyword,inutil
+78,harmful_keyword,putanginang
+79,harmful_keyword,impakta
+80,harmful_keyword,tite
+81,harmful_keyword,kakampuke
+82,harmful_keyword,kadiri
+83,harmful_keyword,"""Boba"""
+84,harmful_keyword,hipokritong
+85,harmful_keyword,Palengkera
+86,harmful_keyword,Hinayupak
+87,harmful_keyword,Hayop
+88,harmful_keyword,Risatanas
+89,harmful_keyword,druglord
+90,harmful_keyword,Delimaw
+91,harmful_keyword,Delimawmaw
+92,harmful_keyword,nakakadiri
+93,harmful_keyword,Madumb
+94,harmful_keyword,Caregiver
+95,harmful_keyword,Ipis
+96,harmful_keyword,tonta
+1,harmful_phrases,corned beef
+2,harmful_phrases,Laspagin kang ulol ka pokpok
+3,harmful_phrases,pokpok hontiveros!
+4,harmful_phrases,Walang puta at pokpok na virgin pa
+5,harmful_phrases,Tangina mo
+6,harmful_phrases,parehas kayong POKPOK
+7,harmful_phrases,putang itang salot
+8,harmful_phrases,rot in hell
+9,harmful_phrases,Political Prostitute
+10,harmful_phrases,political whore
+11,harmful_phrases,kabobohan; kabadingan
+12,harmful_phrases,Madam NPA
+13,harmful_phrases,Inday Insertions
+14,harmful_phrases,NPA; lowly
+15,harmful_phrases,Bobo ka inutil
+16,harmful_phrases,buhay kapa sunog na kaluluwa mo sa impyero. INUTIL
+17,harmful_phrases,drug queen
+18,harmful_phrases,dodo commie
+19,harmful_phrases,delulu Vivamax
+20,harmful_phrases,"""Chinese loving ass"". ""lapdog of China"""
+21,harmful_phrases,” “abnormal
+22,harmful_phrases,” “nepotism”
+23,harmful_phrases,"""fucking cultist Moron"""
+24,harmful_phrases,communist NPA insurgent
+25,harmful_phrases,Queen of Insertions
+26,harmful_phrases,deritso inidoro
+27,harmful_phrases,putang ina
+28,harmful_phrases,drug lord
+29,harmful_phrases,madam libog
+30,harmful_phrases,saba queen
+31,harmful_phrases,"""drug lord queen"""
+32,harmful_phrases,mukhang tite
+33,harmful_phrases,manyak; delibog; demonya
+34,harmful_phrases,pokpok; kabit
+35,harmful_phrases,CPP NPA
+36,harmful_phrases,manay kepyas
+37,harmful_phrases,mongoloid; tarantado
+38,harmful_phrases,malanding matandang gurang
+39,harmful_phrases,teroristang komunista
+40,harmful_phrases,not applicable
+41,harmful_phrases,CPP NPA terrorist front
+42,harmful_phrases,poong santang lutang ina
+43,harmful_phrases,"""impaktang salot"""
+44,harmful_phrases,malignong impakta
+45,harmful_phrases,Poong Santa Lutang Ina
+46,harmful_phrases,ambisyosang virus; poong santa lutang ina
+47,harmful_phrases,Ambisyosang virus
+48,harmful_phrases,gurang; makunat ang kepay
+49,harmful_phrases,"""putanginang salot"""
+50,harmful_phrases,"""impaktang political wh0re"""
+51,harmful_phrases,INAM0KANG B0B0KA
+52,harmful_phrases,delusional; putangina
+53,harmful_phrases,baklang salot
+54,harmful_phrases,Kween Kurakot
+55,harmful_phrases,drug queen; haliparot; baboy
+56,harmful_phrases,Not provided
+57,harmful_phrases,CPP NPA; conduit; recruit; pest
+58,harmful_phrases,narco-terrorist defender
+59,harmful_phrases,NPA; rebelde
+60,harmful_phrases,dumb; kulot na tabachoy
+61,harmful_phrases,npa recruiter
+62,harmful_phrases,Putang Inang babae
+63,harmful_phrases,NPA; kriminal
+64,harmful_phrases,Ikulong; kidnapper
+65,harmful_phrases,NPA; Risatanas
+66,harmful_phrases,Sunogin; Risatanas
+67,harmful_phrases,NPA; Abogaga
+68,harmful_phrases,Chaka; balik selda
+69,harmful_phrases,walang credibility
+70,harmful_phrases,bading; komunista
+71,harmful_phrases,tandang saba
+72,harmful_phrases,mamatay; hayop; NPA; gorang
+73,harmful_phrases,kriminal; convicted child abuser
+74,harmful_phrases,CONVICTED CRIMINAL/NPA operative
+75,harmful_phrases,Bitayin; hibang; kidnapper
+76,harmful_phrases,putangina. gaga. mamundok
+77,harmful_phrases,"hina-harass; tinututukan ng baril; ""nakulong"""
+78,harmful_phrases,political pokpok; alleged Lumad children kidnapper
+79,harmful_phrases,pesteng; leche; paawa;
+80,harmful_phrases,Harassed; clout
+81,harmful_phrases,NPA advocacy; ginagahasa
+82,harmful_phrases,terrorista; redtagging; panget
+83,harmful_phrases,CPP-NPA-NDF; harass the government officials; deceitful tricks; mahiya nmn kayo; Putang ina mo ka; mamamatay tao; gago ka; Nangingikil
+84,harmful_phrases,nanununog; Mamatay sana kayo

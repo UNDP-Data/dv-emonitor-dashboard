@@ -47,7 +47,9 @@ export async function getCountryData(countryCode: string, analysisType: 'human' 
         topic: item.topic !== undefined && item.topic !== null ? TOPIC[item.topic] : undefined,
         target_gender:
           item.target_gender !== undefined && item.target_gender !== null
-            ? GENDER[item.target_gender]
+            ? item.target_gender === 4
+              ? 'N/A'
+              : GENDER[item.target_gender]
             : undefined,
         incitement_techniques:
           item.incitement_techniques !== undefined && item.incitement_techniques !== null

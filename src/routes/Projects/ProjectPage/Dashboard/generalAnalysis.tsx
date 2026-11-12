@@ -5,7 +5,7 @@ import { numberFormattingFunction } from '@undp/data-viz/utils';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { StatCardDescription } from '@undp/design-system-react/StatCard';
-import { H5, H6 } from '@undp/design-system-react/Typography';
+import { H5, H6, P } from '@undp/design-system-react/Typography';
 import { useMemo } from 'react';
 import { NO_OF_FOLLOWERS, SENTIMENT, TOPIC } from '@/constants';
 import {
@@ -38,12 +38,12 @@ export function GeneralAnalysisDashboard() {
       (item) =>
         (!fromDate || item.date >= fromDate) &&
         (!toDate || item.date <= toDate) &&
-        (!containsHateSpeech || item.is_hate_speech) &&
+        (!containsHateSpeech || item.is_hate_speech || analysisType === 'human') &&
         (!isTFGBV || item.is_tfgbv) &&
         (!filterByAffiliation ||
           (item.target_affiliation !== undefined && affiliationSet.has(item.target_affiliation))),
     );
-  }, [data, fromDate, toDate, containsHateSpeech, isTFGBV, selectedAffiliation]);
+  }, [data, fromDate, toDate, containsHateSpeech, isTFGBV, selectedAffiliation, analysisType]);
 
   if (isError) {
     return <div className='flex h-120 items-center justify-center'>Error loading data</div>;
@@ -77,9 +77,15 @@ export function GeneralAnalysisDashboard() {
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <H5 weight='bold' marginBottom='xs'>
-                  {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
-                </H5>
+                {analysisType === 'ai' ? (
+                  <H5 weight='bold' marginBottom='xs'>
+                    {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
+                  </H5>
+                ) : (
+                  <P className='text-content-secondary' size='base' marginBottom='xs'>
+                    Not available for human verified data
+                  </P>
+                )}
                 <StatCardDescription className='mb-0!'>
                   Posts contain hate speech
                 </StatCardDescription>
@@ -127,21 +133,38 @@ export function GeneralAnalysisDashboard() {
           }}
         >
           <GridItem noOfColSpan={1}>
-            <div className='h-auto md:h-120'>
-              <DonutChart
-                data={NO_OF_FOLLOWERS.map((d) => {
-                  return {
-                    label: d,
-                    size: filteredData.filter((f) => f?.no_of_followers === d).length,
-                  };
-                })}
-                backgroundColor='var(--background)'
-                graphTitle='Virality potential of authors'
-                animate={false}
-                strokeWidth={50}
-                colors={['#F4EEE7', '#E2BC3B', '#776992', '#006EB5']}
-              />
-            </div>
+            {analysisType === 'human' ? (
+              <div className='h-auto bg-background p-4 md:h-120'>
+                <P size='xl' marginBottom='xl'>
+                  Virality potential of authors
+                </P>
+                <div className='flex h-full w-full items-center justify-center'>
+                  <P
+                    className='w-full grow text-center text-content-secondary'
+                    size='base'
+                    marginBottom='xs'
+                  >
+                    Not available for human verified data
+                  </P>
+                </div>
+              </div>
+            ) : (
+              <div className='h-auto md:h-120'>
+                <DonutChart
+                  data={NO_OF_FOLLOWERS.map((d) => {
+                    return {
+                      label: d,
+                      size: filteredData.filter((f) => f?.no_of_followers === d).length,
+                    };
+                  })}
+                  backgroundColor='var(--background)'
+                  graphTitle='Virality potential of authors'
+                  animate={false}
+                  strokeWidth={50}
+                  colors={['#F4EEE7', '#E2BC3B', '#776992', '#006EB5']}
+                />
+              </div>
+            )}
           </GridItem>
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
@@ -247,7 +270,8 @@ export function GeneralAnalysisDashboard() {
                 data={TOPIC.map((d) => {
                   return {
                     label: d,
-                    size: filteredData.filter((f) => f.topic === d).length,
+                    size: filteredData.filter((f) => f.topic === d || f.topic?.includes(`${d}`))
+                      .length,
                   };
                 })}
                 backgroundColor='var(--background)'

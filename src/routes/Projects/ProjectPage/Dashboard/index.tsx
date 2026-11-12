@@ -93,8 +93,8 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
                     items: 'grow',
                   }}
                   options={[
-                    { value: 'human', label: 'Human-validated' },
                     { value: 'ai', label: 'AI-assisted' },
+                    { value: 'human', label: 'Human-validated' },
                   ]}
                   onValueChange={(val) => setAnalysisType(val as 'human' | 'ai')}
                   value={analysisType}
@@ -119,11 +119,12 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
               </div>
               <div className='flex w-full items-center justify-between'>
                 <P size='sm' marginBottom='none'>
-                  Contains hate speech
+                  Contains hate speech (only applicable for AI)
                 </P>
                 <Switch
                   size='small'
                   checked={containsHateSpeech}
+                  disabled={analysisType === 'human'}
                   onCheckedChange={(checked) => setContainsHateSpeech(checked)}
                 />
               </div>

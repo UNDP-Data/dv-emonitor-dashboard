@@ -1,0 +1,91 @@
+id,column,name
+1,core_event,Penyiraman air keras terhadap aktivis
+2,core_event,Teror Greenpeace
+3,core_event,Penangkapan Aktivis Lingkungan
+4,core_event,Kerusuhan Halmahera
+5,core_event,Banjir Sumatera
+6,core_event,Pengeroyokan WEHRD
+7,core_event,Pestapora
+8,core_event,Kriminalisasi Aktivis Lingkungan di Halmahera
+9,core_event,Kriminalisasi Aktivis Lingkungan di Maluku Utara
+10,core_event,Penangkapan Aktivis
+11,core_event,freeport di pestapora
+12,core_event,Demo DPR
+13,core_event,Tesso Nilo
+14,core_event,Tambang Nikel Papua
+15,core_event,Ormas dan Tambang
+16,core_event,Tambang Pulau Gebe
+17,core_event,Criminalization of environmental activists
+18,core_event,Kekerasan terhadap aktivis
+19,core_event,Salim Kancil
+20,core_event,Demonstrasi di Indonesia
+21,core_event,Penculikan aktivis
+22,core_event,Aksi Kamisan
+23,core_event,Tambang Kaltim
+24,core_event,Penggantian menkopolhukam
+25,core_event,Aktivis NTT ditemukan meninggal
+26,core_event,BBM Papua
+27,core_event,Sponsor Freeport di Pestapora
+28,core_event,Bela tanah adat (Land rights related incident)
+29,core_event,Penculikan aktivis yang menuju Palestina
+30,core_event,Tambang dikelola Koperasi
+31,core_event,organisasi agama dan ijin tambang
+32,core_event,#SaveTessoNilo
+33,core_event,Tambang Freeport
+34,core_event,Greta Thunberg's arrest in Gaza
+35,core_event,Papua
+36,core_event,Protesting in Manokwari
+1,harmful_keyword,sampah
+2,harmful_keyword,Lonte
+3,harmful_keyword,"""zionist"""
+4,harmful_keyword,egois
+5,harmful_keyword,Pengecut
+6,harmful_keyword,penjilat
+7,harmful_keyword,kotor
+8,harmful_keyword,menjijikan
+9,harmful_keyword,tolol
+10,harmful_keyword,tai
+11,harmful_keyword,durjana
+12,harmful_keyword,diserang
+13,harmful_keyword,bejat
+14,harmful_keyword,hipokrit
+15,harmful_keyword,#wahabilingkungan
+16,harmful_keyword,#wokeism
+17,harmful_keyword,kontol
+18,harmful_keyword,PERUSUH
+19,harmful_keyword,Wahabi
+20,harmful_keyword,Unclear
+21,harmful_keyword,tolouol
+22,harmful_keyword,makar
+23,harmful_keyword,(n/a)
+24,harmful_keyword,ngentod
+25,harmful_keyword,kntl
+26,harmful_keyword,coli
+27,harmful_keyword,boti
+28,harmful_keyword,Teroris
+29,harmful_keyword,kadrun
+30,harmful_keyword,radikal
+31,harmful_keyword,terorist
+32,harmful_keyword,death
+1,harmful_phrases,Nyari panggung
+2,harmful_phrases,"""filthy zionist"""
+3,harmful_phrases,"""02 voters"""
+4,harmful_phrases,Kumpul kebo
+5,harmful_phrases,Penyebab hancurnya negara
+6,harmful_phrases,Muka bajingan
+7,harmful_phrases,nenek gayung
+8,harmful_phrases,Tai kucing
+9,harmful_phrases,tai babi
+10,harmful_phrases,Mending makan tai
+11,harmful_phrases,agen asing
+12,harmful_phrases,alarmisme global
+13,harmful_phrases,sok edgy
+14,harmful_phrases,kek kontol
+15,harmful_phrases,"""antek asing"" (foreign agents)"
+16,harmful_phrases,Not applicable
+17,harmful_phrases,masih punya otak?
+18,harmful_phrases,pler 1
+19,harmful_phrases,ditunggangi asing
+20,harmful_phrases,"""unnecessary equality"""
+21,harmful_phrases,"""feminism shit"""
+22,harmful_phrases,Culas; Provokator

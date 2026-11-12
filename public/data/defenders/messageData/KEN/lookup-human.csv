@@ -1,0 +1,816 @@
+id,column,name
+1,core_event,Cape Verde's friendly against Chile in March 2025
+2,core_event,Deportation of Martha Karua from Uganda
+3,core_event,Assault against a woman
+4,core_event,Anti-femicide protests in Nairobi
+5,core_event,Utumishi School Fire tragedy
+6,core_event,Setting up of Ebola Quarantine Facility
+7,core_event,Ebola Quarantine Facility
+8,core_event,Killing of Abigael Nafula
+9,core_event,Killing of Sonnie (a student)
+10,core_event,Seeting up of Ebola quarantine facility
+11,core_event,Attack on Maureen Matsili
+12,core_event,National Women Prayer Convention
+13,core_event,2026 National Prayer Breakfast Women Convocation
+14,core_event,Fire Tragedy at Utumishi Girls
+15,core_event,Disappearance and Abduction of Children in Kenya
+16,core_event,Victims Compensation Panel controversy
+17,core_event,Women Protesting Against Femicide cases in Kenya
+18,core_event,Kisumu 1979
+19,core_event,Political dynamics surrounding women in parliament and recent statements made by James Orengo
+20,core_event,Women ProtestAgaints Femicide
+21,core_event,Fuel Protests
+22,core_event,Attack on Women Chiefs in Kilimani
+23,core_event,Attack on Muthoni Wandeto
+24,core_event,Femicide and GBV crisis in Kenya
+25,core_event,Killine of Alice Riang'a
+26,core_event,Killing of Alice Riang'a
+27,core_event,Alice Riang’a murder
+28,core_event,Stabbing at funeral vigil
+29,core_event,Lorine Okore Killing
+30,core_event,Killing of Mercy Wanjiru Kimani
+31,core_event,Rescuing a 14 year old from early Marriage
+32,core_event,Killing of a Domestic Worker in Kasarani
+33,core_event,Killing of Krystabel Anyango
+34,core_event,Alice Rianga's missing and murder
+35,core_event,Kalasha Awards
+36,core_event,abortion protests
+37,core_event,Death of Dr Job Obwaka
+38,core_event,Francis Awino’s case
+39,core_event,Fuel Hike Protests
+40,core_event,Kenya abortion ruling
+41,core_event,demonstrations
+42,core_event,Killing of Connie Githinji
+43,core_event,Scandal involving older women and a foreigner
+44,core_event,Kileleshwa Airbnb killing
+45,core_event,Tribal Conflict in Kitui
+46,core_event,Kilifi Tribal Conflict
+47,core_event,Gloria Orwoba tryimg to access The Senate
+48,core_event,the killing of two residents during a protest for better hospital conditions
+49,core_event,Homicide of Serah Mugweru's daughter
+50,core_event,protest against Governor Sicily Mbarire's decree and hospital conditions
+51,core_event,Killing of Ann Mugweru
+52,core_event,Killing of a Woman In Nakuru
+53,core_event,Femicide cases
+54,core_event,Increase in fuel prices
+55,core_event,Attack on Vihiga Senator
+56,core_event,Attack on Activits Francis Awino
+57,core_event,compensation panel discussions
+58,core_event,Demolition of Gikomba Market
+59,core_event,ODM NDC
+60,core_event,HRD Awards
+61,core_event,Abducation of Doctor Job Obwaka
+62,core_event,Moi's plan to grab Uhuru park and the related protests against it
+63,core_event,2007 PEV
+64,core_event,Destruction of trees in Karura
+65,core_event,Political Rally in Kakamega County
+66,core_event,Flooding in Nairobi
+67,core_event,Marion Naipei and Opande
+68,core_event,2007 post election violence
+69,core_event,President Ruto's visit to Alliance High Scchool
+70,core_event,xxxxxxx
+71,core_event,Femicide March - December 2024
+72,core_event,Femicide March - January 2024
+73,core_event,Truphena Muthoni's Tree Hugging World Record
+74,core_event,Protests
+75,core_event,Heckling and booing of Mama Ida Odinga in Meru County
+76,core_event,Miguna Miguna's comments on Passaris
+77,core_event,Launch of report by the Technical Working Group on Gender-Based Violence
+78,core_event,Ida Betty Odinga nominated as Kenya’s Ambassador and Permanent Representative to UNEP
+79,core_event,Kenya's presidential performance and political discourse regarding Ruto
+80,core_event,Tree Hugging Campaign
+81,core_event,Tree Hugging Challenge
+82,core_event,Impeachment of Deputy President
+83,core_event,Tanzania Elections
+84,core_event,Government's engagement of private counsel
+85,core_event,Abductions in Othaya
+86,core_event,"Finland scholarship scam, 2024 Gen Z revolution"
+87,core_event,Boniface mwangi being held hostage in Tanzania
+88,core_event,Finance Bill 2025
+89,core_event,Tanzania Election
+90,core_event,TZ maandamono
+91,core_event,undefined
+92,core_event,Free Muli
+93,core_event,Speed coming to Kenya
+94,core_event,Recall attempt of a political figure
+95,core_event,Cyber Crime Law
+96,core_event,Free Palestine demonstration
+97,core_event,Baada Ya Maandamano
+98,core_event,#GBV
+99,core_event,Robert Alai brawl with Babu Owino
+100,core_event,Maandamano
+101,core_event,Gen Z protests
+102,core_event,Faith Odhiambo’s Appointment to Gen Z Protest Victims Compensation Panel
+103,core_event,appointment of members to victim compensation taskfore
+104,core_event,Appointment to victim compensation taskfore
+105,core_event,Gen Z Protest
+1,harmful_keyword,matako
+2,harmful_keyword,Kuma
+3,harmful_keyword,yapping
+4,harmful_keyword,bitch
+5,harmful_keyword,anarchists
+6,harmful_keyword,whore
+7,harmful_keyword,looser
+8,harmful_keyword,whores
+9,harmful_keyword,kinywero
+10,harmful_keyword,dumb
+11,harmful_keyword,"""prostitute"""
+12,harmful_keyword,Unclear
+13,harmful_keyword,hoe
+14,harmful_keyword,mjulus
+15,harmful_keyword,malaya
+16,harmful_keyword,undefined
+17,harmful_keyword,toxic
+18,harmful_keyword,grovelling
+19,harmful_keyword,whimper
+20,harmful_keyword,Umbwa
+21,harmful_keyword,Maumbwa
+22,harmful_keyword,Shameless
+23,harmful_keyword,losers.
+24,harmful_keyword,umalaya
+25,harmful_keyword,(N/A)
+26,harmful_keyword,"""twat"""
+27,harmful_keyword,"""feilya"""
+28,harmful_keyword,brainless
+29,harmful_keyword,Kinembe
+30,harmful_keyword,mbwa
+31,harmful_keyword,devils
+32,harmful_keyword,tombwa
+33,harmful_keyword,prostitute
+34,harmful_keyword,milaya
+35,harmful_keyword,nitakudinya
+36,harmful_keyword,Fuck
+37,harmful_keyword,retard
+38,harmful_keyword,Mbwaaa
+39,harmful_keyword,menopause
+40,harmful_keyword,pussy
+41,harmful_keyword,haicwo
+42,harmful_keyword,ass
+43,harmful_keyword,imbecile
+44,harmful_keyword,"""stupid"""
+45,harmful_keyword,"""punani"""
+46,harmful_keyword,amechomwa
+47,harmful_keyword,incumming
+48,harmful_keyword,"""whoremana"""
+49,harmful_keyword,bitter
+50,harmful_keyword,confused
+51,harmful_keyword,shapeless
+52,harmful_keyword,"""whoring"""
+53,harmful_keyword,assnhole
+54,harmful_keyword,Ngwati
+55,harmful_keyword,uninformed
+56,harmful_keyword,misinformed
+57,harmful_keyword,prostitutes
+58,harmful_keyword,kumangwa
+59,harmful_keyword,Mumus
+60,harmful_keyword,Kundus
+61,harmful_keyword,Kinono
+62,harmful_keyword,Milayas
+63,harmful_keyword,nguii
+64,harmful_keyword,Failure
+65,harmful_keyword,idiots
+66,harmful_keyword,Orgasm
+67,harmful_keyword,anayap
+68,harmful_keyword,cumming
+69,harmful_keyword,barked
+70,harmful_keyword,saidong'i
+71,harmful_keyword,kumamamako
+72,harmful_keyword,pigs
+73,harmful_keyword,kibwenye
+74,harmful_keyword,poko
+75,harmful_keyword,mjinga
+76,harmful_keyword,bastard
+77,harmful_keyword,erection
+78,harmful_keyword,Mamfrumbanyaa
+79,harmful_keyword,matacore
+80,harmful_keyword,pussfied
+81,harmful_keyword,tako
+82,harmful_keyword,dimwit
+83,harmful_keyword,mboro
+84,harmful_keyword,njoti
+85,harmful_keyword,"""idiot"""
+86,harmful_keyword,"""ashawo"""
+87,harmful_keyword,bimbo
+88,harmful_keyword,mafrii-pupu
+89,harmful_keyword,Njwang'a
+90,harmful_keyword,"""blowjob"""
+91,harmful_keyword,stabbed
+92,harmful_keyword,Sulubwenye
+93,harmful_keyword,milayaahhh
+94,harmful_keyword,cum
+95,harmful_keyword,p*ssy
+96,harmful_keyword,mf
+97,harmful_keyword,buttocks
+98,harmful_keyword,imbeciles
+99,harmful_keyword,bitterness
+100,harmful_keyword,rape
+101,harmful_keyword,hoes
+102,harmful_keyword,none
+103,harmful_keyword,brat
+104,harmful_keyword,kirigu
+105,harmful_keyword,psycho
+106,harmful_keyword,stup1d
+107,harmful_keyword,f00l
+108,harmful_keyword,dogs
+109,harmful_keyword,majegi
+110,harmful_keyword,Mkundu
+111,harmful_keyword,ho*e
+112,harmful_keyword,msolobo
+113,harmful_keyword,punnanis
+114,harmful_keyword,N/a
+115,harmful_keyword,poison
+116,harmful_keyword,Mkizimwa
+117,harmful_keyword,bullshit
+118,harmful_keyword,stupid
+119,harmful_keyword,ngamia
+120,harmful_keyword,fatherlessness
+121,harmful_keyword,thots
+122,harmful_keyword,poor
+123,harmful_keyword,"""bitch"""
+124,harmful_keyword,cunts
+125,harmful_keyword,cvnts
+126,harmful_keyword,ufala
+127,harmful_keyword,whorias
+128,harmful_keyword,sluts
+129,harmful_keyword,hulimwa
+130,harmful_keyword,fuck*d
+131,harmful_keyword,maghazia
+132,harmful_keyword,adinywe
+133,harmful_keyword,mangumi
+134,harmful_keyword,clown
+135,harmful_keyword,Kudinywa
+136,harmful_keyword,mafruuuuumbanya
+137,harmful_keyword,mafurrrrrrmbanya
+138,harmful_keyword,mafrumbanya
+139,harmful_keyword,wanaku-rape
+140,harmful_keyword,Matiti
+141,harmful_keyword,Udinywe
+142,harmful_keyword,aki-rape
+143,harmful_keyword,raped
+144,harmful_keyword,kubakwa
+145,harmful_keyword,"""whore"""
+146,harmful_keyword,bitchy
+147,harmful_keyword,buttaks
+148,harmful_keyword,makagari
+149,harmful_keyword,mungiki
+150,harmful_keyword,kutombwa
+151,harmful_keyword,itina
+152,harmful_keyword,wiitanire
+153,harmful_keyword,Dick
+154,harmful_keyword,asipodinywa
+155,harmful_keyword,cooch
+156,harmful_keyword,horniness
+157,harmful_keyword,kutu
+158,harmful_keyword,ukitombwa
+159,harmful_keyword,ukatombwe
+160,harmful_keyword,kima
+161,harmful_keyword,gender-bending
+162,harmful_keyword,Kasusu
+163,harmful_keyword,pussyass
+164,harmful_keyword,"""N/A"""
+165,harmful_keyword,Sidechik
+166,harmful_keyword,humping
+167,harmful_keyword,Sablenya
+168,harmful_keyword,ametingiza
+169,harmful_keyword,martina
+170,harmful_keyword,puuscat
+171,harmful_keyword,matacores
+172,harmful_keyword,unfat
+173,harmful_keyword,hypocrite
+174,harmful_keyword,FAT
+175,harmful_keyword,hen-pecked
+176,harmful_keyword,umatako
+177,harmful_keyword,JOKE!
+178,harmful_keyword,Jezebel
+179,harmful_keyword,"""halfcasts"""
+180,harmful_keyword,Id!ots
+181,harmful_keyword,Sodom!sed
+182,harmful_keyword,madam
+183,harmful_keyword,shenz
+184,harmful_keyword,jockers
+185,harmful_keyword,clowns
+186,harmful_keyword,imbersals
+187,harmful_keyword,aholes
+188,harmful_keyword,bulshit
+189,harmful_keyword,Disgusting
+190,harmful_keyword,cowardly
+191,harmful_keyword,doleful
+192,harmful_keyword,Usherati
+193,harmful_keyword,nudes
+194,harmful_keyword,nude
+195,harmful_keyword,deport
+196,harmful_keyword,shenzi
+197,harmful_keyword,"""useless"""
+198,harmful_keyword,muhindi
+199,harmful_keyword,panty
+200,harmful_keyword,grip
+201,harmful_keyword,tujidinye
+202,harmful_keyword,kino
+203,harmful_keyword,USELESS
+204,harmful_keyword,cult
+205,harmful_keyword,harlots
+206,harmful_keyword,kipuzi
+207,harmful_keyword,quacks
+208,harmful_keyword,fucked
+209,harmful_keyword,alcohol-and-dick-obsessed
+210,harmful_keyword,umekulwa
+211,harmful_keyword,msolombo
+212,harmful_keyword,meffi
+213,harmful_keyword,sidechick
+214,harmful_keyword,homopesa
+215,harmful_keyword,Bimboo
+216,harmful_keyword,Bimbo's
+217,harmful_keyword,Harassment
+218,harmful_keyword,wanafinyiwa
+219,harmful_keyword,dodo
+220,harmful_keyword,kuchapwa
+221,harmful_keyword,bimbofication
+222,harmful_keyword,circumcise
+223,harmful_keyword,killer
+224,harmful_keyword,ngombe
+225,harmful_keyword,pudesh
+226,harmful_keyword,divorcees
+227,harmful_keyword,ulikamuliwa?
+228,harmful_keyword,dumbest
+229,harmful_keyword,rat
+230,harmful_keyword,cougar
+231,harmful_keyword,b!tch
+232,harmful_keyword,h**ker
+233,harmful_keyword,feiliya
+234,harmful_keyword,pathetic
+235,harmful_keyword,abhorrent
+236,harmful_keyword,traitor
+237,harmful_keyword,opportunist
+238,harmful_keyword,indignified
+239,harmful_keyword,harlot
+240,harmful_keyword,stinks
+241,harmful_keyword,terrorist
+242,harmful_keyword,"""rape"""
+243,harmful_keyword,mnadinyana
+244,harmful_keyword,Disgusts
+245,harmful_keyword,"""unfat"""
+246,harmful_keyword,"""sluts"""
+247,harmful_keyword,"""dimwit"""
+248,harmful_keyword,"""cow"""
+249,harmful_keyword,"""kitombezi"""
+250,harmful_keyword,"""ujinga"""
+251,harmful_keyword,"""tuwatambue"""
+252,harmful_keyword,"""strippers"""
+253,harmful_keyword,"""socialite"""
+254,harmful_keyword,"""bimbo"""
+255,harmful_keyword,"""demeaning"""
+256,harmful_keyword,"""hypocisy"""
+257,harmful_keyword,"""greed"""
+258,harmful_keyword,"""opportunism"""
+259,harmful_keyword,evil
+260,harmful_keyword,thuruari
+261,harmful_keyword,Shit
+262,harmful_keyword,Sexually
+263,harmful_keyword,nyanduas
+264,harmful_keyword,bedminton
+265,harmful_keyword,uabudiwe
+266,harmful_keyword,ghasia
+267,harmful_keyword,violent
+268,harmful_keyword,uncouth
+269,harmful_keyword,agongwe
+270,harmful_keyword,vile
+271,harmful_keyword,watafunwe
+272,harmful_keyword,monkeys
+273,harmful_keyword,kuni
+274,harmful_keyword,mchomwe
+275,harmful_keyword,disrespect
+276,harmful_keyword,"""mysogynistic"""
+277,harmful_keyword,"""divorcee"""
+278,harmful_keyword,"""pettiness"""
+279,harmful_keyword,"""bitterness"""
+280,harmful_keyword,milayaz
+281,harmful_keyword,Voodoo
+282,harmful_keyword,"""malicious"""
+283,harmful_keyword,"""losers"""
+284,harmful_keyword,ugly
+285,harmful_keyword,ritualist
+286,harmful_keyword,h0es
+287,harmful_keyword,“dimwits”
+288,harmful_keyword,machura
+289,harmful_keyword,githambutha
+290,harmful_keyword,hypocrisy
+291,harmful_keyword,wajinga
+292,harmful_keyword,wadinyane
+293,harmful_keyword,b1tch
+294,harmful_keyword,unadinya
+295,harmful_keyword,f*uck
+296,harmful_keyword,kumanina
+297,harmful_keyword,connish
+298,harmful_keyword,conwoman
+299,harmful_keyword,anti-intellectual
+300,harmful_keyword,garbage
+301,harmful_keyword,Manipulation
+302,harmful_keyword,cheap
+303,harmful_keyword,whorish
+304,harmful_keyword,sluttish
+305,harmful_keyword,Beaten
+306,harmful_keyword,uchi
+307,harmful_keyword,mjulubeng
+308,harmful_keyword,Hawafai
+309,harmful_keyword,TAKATAKA
+310,harmful_keyword,idiotic
+311,harmful_keyword,slut
+312,harmful_keyword,haingekalika
+313,harmful_keyword,Stereotyping
+314,harmful_keyword,gbv
+1,harmful_phrases,kupiga twa twa
+2,harmful_phrases,mad bitch
+3,harmful_phrases,commercial activists
+4,harmful_phrases,bitter feminist
+5,harmful_phrases,ukilamba kasongo
+6,harmful_phrases,fake politician
+7,harmful_phrases,"""state twerked"""
+8,harmful_phrases,breasts are dry
+9,harmful_phrases,"""grease her purse"""
+10,harmful_phrases,political bitch
+11,harmful_phrases,Making noise with emotions
+12,harmful_phrases,akili zilienda Kwa matiti
+13,harmful_phrases,matiti haina maziwa
+14,harmful_phrases,Fake disgusting commercial activist.
+15,harmful_phrases,hamnanga akili
+16,harmful_phrases,Paid activism
+17,harmful_phrases,fake activist career
+18,harmful_phrases,don't have the rage to guide our discourse
+19,harmful_phrases,menace in our society
+20,harmful_phrases,"""political wh*ring"""
+21,harmful_phrases,The crooked women have a string of abortions behind them and are mostly childless.
+22,harmful_phrases,shameless shemale
+23,harmful_phrases,defending nonsense
+24,harmful_phrases,fake commercial activist
+25,harmful_phrases,dirty menstruation
+26,harmful_phrases,ulikosa matako
+27,harmful_phrases,mbo ya sudi
+28,harmful_phrases,Fuck You
+29,harmful_phrases,Kissing ass
+30,harmful_phrases,Not applicable
+31,harmful_phrases,Nyesha pole pole
+32,harmful_phrases,kuteta kaa malaya
+33,harmful_phrases,feminist sympathizer
+34,harmful_phrases,cause anarchy
+35,harmful_phrases,"""the dumbest"
+36,harmful_phrases,"most brainless person"""
+37,harmful_phrases,periods imeanza
+38,harmful_phrases,Umbwa mwanamke
+39,harmful_phrases,mliuliwa kama mchwa...
+40,harmful_phrases,bitter bitch
+41,harmful_phrases,degenerate influencers
+42,harmful_phrases,"""toxic beauty"""
+43,harmful_phrases,obese buffoon
+44,harmful_phrases,Dumbest looking
+45,harmful_phrases,the Lady who can't cry
+46,harmful_phrases,wife of satan
+47,harmful_phrases,Endelea kunyesha
+48,harmful_phrases,stupid feminist
+49,harmful_phrases,tunapaka lube
+50,harmful_phrases,She’s loud
+51,harmful_phrases,with ridiculous takes
+52,harmful_phrases,food that faces the earth
+53,harmful_phrases,"""bigger lips than your brain"""
+54,harmful_phrases,igh end prostitutes
+55,harmful_phrases,bitch ass
+56,harmful_phrases,obese toad
+57,harmful_phrases,never be good wives
+58,harmful_phrases,period .
+59,harmful_phrases,talk a lot shit
+60,harmful_phrases,being a Feminist is using cocaine
+61,harmful_phrases,s- None
+62,harmful_phrases,Retired bops
+63,harmful_phrases,kudinywa dinywa
+64,harmful_phrases,punguza umalaya
+65,harmful_phrases,yapping like a mongoose
+66,harmful_phrases,"""Stupid women"""
+67,harmful_phrases,matako na mapaja
+68,harmful_phrases,rugged ass
+69,harmful_phrases,taught serious greetings
+70,harmful_phrases,"""beauty without brains"""
+71,harmful_phrases,brainless bimbo
+72,harmful_phrases,salivating on other people's husbands
+73,harmful_phrases,"""opening legs"""
+74,harmful_phrases,shaking buttocks
+75,harmful_phrases,anagawa bwaa zawenyewe
+76,harmful_phrases,shaking nyash
+77,harmful_phrases,fake activism
+78,harmful_phrases,paid activist
+79,harmful_phrases,deranged indigenous ones
+80,harmful_phrases,degenerate whore
+81,harmful_phrases,shetani is roaming
+82,harmful_phrases,Toxic Feminist
+83,harmful_phrases,human right women who are screaming undressing
+84,harmful_phrases,seeking attention
+85,harmful_phrases,wanting freebies without opening their legs
+86,harmful_phrases,enda makeup
+87,harmful_phrases,feminazi crap
+88,harmful_phrases,giant old octogenarian hole
+89,harmful_phrases,Feminism ni Cancer
+90,harmful_phrases,rude and chaotic.
+91,harmful_phrases,fat ass
+92,harmful_phrases,old ugly hogs
+93,harmful_phrases,bastards children
+94,harmful_phrases,sxxually starved
+95,harmful_phrases,bile and toxicity
+96,harmful_phrases,discipline with a few slaps
+97,harmful_phrases,ego-bloated feminist
+98,harmful_phrases,Get a husband
+99,harmful_phrases,shake ass
+100,harmful_phrases,incompetent woman?
+101,harmful_phrases,shut a fuck up bitch
+102,harmful_phrases,bland and tasteless as a piece of wood.
+103,harmful_phrases,matiti mbili naona umeanza kufikiria kaa ngombe
+104,harmful_phrases,foolish as her hubby
+105,harmful_phrases,Girl with an empty head
+106,harmful_phrases,she's selling her coochie
+107,harmful_phrases,tribal mungiki
+108,harmful_phrases,useless tribal mohawk
+109,harmful_phrases,mama ananyesha
+110,harmful_phrases,as easy as you open your legs
+111,harmful_phrases,miguu Yako wapanua anytime
+112,harmful_phrases,Bloody commercial activists
+113,harmful_phrases,Speaking nothing
+114,harmful_phrases,"""dead friends"""
+115,harmful_phrases,malaya activist
+116,harmful_phrases,wanawake wenye tamaa mtaumia sana
+117,harmful_phrases,Mta kufa Bure
+118,harmful_phrases,useless kids
+119,harmful_phrases,Fuck off
+120,harmful_phrases,murderous clan mates
+121,harmful_phrases,Fake Femicide
+122,harmful_phrases,toxic women
+123,harmful_phrases,silly activism
+124,harmful_phrases,Ugui mutheri
+125,harmful_phrases,toxic relationship
+126,harmful_phrases,greed is worse than that of a hyena
+127,harmful_phrases,greedy slay queens
+128,harmful_phrases,wamekalia ATM katikati ya miguu na huku pande ya mafurumbanya
+129,harmful_phrases,controlled by emotions
+130,harmful_phrases,women with flat behinds and over congested front
+131,harmful_phrases,long sleeve face
+132,harmful_phrases,ho@ing around
+133,harmful_phrases,you don't want to be 'eaten'
+134,harmful_phrases,guts to sleep with a stranger just to go and enjoy sex
+135,harmful_phrases,Ngui ĩno
+136,harmful_phrases,"""dry humped a Tree"""
+137,harmful_phrases,"""gross violation of coochie"""
+138,harmful_phrases,dying hadi ile siku watapata akili
+139,harmful_phrases,dry humped a Tree
+140,harmful_phrases,gross violation of coochie
+141,harmful_phrases,mechi mnadinyana
+142,harmful_phrases,unajuwanga unaweza råpe
+143,harmful_phrases,anal fvck underage girls and harlots
+144,harmful_phrases,rotten piece of nyoko
+145,harmful_phrases,greedy pig of a mother
+146,harmful_phrases,orangutans like gachietha
+147,harmful_phrases,ugly pig
+148,harmful_phrases,socialite bimbos
+149,harmful_phrases,feminists will shave their heads and strip naked
+150,harmful_phrases,sexually transmitted position
+151,harmful_phrases,quotes za kisenge
+152,harmful_phrases,walking corpse
+153,harmful_phrases,"fuckin ""stupid"""
+154,harmful_phrases,kuvaa pantie moja
+155,harmful_phrases,monthly period inamusumbua.
+156,harmful_phrases,nyuma uko flat kama chinese wa mjengo
+157,harmful_phrases,kupeana kasusu nje
+158,harmful_phrases,selling puddesh
+159,harmful_phrases,Outrage manufacturers
+160,harmful_phrases,toxic feminist ideologies
+161,harmful_phrases,Toxic Feminazi
+162,harmful_phrases,Slay Queen
+163,harmful_phrases,fighting for nothing
+164,harmful_phrases,locked in one of those toilets for 2 days and forced to drink that water.
+165,harmful_phrases,"""Fake feminist"""
+166,harmful_phrases,mtazidi kuuliwa
+167,harmful_phrases,Silly and idle
+168,harmful_phrases,"""mentally sick"""
+169,harmful_phrases,nliingiza mrija
+170,harmful_phrases,fůcking months
+171,harmful_phrases,we don't give a fuck
+172,harmful_phrases,wamama waliacha ku rape vijana
+173,harmful_phrases,hawezi tembea na rhino
+174,harmful_phrases,Sundus & kilgoris
+175,harmful_phrases,tank kubwa ya maziwa
+176,harmful_phrases,Dura coat lips
+177,harmful_phrases,lesbian offspring
+178,harmful_phrases,sexually transmitted
+179,harmful_phrases,matter core
+180,harmful_phrases,"""loose women"""
+181,harmful_phrases,pieces of shit
+182,harmful_phrases,Damaged women
+183,harmful_phrases,ulidinywa kwa pool juu ta few thousands
+184,harmful_phrases,spread their legs the widest
+185,harmful_phrases,fucked up fetishes
+186,harmful_phrases,Never knew women speak sense
+187,harmful_phrases,radical feminist
+188,harmful_phrases,wewe pubafu kama kuma yako
+189,harmful_phrases,huge titties
+190,harmful_phrases,activist POS
+191,harmful_phrases,"""that bitch"""
+192,harmful_phrases,Paid activists
+193,harmful_phrases,bed to bed midfielding
+194,harmful_phrases,neurotic woman
+195,harmful_phrases,Hufikiria na liptick tu
+196,harmful_phrases,alihag mtu ju ya kutu alafu akaenda kutolewa
+197,harmful_phrases,stick to ass shaking
+198,harmful_phrases,slut feminist
+199,harmful_phrases,"""toxic feminist"""
+200,harmful_phrases,irrational radical feminist stance
+201,harmful_phrases,feminist bitches
+202,harmful_phrases,zaaa Kwanza
+203,harmful_phrases,pad ndani ya ngodha
+204,harmful_phrases,alitolewa nyege
+205,harmful_phrases,big belly
+206,harmful_phrases,Kwani ni strip club?
+207,harmful_phrases,fucking heifer
+208,harmful_phrases,shetani mama mlafi
+209,harmful_phrases,lack of long-term thinking and awareness of consequences
+210,harmful_phrases,Dumb idiots
+211,harmful_phrases,pushing agendas that kill masculinity and testosterone levels
+212,harmful_phrases,dumb feminist women
+213,harmful_phrases,Nulliparous & Barren women
+214,harmful_phrases,feminist rage
+215,harmful_phrases,brainless feminist head
+216,harmful_phrases,mamazao ni hippos
+217,harmful_phrases,unakaa vibaya
+218,harmful_phrases,feminist nonsense
+219,harmful_phrases,bitchy bitches
+220,harmful_phrases,ugly leftists fat fucks
+221,harmful_phrases,ucking feminist ideology
+222,harmful_phrases,Activism borders terrorism
+223,harmful_phrases,Bottom of the barrel idiot
+224,harmful_phrases,saa hii kimepanua
+225,harmful_phrases,That “kamama
+226,harmful_phrases,” orshipped by a clique who can even feast on her defaecation 💩to prove loyalty
+227,harmful_phrases,Kwenda uko
+228,harmful_phrases,Big Booty Wheel barrow
+229,harmful_phrases,We only see her at burials and she has done nothing
+230,harmful_phrases,she is damaged beyond repair
+231,harmful_phrases,her femininity is dead and her body is gone
+232,harmful_phrases,commercial activist
+233,harmful_phrases,Inept woman
+234,harmful_phrases,msichana yake anatembea Nairobi bila suruali
+235,harmful_phrases,FEMINIST PIECE OF SHIT
+236,harmful_phrases,you will get killed and the world shall move on easily without you and your stupidity.
+237,harmful_phrases,damaged beyond repair
+238,harmful_phrases,Lesbian feminist
+239,harmful_phrases,shut the fvck up
+240,harmful_phrases,traitorous b!tch
+241,harmful_phrases,niko na mti
+242,harmful_phrases,kila timu ikikuona inaaamka
+243,harmful_phrases,duplicitous woman
+244,harmful_phrases,Eat properly until she can’t report back to her boss. Ng’othe kabisa!
+245,harmful_phrases,nagonga kaa nanzens
+246,harmful_phrases,toothless dog
+247,harmful_phrases,upuzi tu
+248,harmful_phrases,male cucks
+249,harmful_phrases,toxic feminism
+250,harmful_phrases,rotten to the core
+251,harmful_phrases,Clout chaser
+252,harmful_phrases,protect her own vagina from yeast
+253,harmful_phrases,chasing the bag
+254,harmful_phrases,Comfort him with some tirries.
+255,harmful_phrases,leadership is sexually transmitted like ukedi
+256,harmful_phrases,epitome of hypocrisy
+257,harmful_phrases,"""Fuck outta here with that bullshit"""
+258,harmful_phrases,Activists are frauds
+259,harmful_phrases,Fuck off dude
+260,harmful_phrases,Low-value unmarriageable women
+261,harmful_phrases,sleeping from one bed to another bed
+262,harmful_phrases,Fungua zip
+263,harmful_phrases,pea mke dose
+264,harmful_phrases,wacha ujinga
+265,harmful_phrases,fuck you ruminant!
+266,harmful_phrases,too young to reason
+267,harmful_phrases,looking for someone wealthier
+268,harmful_phrases,she is pregnant and she doesn't know the owner
+269,harmful_phrases,cooling the engine down there
+270,harmful_phrases,kwani weekend ilikuwa fireworks
+271,harmful_phrases,know it all.
+272,harmful_phrases,private parts
+273,harmful_phrases,clout chasing
+274,harmful_phrases,brainless faith fools.
+275,harmful_phrases,Sexual utterances
+276,harmful_phrases,politicized auction.
+277,harmful_phrases,leadership si ya wasichana wewe tulia upangwe
+278,harmful_phrases,tribal bigot
+279,harmful_phrases,"""fix"" them with a child or a marriage certificate!"
+280,harmful_phrases,Dont use sympathy to get funds
+281,harmful_phrases,ineffective joy riders
+282,harmful_phrases,waste our good time as keyboard warriors
+283,harmful_phrases,tumbo ikizidi matiti....chorea
+284,harmful_phrases,anakaa salamander haijakula
+285,harmful_phrases,miserable beings
+286,harmful_phrases,horrible and despicable creatures
+287,harmful_phrases,old & overused ceiling inspectors
+288,harmful_phrases,daughters of Agrippina
+289,harmful_phrases,supporting her environmental conservation initiatives in different ways
+290,harmful_phrases,with FAT NECKS
+291,harmful_phrases,siasa za wamama
+292,harmful_phrases,Smell terrible
+293,harmful_phrases,dinya Malaya mnono
+294,harmful_phrases,trail of abortions
+295,harmful_phrases,weekend P2 cocktails
+296,harmful_phrases,and Gilbey’s chasers
+297,harmful_phrases,Socialite Bimbo
+298,harmful_phrases,kusupply matako
+299,harmful_phrases,Kitu uko nayo ya maana ni panty
+300,harmful_phrases,ulikaa na panty moja
+301,harmful_phrases,"""mature and seasoned walls of Jericho"" strong and curved eucalyptus tree"
+302,harmful_phrases,Putting them in their rightful place
+303,harmful_phrases,no payment of dowry for Non-virgins
+304,harmful_phrases,"""Fuck you"""
+305,harmful_phrases,anapenda kutoa pantie
+306,harmful_phrases,brainwashing masses
+307,harmful_phrases,tukunyonye au?? Au tukuletee mrija upande??? Are you mokundo??
+308,harmful_phrases,uhug mti yake pia
+309,harmful_phrases,GREEDY raving m@d degenerate
+310,harmful_phrases,ill bred piece of shit
+311,harmful_phrases,cerebral midgets
+312,harmful_phrases,anafaa kufinywa
+313,harmful_phrases,what the hell
+314,harmful_phrases,terrible human beings
+315,harmful_phrases,praying mantis
+316,harmful_phrases,cursed for generations
+317,harmful_phrases,lumps of fat
+318,harmful_phrases,utter bs!
+319,harmful_phrases,Sexual coercion
+320,harmful_phrases,ta gui
+321,harmful_phrases,sexual harassment is like swimming in the Pacific Ocean
+322,harmful_phrases,@fidakenya the epicenter of family breakages
+323,harmful_phrases,"""ugly useless women"""
+324,harmful_phrases,blood money
+325,harmful_phrases,using their body
+326,harmful_phrases,you really don't look like a woman
+327,harmful_phrases,old behind
+328,harmful_phrases,stray dogs
+329,harmful_phrases,mifupa mikavu
+330,harmful_phrases,shut the fuck up
+331,harmful_phrases,"""political prostitution"""
+332,harmful_phrases,kimwili tu na tumbo imeanguka kama ya nguruwe alizaa asubuhi
+333,harmful_phrases,alitolewa mbegu hawezagi kazi
+334,harmful_phrases,Morally Ill creatures
+335,harmful_phrases,single mothers
+336,harmful_phrases,fake environmentalists
+337,harmful_phrases,sewer rat
+338,harmful_phrases,mnapeana kupeana
+339,harmful_phrases,keep tirries upright like Homo erectus
+340,harmful_phrases,"""proudly single mothers"" Tangatanga"
+341,harmful_phrases,kifagio mpya inatafutwa itafunwe
+342,harmful_phrases,circumcised clit
+343,harmful_phrases,bitter feminist cartel
+344,harmful_phrases,bloody paid activist
+345,harmful_phrases,shit hole
+346,harmful_phrases,Kitu inakaa Chura
+347,harmful_phrases,Gonga Hio Kitu
+348,harmful_phrases,Weka Kuweka
+349,harmful_phrases,Guza Nyonyo
+350,harmful_phrases,Pigia Mamako Umwambie Huku ni Mautamu Tu
+351,harmful_phrases,gang rape
+352,harmful_phrases,Dare and do!
+353,harmful_phrases,fat woman
+354,harmful_phrases,Women like you
+355,harmful_phrases,high end milayas
+356,harmful_phrases,"""slay queen"""
+357,harmful_phrases,"""very ugly"""
+358,harmful_phrases,"""mtataliwa na vijanajike"""
+359,harmful_phrases,IQ is always lower than their vaginal discharge.
+360,harmful_phrases,rape cases
+361,harmful_phrases,venomous vipers
+362,harmful_phrases,Rape references
+363,harmful_phrases,retired whore
+364,harmful_phrases,"""political prostitute"""
+365,harmful_phrases,appetite for body count
+366,harmful_phrases,morally rotten gender
+367,harmful_phrases,"tuchome ""wamama"" (mothers)"
+368,harmful_phrases,clout chasing goons
+369,harmful_phrases,ghasia takataka
+370,harmful_phrases,political pokooo
+371,harmful_phrases,lost my respect
+372,harmful_phrases,hawezi oleka
+373,harmful_phrases,sura ni ya abuser
+374,harmful_phrases,Never involve women
+375,harmful_phrases,kuvuta bhangi
+376,harmful_phrases,"""bitter bitch"""
+377,harmful_phrases,dog ass niggas
+378,harmful_phrases,punch the fuck out
+379,harmful_phrases,psychotic bitch
+380,harmful_phrases,beating wives is right
+381,harmful_phrases,GBV is a scam for feminists
+382,harmful_phrases,akwende huko ngamia
+383,harmful_phrases,slimy opportunists
+384,harmful_phrases,Reject Commercial Activists
+385,harmful_phrases,political whore
+386,harmful_phrases,social-media grandmothers
+387,harmful_phrases,Kikuyu women
+388,harmful_phrases,other tribes
+389,harmful_phrases,umpatie mimba
+390,harmful_phrases,never allow these women to come anywhere close to power
+391,harmful_phrases,dead beat single mother
+392,harmful_phrases,have some self-respect
+393,harmful_phrases,Career Burn;
+394,harmful_phrases,malaya; kumanina
+395,harmful_phrases,commercial activists; militia government; cartels; anus; chicken; exposed; frog match; activists
+396,harmful_phrases,state operative; ideological turncoat; defender of corrupt politicians; plunder

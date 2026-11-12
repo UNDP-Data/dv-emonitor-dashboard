@@ -145,9 +145,15 @@ export function TFGBVAnalysisDashboard() {
               </div>
               <Spacer size='xl' />
               <div className='flex grow flex-col justify-center bg-background p-6'>
-                <H5 weight='bold' marginBottom='xs'>
-                  {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
-                </H5>
+                {analysisType === 'ai' ? (
+                  <H5 weight='bold' marginBottom='xs'>
+                    {numberFormattingFunction(filteredData.filter((d) => d.is_hate_speech).length)}
+                  </H5>
+                ) : (
+                  <P className='text-content-secondary' size='base' marginBottom='xs'>
+                    Not available for human verified data
+                  </P>
+                )}
                 <StatCardDescription className='mb-0!'>
                   Posts contain hate speech
                 </StatCardDescription>
@@ -199,7 +205,7 @@ export function TFGBVAnalysisDashboard() {
               <DonutChart
                 data={GENDER.map((d) => {
                   return {
-                    label: d === 'N/A' ? 'N?A or Unclear' : d,
+                    label: d === 'N/A' ? 'N/A or Unclear' : d,
                     size: filteredData.filter((f) =>
                       d === 'N/A'
                         ? f.target_gender === d || !f.target_gender
@@ -433,7 +439,7 @@ export function TFGBVAnalysisDashboard() {
                 valueColor='var(--foreground)'
                 showColorScale={false}
                 bottomMargin={50}
-                colors={Colors.light.sequentialColors.neutralColorsx05}
+                colors={Colors.light.sequentialColors.neutralColorsx06}
                 footNote='Less severe  →  More severe'
               />
             </div>
