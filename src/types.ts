@@ -33,7 +33,8 @@ export interface MessageItem {
   speech_intensity?: number;
   target_affiliation?: number;
   core_event?: number;
-  harmful_keyword?: number;
+  harmful_keyword?: number | string;
+  harmful_phrases?: number | string;
 }
 
 export interface LookupItem {

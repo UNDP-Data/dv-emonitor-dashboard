@@ -1,4 +1,13 @@
 import { fetchAndParseCSV } from '@undp/data-viz/fetchAndParseData';
+import {
+  AFFILIATION,
+  GENDER,
+  INTENSITY,
+  NO_OF_FOLLOWERS,
+  SENTIMENT,
+  TACTIC,
+  TOPIC,
+} from '@/constants';
 import type { LookupItem, MessageItem } from '@/types';
 
 export async function getCountryData(countryCode: string, analysisType: 'human' | 'ai') {
@@ -6,9 +15,9 @@ export async function getCountryData(countryCode: string, analysisType: 'human' 
     fetchAndParseCSV(
       `/data/defenders/messageData/${countryCode}/data-${analysisType}.csv`,
     ) as Promise<MessageItem[]>,
-    fetchAndParseCSV(`/data/defenders/messageData/${countryCode}/lookup.csv`) as Promise<
-      LookupItem[]
-    >,
+    fetchAndParseCSV(
+      `/data/defenders/messageData/${countryCode}/lookup-${analysisType}.csv`,
+    ) as Promise<LookupItem[]>,
   ]);
 
   const formattedData = messageData
@@ -27,30 +36,47 @@ export async function getCountryData(countryCode: string, analysisType: 'human' 
           item.is_target_wehrd === 1 ? true : item.is_target_wehrd === 0 ? false : null,
         is_target_indigenous:
           item.is_target_indigenous === 1 ? true : item.is_target_indigenous === 0 ? false : null,
-        no_of_followers: lookupData.find(
-          (l) => l.id === item.no_of_followers && l.column === 'no_of_followers',
-        )?.name,
-        overall_sentiment: lookupData.find(
-          (l) => l.id === item.overall_sentiment && l.column === 'overall_sentiment',
-        )?.name,
-        topic: lookupData.find((l) => l.id === item.topic && l.column === 'topic')?.name,
-        target_gender: lookupData.find(
-          (l) => l.id === item.target_gender && l.column === 'target_gender',
-        )?.name,
-        incitement_techniques: lookupData.find(
-          (l) => l.id === item.incitement_techniques && l.column === 'incitement_techniques',
-        )?.name,
-        speech_intensity: lookupData.find(
-          (l) => l.id === item.speech_intensity && l.column === 'speech_intensity',
-        )?.name,
-        target_affiliation: lookupData.find(
-          (l) => l.id === item.target_affiliation && l.column === 'target_affiliation',
-        )?.name,
-        core_event: lookupData.find((l) => l.id === item.core_event && l.column === 'core_event')
-          ?.name,
-        harmful_keyword: lookupData.find(
-          (l) => l.id === item.harmful_keyword && l.column === 'harmful_keyword',
-        )?.name,
+        no_of_followers:
+          item.no_of_followers !== undefined && item.no_of_followers !== null
+            ? NO_OF_FOLLOWERS[item.no_of_followers]
+            : undefined,
+        overall_sentiment:
+          item.overall_sentiment !== undefined && item.overall_sentiment !== null
+            ? SENTIMENT[item.overall_sentiment]
+            : undefined,
+        topic: item.topic !== undefined && item.topic !== null ? TOPIC[item.topic] : undefined,
+        target_gender:
+          item.target_gender !== undefined && item.target_gender !== null
+            ? GENDER[item.target_gender]
+            : undefined,
+        incitement_techniques:
+          item.incitement_techniques !== undefined && item.incitement_techniques !== null
+            ? TACTIC[item.incitement_techniques]
+            : undefined,
+        speech_intensity:
+          item.speech_intensity !== undefined && item.speech_intensity !== null
+            ? INTENSITY[item.speech_intensity]
+            : undefined,
+        target_affiliation:
+          item.target_affiliation !== undefined && item.target_affiliation !== null
+            ? AFFILIATION[item.target_affiliation]
+            : undefined,
+        core_event:
+          analysisType === 'ai'
+            ? undefined
+            : lookupData.find((l) => l.id === item.core_event && l.column === 'core_event')?.name,
+        harmful_keyword: (typeof item.harmful_keyword === 'string'
+          ? item.harmful_keyword.split('|').map((d) => Number(d))
+          : [item.harmful_keyword]
+        )
+          .map((d) => lookupData.find((l) => l.id === d && l.column === 'harmful_keyword')?.name)
+          .filter((d) => d !== undefined),
+        harmful_phrases: (typeof item.harmful_phrases === 'string'
+          ? item.harmful_phrases.split('|').map((d) => Number(d))
+          : [item.harmful_phrases]
+        )
+          .map((d) => lookupData.find((l) => l.id === d && l.column === 'harmful_phrases')?.name)
+          .filter((d) => d !== undefined),
       };
     })
     .sort((a, b) => a.date.getTime() - b.date.getTime());

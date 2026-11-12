@@ -1,0 +1,1164 @@
+id,column,name
+1,harmful_keyword,Bloodshed
+2,harmful_keyword,BloodBasedGovernment
+3,harmful_keyword,Osois
+4,harmful_keyword,Fraud
+5,harmful_keyword,warlord
+6,harmful_keyword,GBV
+7,harmful_keyword,abducting
+8,harmful_keyword,Islamic
+9,harmful_keyword,Femicide
+10,harmful_keyword,disgusting
+11,harmful_keyword,Idiot
+12,harmful_keyword,Criminals
+13,harmful_keyword,Kubaff
+14,harmful_keyword,Primitive
+15,harmful_keyword,Betrayer
+16,harmful_keyword,Hadi
+17,harmful_keyword,cheerleader
+18,harmful_keyword,activist
+19,harmful_keyword,ilk
+20,harmful_keyword,genocidal
+21,harmful_keyword,fisi
+22,harmful_keyword,Hate
+23,harmful_keyword,steal
+24,harmful_keyword,takataka
+25,harmful_keyword,Wamunyorolets
+26,harmful_keyword,#GBV
+27,harmful_keyword,enemies
+28,harmful_keyword,Shame
+29,harmful_keyword,KeepingTheFaithFake
+30,harmful_keyword,Kidnapping
+31,harmful_keyword,rape
+32,harmful_keyword,whites
+33,harmful_keyword,threats
+34,harmful_keyword,porn
+35,harmful_keyword,scum
+36,harmful_keyword,loser
+37,harmful_keyword,disgrace
+38,harmful_keyword,goons
+39,harmful_keyword,Immigrants
+40,harmful_keyword,Hypocrite
+41,harmful_keyword,blasphemer
+42,harmful_keyword,Indigenous
+43,harmful_keyword,dimwit
+44,harmful_keyword,irresponsible
+45,harmful_keyword,greedy
+46,harmful_keyword,R*ape
+47,harmful_keyword,demeaned
+48,harmful_keyword,chase
+49,harmful_keyword,beat
+50,harmful_keyword,hunt
+51,harmful_keyword,torment
+52,harmful_keyword,haunt
+53,harmful_keyword,simps
+54,harmful_keyword,violence
+55,harmful_keyword,harassed
+56,harmful_keyword,Whore
+57,harmful_keyword,malaya
+58,harmful_keyword,activism
+59,harmful_keyword,thugs
+60,harmful_keyword,FAKE
+61,harmful_keyword,tyrant
+62,harmful_keyword,abduction
+63,harmful_keyword,abuse
+64,harmful_keyword,corruption
+65,harmful_keyword,Leave
+66,harmful_keyword,Hostile
+67,harmful_keyword,antisemitism
+68,harmful_keyword,Stereotyping
+69,harmful_keyword,Babe
+70,harmful_keyword,retards
+71,harmful_keyword,Mistreatment
+72,harmful_keyword,terrorist
+73,harmful_keyword,torture
+74,harmful_keyword,kill
+75,harmful_keyword,cowardice
+76,harmful_keyword,cruelty
+77,harmful_keyword,demeaning
+78,harmful_keyword,Terrorize
+79,harmful_keyword,abductions
+80,harmful_keyword,ISLAMISTS
+81,harmful_keyword,doxxing
+82,harmful_keyword,stupid
+83,harmful_keyword,stpid
+84,harmful_keyword,Mediocre
+85,harmful_keyword,clowns
+86,harmful_keyword,killers
+87,harmful_keyword,bullet
+88,harmful_keyword,pitty
+89,harmful_keyword,exploitation
+90,harmful_keyword,Obesity
+91,harmful_keyword,Abusive
+92,harmful_keyword,swearing
+93,harmful_keyword,killed
+94,harmful_keyword,Conmen
+95,harmful_keyword,conwomen
+96,harmful_keyword,Christianity
+97,harmful_keyword,Bibi
+98,harmful_keyword,bladifakin
+99,harmful_keyword,murderer
+100,harmful_keyword,thief
+101,harmful_keyword,#boychildadvocate
+102,harmful_keyword,killing
+103,harmful_keyword,dictatorship
+104,harmful_keyword,Bitch
+105,harmful_keyword,Insult
+106,harmful_keyword,Sycophants
+107,harmful_keyword,POWER-HUNGRY
+108,harmful_keyword,Child
+109,harmful_keyword,abductors
+110,harmful_keyword,#nopeaceforthewicked
+111,harmful_keyword,Imbecile
+112,harmful_keyword,theatrics
+113,harmful_keyword,lesbians
+114,harmful_keyword,hoe
+115,harmful_keyword,Feminists
+116,harmful_keyword,Cyberbullying
+117,harmful_keyword,FU
+118,harmful_keyword,Terrorism
+119,harmful_keyword,Humiliation
+120,harmful_keyword,LGBTQ
+121,harmful_keyword,anarchists
+122,harmful_keyword,Unmanly
+123,harmful_keyword,feminist
+124,harmful_keyword,k1lling
+125,harmful_keyword,g3nocide
+126,harmful_keyword,Abducted
+127,harmful_keyword,Islamization
+128,harmful_keyword,Genocide
+129,harmful_keyword,Laana
+130,harmful_keyword,Gaslighting
+131,harmful_keyword,dictator
+132,harmful_keyword,promiscuous
+133,harmful_keyword,Hyu
+134,harmful_keyword,S£x
+135,harmful_keyword,eliminated
+136,harmful_keyword,Con
+137,harmful_keyword,bila
+138,harmful_keyword,slap
+139,harmful_keyword,Fear
+140,harmful_keyword,misogynist
+141,harmful_keyword,Arabs
+142,harmful_keyword,Manipulate
+143,harmful_keyword,HEYNAS
+144,harmful_keyword,Threatening
+145,harmful_keyword,scumbag
+146,harmful_keyword,Mbwa
+147,harmful_keyword,scums
+148,harmful_keyword,activists
+149,harmful_keyword,traitors
+150,harmful_keyword,Manipulation
+151,harmful_keyword,Assault
+152,harmful_keyword,rapist
+153,harmful_keyword,spit
+154,harmful_keyword,Islamize
+155,harmful_keyword,Hitler
+156,harmful_keyword,Useless
+157,harmful_keyword,crybully
+158,harmful_keyword,Abortion
+159,harmful_keyword,hypocrisy
+160,harmful_keyword,Muslim
+161,harmful_keyword,Corrupt
+162,harmful_keyword,hypocrites
+163,harmful_keyword,shitty
+164,harmful_keyword,enemy
+165,harmful_keyword,sudanese
+166,harmful_keyword,palestinian
+167,harmful_keyword,globalists
+168,harmful_keyword,misogyny
+169,harmful_keyword,Nigger
+170,harmful_keyword,#smearcampaign
+171,harmful_keyword,psychopath
+172,harmful_keyword,abduct
+173,harmful_keyword,abuser
+174,harmful_keyword,Asshole
+175,harmful_keyword,fucking
+176,harmful_keyword,TFGBV
+177,harmful_keyword,bullying
+178,harmful_keyword,harassment
+179,harmful_keyword,disgraceful
+180,harmful_keyword,pussies
+181,harmful_keyword,moslem
+182,harmful_keyword,Pistol
+183,harmful_keyword,bitches
+184,harmful_keyword,madness
+185,harmful_keyword,cowards
+186,harmful_keyword,MASTURBATI0N
+187,harmful_keyword,Misinformation
+188,harmful_keyword,snakes
+189,harmful_keyword,colonialists
+190,harmful_keyword,imperialists
+191,harmful_keyword,zionist
+192,harmful_keyword,Silenced
+193,harmful_keyword,butchered
+194,harmful_keyword,Payment
+195,harmful_keyword,tribalism
+196,harmful_keyword,circus
+197,harmful_keyword,clueless
+198,harmful_keyword,terrorists
+199,harmful_keyword,Barbaric
+200,harmful_keyword,upuzi
+201,harmful_keyword,murd3rers
+202,harmful_keyword,toxic
+203,harmful_keyword,prostitute
+204,harmful_keyword,betrayal
+205,harmful_keyword,stabbed
+206,harmful_keyword,castration
+207,harmful_keyword,NINCOMPOOP
+208,harmful_keyword,murderers
+209,harmful_keyword,tumbocrats
+210,harmful_keyword,melodrama
+211,harmful_keyword,Educate
+212,harmful_keyword,frauds
+213,harmful_keyword,motherhoes
+214,harmful_keyword,psychopaths
+215,harmful_keyword,rapists
+216,harmful_keyword,Sluts
+217,harmful_keyword,murder
+218,harmful_keyword,dysfunctional
+219,harmful_keyword,stupidity
+220,harmful_keyword,Stereotype
+221,harmful_keyword,widow
+222,harmful_keyword,Zionists
+223,harmful_keyword,matusi
+224,harmful_keyword,Leadership
+225,harmful_keyword,Lesbian
+226,harmful_keyword,animal
+227,harmful_keyword,miserable
+228,harmful_keyword,paid
+229,harmful_keyword,arrest
+230,harmful_keyword,Interference
+231,harmful_keyword,Sissy
+232,harmful_keyword,UKoloni
+233,harmful_keyword,missing
+234,harmful_keyword,weaponizes
+235,harmful_keyword,blackmail
+236,harmful_keyword,Disrespect
+237,harmful_keyword,evilllllls
+238,harmful_keyword,killLLLLEd
+239,harmful_keyword,devvvvvil's
+240,harmful_keyword,mlevvvi
+241,harmful_keyword,manipulativeness
+242,harmful_keyword,RejectCommercialActivists
+243,harmful_keyword,Robbery
+244,harmful_keyword,foolish
+245,harmful_keyword,tribalist
+246,harmful_keyword,Provocative
+247,harmful_keyword,discrimination
+248,harmful_keyword,THUG
+249,harmful_keyword,narcissist
+250,harmful_keyword,Empowered
+251,harmful_keyword,Coercion
+252,harmful_keyword,lynched
+253,harmful_keyword,#Wachochezi
+254,harmful_keyword,shaming
+255,harmful_keyword,commercial
+256,harmful_keyword,oppressors
+257,harmful_keyword,CommercialActivistsUnmasked
+258,harmful_keyword,smears
+259,harmful_keyword,trolls
+260,harmful_keyword,trash-ass
+261,harmful_keyword,aggression
+262,harmful_keyword,#RejectCommercialActivists
+263,harmful_keyword,Incitement
+264,harmful_keyword,#ABDUCTIONS
+265,harmful_keyword,EnemiesOfTanzania
+266,harmful_keyword,SLEEPY
+267,harmful_keyword,DELULU
+268,harmful_keyword,Neglect
+269,harmful_keyword,#EnemiesOfTanzania
+270,harmful_keyword,#FORCEDDISAPPEARANCES
+271,harmful_keyword,#EXTRAJUDICIALKILLINGS
+272,harmful_keyword,chaos
+273,harmful_keyword,Fag
+274,harmful_keyword,demonizing
+275,harmful_keyword,#FakeActivism
+276,harmful_keyword,#LiesCNNTell
+277,harmful_keyword,#WhoBankrollsTheChaos
+278,harmful_keyword,Somaliphobic
+279,harmful_keyword,islamophobic
+280,harmful_keyword,blackmailing
+281,harmful_keyword,Kidnap
+282,harmful_keyword,#DonorFundedChaos
+283,harmful_keyword,assaulting
+284,harmful_keyword,Slavery
+285,harmful_keyword,Sabbath
+286,harmful_keyword,#FakeActivismFordFunded
+287,harmful_keyword,FalseNarrative
+288,harmful_keyword,Distabilize
+289,harmful_keyword,Influence
+290,harmful_keyword,slaves
+291,harmful_keyword,kîllëd
+292,harmful_keyword,kaliwa
+293,harmful_keyword,misogynistic
+294,harmful_keyword,slave
+295,harmful_keyword,FAT
+296,harmful_keyword,GLUTTONS
+297,harmful_keyword,Tortured
+298,harmful_keyword,smeared
+299,harmful_keyword,#RejectToxicActivists
+300,harmful_keyword,stabbing
+301,harmful_keyword,dangerous
+302,harmful_keyword,Somalis
+303,harmful_keyword,lazy
+304,harmful_keyword,unambitious
+305,harmful_keyword,#NoExcuseForOnlineAbuse
+306,harmful_keyword,ActivismSyndicate
+307,harmful_keyword,#CNNFalseNarrative
+308,harmful_keyword,CNNFalseNarrative
+309,harmful_keyword,witches
+310,harmful_keyword,disinformation
+311,harmful_keyword,lunatism
+312,harmful_keyword,Abandon
+313,harmful_keyword,Unrest
+314,harmful_keyword,Mistreat
+315,harmful_keyword,DonorFundedChaos
+316,harmful_keyword,FakeActivism
+317,harmful_keyword,CNN
+318,harmful_keyword,Threatened
+319,harmful_keyword,Hubris
+320,harmful_keyword,dogs
+321,harmful_keyword,trolling
+322,harmful_keyword,beaten
+323,harmful_keyword,cursed
+324,harmful_keyword,disaster
+325,harmful_keyword,#PaidGoonsUnmasked
+326,harmful_keyword,fala
+327,harmful_keyword,Racist
+328,harmful_keyword,kiburi
+329,harmful_keyword,madharau
+330,harmful_keyword,installed
+331,harmful_keyword,dalala
+332,harmful_keyword,circumcise
+333,harmful_keyword,Satanic
+334,harmful_keyword,traitor
+335,harmful_keyword,assaulted
+336,harmful_keyword,marriage
+337,harmful_keyword,Intimidation
+338,harmful_keyword,Homosexuality
+339,harmful_keyword,EndGBV
+340,harmful_keyword,hajui
+341,harmful_keyword,weak
+342,harmful_keyword,decaying
+343,harmful_keyword,destroyed
+344,harmful_keyword,horrible
+345,harmful_keyword,vicious
+346,harmful_keyword,Intimidate
+347,harmful_keyword,weird
+348,harmful_keyword,unyama
+349,harmful_keyword,idiotic
+350,harmful_keyword,shameless
+351,harmful_keyword,dimwits
+352,harmful_keyword,pu$$¥fied
+353,harmful_keyword,Drugs
+354,harmful_keyword,Witchcraft
+355,harmful_keyword,Homo$exuality
+356,harmful_keyword,Nepotism
+357,harmful_keyword,Rungus
+358,harmful_keyword,failure
+359,harmful_keyword,undisciplined
+360,harmful_keyword,whorish
+361,harmful_keyword,sluttish
+362,harmful_keyword,#dogs
+363,harmful_keyword,Wifey
+364,harmful_keyword,Proud
+365,harmful_keyword,Cheating
+366,harmful_keyword,Luo
+367,harmful_keyword,Sifuna
+368,harmful_keyword,evil
+369,harmful_keyword,illiterate
+370,harmful_keyword,Troll
+371,harmful_keyword,jezebel
+372,harmful_keyword,responsibility
+373,harmful_keyword,Abusing
+374,harmful_keyword,Mikora
+375,harmful_keyword,Chuki
+376,harmful_keyword,Karma
+377,harmful_keyword,assassin
+378,harmful_keyword,persecution
+379,harmful_keyword,Taka-taka
+380,harmful_keyword,Predators
+381,harmful_keyword,#fearwomen
+382,harmful_keyword,control
+383,harmful_keyword,slander
+384,harmful_keyword,extortion
+385,harmful_keyword,sellouts
+386,harmful_keyword,Burukenge
+387,harmful_keyword,#SexForBursary
+388,harmful_keyword,harman
+389,harmful_keyword,Toxicity
+390,harmful_keyword,msaliti
+391,harmful_keyword,Sex-for-Bursary
+392,harmful_keyword,conman
+393,harmful_keyword,wezi
+394,harmful_keyword,Narcissists
+395,harmful_keyword,investigation
+396,harmful_keyword,backstabbers
+397,harmful_keyword,assassinations
+398,harmful_keyword,attack
+399,harmful_keyword,impregnated
+400,harmful_keyword,Weaponize
+401,harmful_keyword,Mavi
+402,harmful_keyword,Self-control
+403,harmful_keyword,discipline
+404,harmful_keyword,pleasure
+405,harmful_keyword,mistreating
+406,harmful_keyword,monkey
+407,harmful_keyword,WANTAM
+408,harmful_keyword,retaliation
+409,harmful_keyword,pressure
+410,harmful_keyword,vulnerability
+411,harmful_keyword,harers
+412,harmful_keyword,looter
+413,harmful_keyword,homelessness
+414,harmful_keyword,treason
+415,harmful_keyword,submission
+416,harmful_keyword,pu**y
+417,harmful_keyword,sodomy
+418,harmful_keyword,#susannakhumicha2026
+419,harmful_keyword,cheap
+420,harmful_keyword,deserve
+421,harmful_keyword,vagabonds
+422,harmful_keyword,condemnation
+423,harmful_keyword,bulldozing
+424,harmful_keyword,surveillance
+425,harmful_keyword,Kikuyu
+426,harmful_keyword,wajaluo
+427,harmful_keyword,Jews
+428,harmful_keyword,swara
+429,harmful_keyword,supporting
+430,harmful_keyword,marry
+431,harmful_keyword,Elimination
+432,harmful_keyword,threat
+433,harmful_keyword,Deepfake
+434,harmful_keyword,disrespectful
+435,harmful_keyword,insulted
+436,harmful_keyword,reckless
+437,harmful_keyword,thuggery
+438,harmful_keyword,sorcerer
+439,harmful_keyword,assassination
+440,harmful_keyword,Demonic
+441,harmful_keyword,Prostitutes
+442,harmful_keyword,Chiwawa
+443,harmful_keyword,råpe
+444,harmful_keyword,vulgar
+445,harmful_keyword,Trafficking
+446,harmful_keyword,abuses
+447,harmful_keyword,ujinga
+448,harmful_keyword,bitchy
+449,harmful_keyword,ugly
+450,harmful_keyword,liberal
+451,harmful_keyword,Makai
+452,harmful_keyword,murders
+453,harmful_keyword,fornicators
+454,harmful_keyword,thieves
+455,harmful_keyword,tribalists
+456,harmful_keyword,gays
+457,harmful_keyword,#UshenziKe
+458,harmful_keyword,men
+459,harmful_keyword,ovyo
+460,harmful_keyword,blind
+461,harmful_keyword,Predator
+462,harmful_keyword,Manipulated
+463,harmful_keyword,chafu
+464,harmful_keyword,r@ped
+465,harmful_keyword,Patriarchy
+466,harmful_keyword,Sellout
+467,harmful_keyword,gangsters
+468,harmful_keyword,gender-bending
+469,harmful_keyword,MAIMING
+470,harmful_keyword,DESTRUCTION
+471,harmful_keyword,#FinancialAbuse
+472,harmful_keyword,snake
+473,harmful_keyword,ambicioso
+474,harmful_keyword,apuñala
+475,harmful_keyword,Wachawi
+476,harmful_keyword,gangs
+477,harmful_keyword,pork
+478,harmful_keyword,milk
+479,harmful_keyword,margarine
+480,harmful_keyword,laheelooy
+481,harmful_keyword,dehumanization
+482,harmful_keyword,mchawi
+483,harmful_keyword,justice
+484,harmful_keyword,Cibercrimen
+485,harmful_keyword,daring
+486,harmful_keyword,Duty
+487,harmful_keyword,ninja
+488,harmful_keyword,deranged
+489,harmful_keyword,Arrogant
+490,harmful_keyword,imperialism
+491,harmful_keyword,Ugliest
+492,harmful_keyword,Hanged
+493,harmful_keyword,colero
+494,harmful_keyword,jobless
+495,harmful_keyword,uongo
+496,harmful_keyword,unalive
+497,harmful_keyword,Matiangi
+498,harmful_keyword,Discriminatory
+499,harmful_keyword,r@ping
+500,harmful_keyword,#OpiyoWandayiStepDown
+501,harmful_keyword,#ErastusKangaMustGo
+502,harmful_keyword,WASHENZI
+503,harmful_keyword,p*n*s
+504,harmful_keyword,poison
+505,harmful_keyword,kichapo
+506,harmful_keyword,self-hating
+507,harmful_keyword,bullies
+508,harmful_keyword,Apartheid
+509,harmful_keyword,mad
+510,harmful_keyword,divorce
+511,harmful_keyword,Narrative
+512,harmful_keyword,Jealousy
+513,harmful_keyword,Mjinga
+514,harmful_keyword,gùns
+515,harmful_keyword,jaluo
+516,harmful_keyword,Transphobia
+517,harmful_keyword,pity
+518,harmful_keyword,Hatred
+519,harmful_keyword,Stereotypes
+520,harmful_keyword,girlfriend
+521,harmful_keyword,Lesbianism
+522,harmful_keyword,buree
+523,harmful_keyword,birthright
+524,harmful_keyword,age
+525,harmful_keyword,childlessness
+526,harmful_keyword,desperate
+527,harmful_keyword,poverty
+528,harmful_keyword,Tears
+529,harmful_keyword,Dishonest
+530,harmful_keyword,h@ted
+531,harmful_keyword,imbeciles
+532,harmful_keyword,GachaguaTheHypocrite
+533,harmful_keyword,shit^hole
+534,harmful_keyword,pests
+535,harmful_keyword,discriminative
+536,harmful_keyword,Gachagua
+537,harmful_keyword,crush
+538,harmful_keyword,polygamy
+539,harmful_keyword,payout
+540,harmful_keyword,oppression
+541,harmful_keyword,Goonism
+542,harmful_keyword,Colonialism
+543,harmful_keyword,harass
+544,harmful_keyword,Hypergamy
+545,harmful_keyword,hoax
+546,harmful_keyword,slutty
+547,harmful_keyword,m@rdered
+548,harmful_keyword,virus
+549,harmful_keyword,shameful
+550,harmful_keyword,obligation
+551,harmful_keyword,Survival-driven
+552,harmful_keyword,bashing
+553,harmful_keyword,assholes
+554,harmful_keyword,Narcissism
+555,harmful_keyword,shetani
+556,harmful_keyword,cabal
+557,harmful_keyword,Hakuna
+558,harmful_keyword,Maumbwa
+559,harmful_keyword,cancer
+560,harmful_keyword,Danger
+561,harmful_keyword,tarnish
+562,harmful_keyword,feminazi
+563,harmful_keyword,heartless
+564,harmful_keyword,nudes
+565,harmful_keyword,Honey
+566,harmful_keyword,idiots
+567,harmful_keyword,fools
+568,harmful_keyword,moron
+569,harmful_keyword,Vampires
+570,harmful_keyword,bimbos
+571,harmful_keyword,Mabeberu
+572,harmful_keyword,GangsOfNairobi
+573,harmful_keyword,perverts
+574,harmful_keyword,RUTO
+575,harmful_keyword,stùpìd
+576,harmful_keyword,shenzi
+577,harmful_keyword,Toiletes
+578,harmful_keyword,dehumanising
+579,harmful_keyword,Mafisadi
+580,harmful_keyword,KAFIRI
+581,harmful_keyword,ARNA
+582,harmful_keyword,defamation
+583,harmful_keyword,trash
+584,harmful_keyword,sidechick
+585,harmful_keyword,idlers
+586,harmful_keyword,misled
+587,harmful_keyword,tribes
+588,harmful_keyword,matakataka
+589,harmful_keyword,kugongewa
+590,harmful_keyword,cheater
+591,harmful_keyword,gaslight
+592,harmful_keyword,graft
+593,harmful_keyword,silence
+594,harmful_keyword,shit
+595,harmful_keyword,staged
+596,harmful_keyword,Sensationalized
+597,harmful_keyword,horny
+598,harmful_keyword,Wachochezi
+599,harmful_keyword,Burns
+600,harmful_keyword,attacked
+601,harmful_keyword,#WanaharakatiWaGhasia
+602,harmful_keyword,castrate
+603,harmful_keyword,gallows
+604,harmful_keyword,Training
+605,harmful_keyword,#HarakatiZaUongo
+606,harmful_keyword,WanaharakatiWasaliti
+607,harmful_keyword,#WanaharakatiWasaliti
+608,harmful_keyword,CCTV
+609,harmful_keyword,dumb
+610,harmful_keyword,Fugga
+611,harmful_keyword,raped
+612,harmful_keyword,curses
+613,harmful_keyword,UDA
+614,harmful_keyword,Ungrateful
+615,harmful_keyword,LUCIFER
+616,harmful_keyword,Attacks
+617,harmful_keyword,Exclusion
+618,harmful_keyword,wajinga
+619,harmful_keyword,Matako
+620,harmful_keyword,CRIMINAL
+621,harmful_keyword,EGO
+622,harmful_keyword,INEXPERIENCED
+623,harmful_keyword,LIGHTWEIGHT
+624,harmful_keyword,alcoholism
+625,harmful_keyword,Transgender
+626,harmful_keyword,misleading
+627,harmful_keyword,judgement
+628,harmful_keyword,repentance
+629,harmful_keyword,sin
+630,harmful_keyword,Shit_hole
+631,harmful_keyword,LIES
+632,harmful_keyword,HATREDD
+633,harmful_keyword,DimbaTheExtortionist
+634,harmful_keyword,mshenzi
+635,harmful_keyword,shoga
+636,harmful_keyword,msenge
+637,harmful_keyword,bongolala
+638,harmful_keyword,kicheche
+639,harmful_keyword,#ArrestWanjikuMuhia
+640,harmful_keyword,violent
+641,harmful_keyword,mnyonye
+642,harmful_keyword,Ebola
+643,harmful_keyword,jeneza
+644,harmful_keyword,#StopKillingUs
+645,harmful_keyword,Money
+646,harmful_keyword,Mob
+647,harmful_keyword,sponsor
+648,harmful_keyword,Fafu
+649,harmful_keyword,goon
+650,harmful_keyword,LordsOfViolence
+651,harmful_keyword,dildo
+652,harmful_keyword,Devil
+653,harmful_keyword,Drunk
+654,harmful_keyword,killer
+655,harmful_keyword,pathetic
+656,harmful_keyword,blood
+657,harmful_keyword,MerchantsOfChaos
+658,harmful_keyword,Muslims
+659,harmful_keyword,deadbeatdad
+660,harmful_keyword,Fvck
+661,harmful_keyword,Neanderthal
+662,harmful_keyword,obsession
+663,harmful_keyword,Wakora
+664,harmful_keyword,#rape
+1,harmful_phrases,Reject Armed Activism
+2,harmful_phrases,treason disguised as activism
+3,harmful_phrases,commercial activists
+4,harmful_phrases,paid activism
+5,harmful_phrases,shady past
+6,harmful_phrases,BURE KABISA
+7,harmful_phrases,Armed Activism
+8,harmful_phrases,merchants for hire
+9,harmful_phrases,PAID activists
+10,harmful_phrases,dangerous plans
+11,harmful_phrases,tambia mbaya
+12,harmful_phrases,shenzi sana
+13,harmful_phrases,Hostile Activism
+14,harmful_phrases,gender based violence
+15,harmful_phrases,Mental health activist
+16,harmful_phrases,Totally ignorant
+17,harmful_phrases,mad one
+18,harmful_phrases,dumb fuck
+19,harmful_phrases,or nyash
+20,harmful_phrases,paid activist
+21,harmful_phrases,looting human right's abuse
+22,harmful_phrases,Commercial activist
+23,harmful_phrases,Dumb ass
+24,harmful_phrases,TOKENI CBD
+25,harmful_phrases,barbaric remarks
+26,harmful_phrases,old disgusting dimwit
+27,harmful_phrases,Fake Activist
+28,harmful_phrases,attention seeker
+29,harmful_phrases,disgusting man
+30,harmful_phrases,Islamic propaganda
+31,harmful_phrases,hate paid activism
+32,harmful_phrases,fake activists
+33,harmful_phrases,toxic feminist
+34,harmful_phrases,stolen land
+35,harmful_phrases,Kware dumpster killings
+36,harmful_phrases,low IQ mongrels
+37,harmful_phrases,blood thirst
+38,harmful_phrases,Government apologists
+39,harmful_phrases,Child Abuse
+40,harmful_phrases,fools idiots useless
+41,harmful_phrases,deeper shit
+42,harmful_phrases,dictator and murderer
+43,harmful_phrases,shameless sell outs
+44,harmful_phrases,foreign agendas
+45,harmful_phrases,worst media group
+46,harmful_phrases,Stereotypes about women
+47,harmful_phrases,toothless dog
+48,harmful_phrases,Police killed
+49,harmful_phrases,fake climate activism
+50,harmful_phrases,security of the nation
+51,harmful_phrases,Demeaning remarks
+52,harmful_phrases,Mental health
+53,harmful_phrases,violation of human rights
+54,harmful_phrases,Shut up
+55,harmful_phrases,Kalonzo Airlines
+56,harmful_phrases,blood money
+57,harmful_phrases,wife abuser
+58,harmful_phrases,greedy corrupt clown
+59,harmful_phrases,Demeaning shots
+60,harmful_phrases,Mental health issues
+61,harmful_phrases,fake human right activist
+62,harmful_phrases,Commercial activism
+63,harmful_phrases,defeatist mentality
+64,harmful_phrases,land grabber
+65,harmful_phrases,human rights abuser
+66,harmful_phrases,family institution
+67,harmful_phrases,human rights abuse
+68,harmful_phrases,mental issues
+69,harmful_phrases,bitter feminist
+70,harmful_phrases,get back to the kitchen
+71,harmful_phrases,shut the fuck up
+72,harmful_phrases,fake news
+73,harmful_phrases,abortion advocates
+74,harmful_phrases,fake activism
+75,harmful_phrases,Inappropriate touching
+76,harmful_phrases,whispered innuendos
+77,harmful_phrases,leaked personal data
+78,harmful_phrases,Zionist scam
+79,harmful_phrases,threatened to gas us
+80,harmful_phrases,Cultural genocide
+81,harmful_phrases,Body shaming
+82,harmful_phrases,legalized rape
+83,harmful_phrases,sexual violence
+84,harmful_phrases,toxic feminist rhetoric
+85,harmful_phrases,kizungu mingi
+86,harmful_phrases,financing goons
+87,harmful_phrases,Lucifer's last born son
+88,harmful_phrases,Broad Based Thieves Company devils
+89,harmful_phrases,fake narratives
+90,harmful_phrases,toxic feminism
+91,harmful_phrases,war crimes
+92,harmful_phrases,stupid Muslims
+93,harmful_phrases,Islamic funded ideologies
+94,harmful_phrases,useless fools
+95,harmful_phrases,political brokers
+96,harmful_phrases,fear women
+97,harmful_phrases,Fake feminist
+98,harmful_phrases,dick ride
+99,harmful_phrases,justifying commercial activism
+100,harmful_phrases,wild animal
+101,harmful_phrases,Nairobi or African Country
+102,harmful_phrases,clown activist
+103,harmful_phrases,sell outs
+104,harmful_phrases,money worshipping
+105,harmful_phrases,paid/commercial activists
+106,harmful_phrases,Paid fucking activists
+107,harmful_phrases,lack of empathy
+108,harmful_phrases,Physical abuse
+109,harmful_phrases,Commercial and Paid activists
+110,harmful_phrases,Pieces of shit
+111,harmful_phrases,Fake Tribal Outrage
+112,harmful_phrases,Fuck ass ngga
+113,harmful_phrases,devil worshipping
+114,harmful_phrases,shambolic elections
+115,harmful_phrases,Gikuyu rats
+116,harmful_phrases,Free Palestine bullshit
+117,harmful_phrases,Abortion is Murder
+118,harmful_phrases,blood on their hands
+119,harmful_phrases,desperate characters
+120,harmful_phrases,cheap propaganda
+121,harmful_phrases,idle propagandists
+122,harmful_phrases,transgender agenda
+123,harmful_phrases,Stereotyping against women
+124,harmful_phrases,death threats
+125,harmful_phrases,war criminals
+126,harmful_phrases,sexual assault
+127,harmful_phrases,Pathetic creatures
+128,harmful_phrases,sell out
+129,harmful_phrases,political whore
+130,harmful_phrases,Stop spreading fake propaganda
+131,harmful_phrases,State House
+132,harmful_phrases,false doctrine
+133,harmful_phrases,sexual immorality
+134,harmful_phrases,end Islamic Immigration
+135,harmful_phrases,goat fucker
+136,harmful_phrases,killed all the male gender
+137,harmful_phrases,untold abuses
+138,harmful_phrases,woke feminist
+139,harmful_phrases,attention seeking
+140,harmful_phrases,go back to Somali
+141,harmful_phrases,rage farming
+142,harmful_phrases,Ass licking
+143,harmful_phrases,stupid activism
+144,harmful_phrases,terrorist activism
+145,harmful_phrases,wamunyeri tricks
+146,harmful_phrases,Illicit brew
+147,harmful_phrases,bloody commercial activist
+148,harmful_phrases,bad woman
+149,harmful_phrases,shit test
+150,harmful_phrases,Rape threats
+151,harmful_phrases,bitch ass
+152,harmful_phrases,female dictator
+153,harmful_phrases,the goat
+154,harmful_phrases,looks transgender
+155,harmful_phrases,toxic masculinity
+156,harmful_phrases,killing indigenous Americans
+157,harmful_phrases,Reject Commercial Activists
+158,harmful_phrases,fight ladies
+159,harmful_phrases,Mvuttta bhhhhhangi
+160,harmful_phrases,sexually abusing
+161,harmful_phrases,gender violence
+162,harmful_phrases,Alshabab sympathizer
+163,harmful_phrases,child abusers
+164,harmful_phrases,human rights abusers
+165,harmful_phrases,cutting off your dick
+166,harmful_phrases,single mothers
+167,harmful_phrases,Commercialized activism
+168,harmful_phrases,Tragic end
+169,harmful_phrases,exaggerated narratives
+170,harmful_phrases,Commercialised activism
+171,harmful_phrases,self-appointed online saviors
+172,harmful_phrases,foreign cash
+173,harmful_phrases,Pepo nyeusi
+174,harmful_phrases,Emotional exploitation
+175,harmful_phrases,reckless police officers
+176,harmful_phrases,Bipolar disorder
+177,harmful_phrases,Enemies Of Tanzania
+178,harmful_phrases,Digital violence
+179,harmful_phrases,Substance abuse
+180,harmful_phrases,Paid infiltrators
+181,harmful_phrases,CNN False Narrative
+182,harmful_phrases,Bad bitch
+183,harmful_phrases,Death sentence
+184,harmful_phrases,Toxic Activists
+185,harmful_phrases,severe judgement
+186,harmful_phrases,Foreign influence
+187,harmful_phrases,political class are full of shit
+188,harmful_phrases,superiority complexes
+189,harmful_phrases,Hawa hawana huruma hata kidogo
+190,harmful_phrases,bipolar and akili mbaya
+191,harmful_phrases,Activists for Hire
+192,harmful_phrases,same sex
+193,harmful_phrases,Unrest Profiteers
+194,harmful_phrases,bad behaviors
+195,harmful_phrases,Mental cases
+196,harmful_phrases,stand up like a man
+197,harmful_phrases,abusive treatment
+198,harmful_phrases,Bunduki fake Bonoko
+199,harmful_phrases,Armed bandits
+200,harmful_phrases,Fimbo itachapa
+201,harmful_phrases,gender bias
+202,harmful_phrases,abusive marriage
+203,harmful_phrases,political sabotage
+204,harmful_phrases,fake pregnancy
+205,harmful_phrases,hate speech
+206,harmful_phrases,disgusting human being
+207,harmful_phrases,cowardly humiliation
+208,harmful_phrases,Economic abuse
+209,harmful_phrases,UDAku party Mpigs
+210,harmful_phrases,affordable bloggers and propagandists
+211,harmful_phrases,sibuor madhako
+212,harmful_phrases,Mama achomwe
+213,harmful_phrases,government goons
+214,harmful_phrases,body shamed
+215,harmful_phrases,Armed violence
+216,harmful_phrases,Banned students with children
+217,harmful_phrases,Illicit brews
+218,harmful_phrases,Buck Breaking
+219,harmful_phrases,harmful keyword
+220,harmful_phrases,deep state
+221,harmful_phrases,state brutality
+222,harmful_phrases,predators in perfume
+223,harmful_phrases,fabricating stories about GBV survivors
+224,harmful_phrases,Radical Left Scum
+225,harmful_phrases,Useless Moron
+226,harmful_phrases,moral authority
+227,harmful_phrases,selective outrage
+228,harmful_phrases,rewriting history
+229,harmful_phrases,emotionally abusive
+230,harmful_phrases,hot knife
+231,harmful_phrases,piga risasi
+232,harmful_phrases,disregard of the rule of law
+233,harmful_phrases,hostile political profiling
+234,harmful_phrases,insulting messages; wrecked marriage; killed
+235,harmful_phrases,manipulative women
+236,harmful_phrases,praying for death
+237,harmful_phrases,sustained attacks
+238,harmful_phrases,defamatory remarks
+239,harmful_phrases,remove her headscarf
+240,harmful_phrases,go back to her country
+241,harmful_phrases,stereotypes about identity and leadership
+242,harmful_phrases,Roman Catholic Church
+243,harmful_phrases,disturb them to insanity
+244,harmful_phrases,Beating up
+245,harmful_phrases,IDIOTIC HYPOCRITES
+246,harmful_phrases,Shupid madafakas
+247,harmful_phrases,Do not abuse and kill women
+248,harmful_phrases,s3xual abuse
+249,harmful_phrases,toxic drama queen
+250,harmful_phrases,useless in our society
+251,harmful_phrases,Unlawful detention
+252,harmful_phrases,corrupt traitor
+253,harmful_phrases,Medical abuse
+254,harmful_phrases,old and tired
+255,harmful_phrases,Negatively charged language
+256,harmful_phrases,Stereotypes about women's behavior
+257,harmful_phrases,Stereotyping of political leaders
+258,harmful_phrases,toxic cycle
+259,harmful_phrases,illegal means
+260,harmful_phrases,turned the female students into his wives
+261,harmful_phrases,shouting 'proudly single mothers'
+262,harmful_phrases,masculine men
+263,harmful_phrases,Smear campaign
+264,harmful_phrases,criminal government
+265,harmful_phrases,bring him in dead or alive
+266,harmful_phrases,traditional marriage
+267,harmful_phrases,Racist abuse
+268,harmful_phrases,Rape Cases
+269,harmful_phrases,tribal hatred
+270,harmful_phrases,slave owner
+271,harmful_phrases,tribal bigots
+272,harmful_phrases,Nitakunywa sumu
+273,harmful_phrases,angry mob
+274,harmful_phrases,Iredeemable Hypocrite
+275,harmful_phrases,Kenyan men
+276,harmful_phrases,will ke you
+277,harmful_phrases,I will búrn your car
+278,harmful_phrases,Statutory rape
+279,harmful_phrases,dark heart
+280,harmful_phrases,vulgar noisemakers
+281,harmful_phrases,Emotional blackmail
+282,harmful_phrases,Hate speech and shaming
+283,harmful_phrases,Drug abuse
+284,harmful_phrases,Kamillan guy
+285,harmful_phrases,Unlawful eviction
+286,harmful_phrases,Huyu jamaa ni faya!
+287,harmful_phrases,morality police
+288,harmful_phrases,Domestic abuse
+289,harmful_phrases,responsible for the death
+290,harmful_phrases,inept woman
+291,harmful_phrases,physically discipline
+292,harmful_phrases,Discriminatory provisions
+293,harmful_phrases,mad women
+294,harmful_phrases,shameless contradiction
+295,harmful_phrases,dragged by school dropouts
+296,harmful_phrases,clandestine meeting
+297,harmful_phrases,splinter group
+298,harmful_phrases,bad habit
+299,harmful_phrases,soliciting money
+300,harmful_phrases,Obstetric violence
+301,harmful_phrases,sexual abuse
+302,harmful_phrases,ethnic massacre
+303,harmful_phrases,worst abusers
+304,harmful_phrases,Mental health activists
+305,harmful_phrases,Fake ass activist
+306,harmful_phrases,fake maandamanoprenurers
+307,harmful_phrases,Stereotypes against transgender women
+308,harmful_phrases,biological males
+309,harmful_phrases,fraud activist
+310,harmful_phrases,Stereotyping of women
+311,harmful_phrases,Discrimination against transgender women
+312,harmful_phrases,Stereotypes about gender and sports
+313,harmful_phrases,disgusting evil woman
+314,harmful_phrases,Emotional abuse
+315,harmful_phrases,Threatening behavior
+316,harmful_phrases,Brutally killed
+317,harmful_phrases,proxy operation
+318,harmful_phrases,radical feminist
+319,harmful_phrases,Gender identity
+320,harmful_phrases,Kalenjin goons
+321,harmful_phrases,Gay Funded
+322,harmful_phrases,disgusting hypocrite
+323,harmful_phrases,romantic rejection
+324,harmful_phrases,survivors of sexual and gender-based violence
+325,harmful_phrases,emotional violence
+326,harmful_phrases,job denial
+327,harmful_phrases,Toxic Feminazi
+328,harmful_phrases,Agresion sexual
+329,harmful_phrases,Stereotypes about cheating women
+330,harmful_phrases,disgusting murderer
+331,harmful_phrases,agresión sexual
+332,harmful_phrases,house Negro
+333,harmful_phrases,oil Money
+334,harmful_phrases,Respect yourself
+335,harmful_phrases,Obstructing justice
+336,harmful_phrases,defending a murderer
+337,harmful_phrases,vicious entitlement
+338,harmful_phrases,Wasichana wanashinda kupiga nduru
+339,harmful_phrases,modern woman
+340,harmful_phrases,bad luck
+341,harmful_phrases,will not be here
+342,harmful_phrases,Emotional manipulation
+343,harmful_phrases,lord of violence
+344,harmful_phrases,Abuse of power
+345,harmful_phrases,Killer cop
+346,harmful_phrases,control us
+347,harmful_phrases,puppet of a corrupt and murderous regime
+348,harmful_phrases,beat me
+349,harmful_phrases,white supremacy
+350,harmful_phrases,Stereotyping based on ethnicity
+351,harmful_phrases,Gen z killers
+352,harmful_phrases,nywele ngumu
+353,harmful_phrases,Financial irresponsibility
+354,harmful_phrases,fake prophets
+355,harmful_phrases,Unspecified in the post
+356,harmful_phrases,Homo economicus thugs
+357,harmful_phrases,dead friends
+358,harmful_phrases,Answer: Abuse
+359,harmful_phrases,nimeitwa mrs simp
+360,harmful_phrases,Rape Apologist
+361,harmful_phrases,sleeping with women
+362,harmful_phrases,white supremacists
+363,harmful_phrases,Stereotyping and entitlement
+364,harmful_phrases,evil man
+365,harmful_phrases,Armed attack
+366,harmful_phrases,Abuse OfOffice
+367,harmful_phrases,forest in your eye
+368,harmful_phrases,Stereotyping women and their choices
+369,harmful_phrases,mtu wa vitendawili
+370,harmful_phrases,bitch fight
+371,harmful_phrases,there are mentions of pain
+372,harmful_phrases,postpartum depression
+373,harmful_phrases,and neglect
+374,harmful_phrases,xenophobic hatred
+375,harmful_phrases,Deserves better
+376,harmful_phrases,disgusting moment
+377,harmful_phrases,State repression
+378,harmful_phrases,mob justice
+379,harmful_phrases,horrible human being
+380,harmful_phrases,watu ya Murima
+381,harmful_phrases,Derogatory remarks
+382,harmful_phrases,gender-based violence
+383,harmful_phrases,Paycheck Commercial Activists
+384,harmful_phrases,Political assassination
+385,harmful_phrases,political dust
+386,harmful_phrases,Mother of Harlots
+387,harmful_phrases,political bondage
+388,harmful_phrases,soft hair
+389,harmful_phrases,Faked Sickness
+390,harmful_phrases,old woman
+391,harmful_phrases,Rape charges
+392,harmful_phrases,Mambo ya kibonyonyo
+393,harmful_phrases,shades of black
+394,harmful_phrases,sukuma ugali
+395,harmful_phrases,pro-everything paid activists
+396,harmful_phrases,real woman
+397,harmful_phrases,Underage marriage
+398,harmful_phrases,death penalty
+399,harmful_phrases,Transgender ideology/activism
+400,harmful_phrases,allegations of murder
+401,harmful_phrases,Single mum's are cheap pros$titutes
+402,harmful_phrases,Brutally attacked
+403,harmful_phrases,useless activists
+404,harmful_phrases,deranged indigenous
+405,harmful_phrases,Forced marriage
+406,harmful_phrases,Ass Whopper Activist
+407,harmful_phrases,domestic violence
+408,harmful_phrases,Child marriage
+409,harmful_phrases,physically abuse
+410,harmful_phrases,sponsored Hashtag
+411,harmful_phrases,walking time bomb
+412,harmful_phrases,land grabbing
+413,harmful_phrases,demonic counterfeit Christianity
+414,harmful_phrases,indigenous dog
+415,harmful_phrases,cold hearted LOSERS
+416,harmful_phrases,ma umbwa sana
+417,harmful_phrases,Shameless commercial activist
+418,harmful_phrases,bought off
+419,harmful_phrases,NIS rat
+420,harmful_phrases,abusive remarks
+421,harmful_phrases,Ancestral curses
+422,harmful_phrases,bitter single mother
+423,harmful_phrases,LGBTQ cartels
+424,harmful_phrases,fake wanabe activists
+425,harmful_phrases,Mentally Deranged Persons
+426,harmful_phrases,stupid commercial activists
+427,harmful_phrases,grease her purse
+428,harmful_phrases,Rape of Justice
+429,harmful_phrases,Kill himself
+430,harmful_phrases,Virusi mbaya
+431,harmful_phrases,toxic misogynist
+432,harmful_phrases,shit crazy
+433,harmful_phrases,Wachochezi Wa Vurugu
+434,harmful_phrases,Toxic talk
+435,harmful_phrases,paid commercial activists
+436,harmful_phrases,organized violence
+437,harmful_phrases,Ukweli Wa Ghasia
+438,harmful_phrases,Activists destroyed Tanzania's economy
+439,harmful_phrases,dark skills
+440,harmful_phrases,Disguised activism
+441,harmful_phrases,foreign handlers
+442,harmful_phrases,Ukweli Umefichuliwa
+443,harmful_phrases,Shocking level of deception
+444,harmful_phrases,Foreign money
+445,harmful_phrases,Hostile discourse
+446,harmful_phrases,political intolerance
+447,harmful_phrases,let them be killed
+448,harmful_phrases,Stereotyping related to gender violence
+449,harmful_phrases,leftist scumbag
+450,harmful_phrases,LGBTQ activist
+451,harmful_phrases,Violent unrest
+452,harmful_phrases,blame your father
+453,harmful_phrases,violent protest strategies
+454,harmful_phrases,Job losses
+455,harmful_phrases,investors away
+456,harmful_phrases,Radical Activists
+457,harmful_phrases,Demon of Homosexuality
+458,harmful_phrases,woke activists
+459,harmful_phrases,Generational patterns
+460,harmful_phrases,offensive and demeaning
+461,harmful_phrases,swamp rat
+462,harmful_phrases,dirty funds
+463,harmful_phrases,reckless activists
+464,harmful_phrases,Vulnerable youth
+465,harmful_phrases,vulnerable groups
+466,harmful_phrases,Manipulative activists
+467,harmful_phrases,Deceitful activists
+468,harmful_phrases,oppressive bastards
+469,harmful_phrases,activism failed
+470,harmful_phrases,Diverse tactics in technology misuse
+471,harmful_phrases,superior people
+472,harmful_phrases,satanic lock down
+473,harmful_phrases,paid for NGO goons
+474,harmful_phrases,life is a bitch
+475,harmful_phrases,Invalid question - no harmful keywords identified
+476,harmful_phrases,military coup
+477,harmful_phrases,Luo moor
+478,harmful_phrases,Goon in Chief
+479,harmful_phrases,chasing Non-Kikuyus
+480,harmful_phrases,FUCK YOU
+481,harmful_phrases,terrorist aggressor
+482,harmful_phrases,Ruto must go
+483,harmful_phrases,Body found
+484,harmful_phrases,indigenous people
+485,harmful_phrases,feminists and terrorists
+486,harmful_phrases,self-righteous mentality
+487,harmful_phrases,beat up government goons
+488,harmful_phrases,dick owners
+489,harmful_phrases,fuck the government of Kenya
+490,harmful_phrases,Ugly appearances
+491,harmful_phrases,drunk and intoxicated
+492,harmful_phrases,toxic parent
+493,harmful_phrases,the blind and senile president
+494,harmful_phrases,disgusting creatures
+495,harmful_phrases,activism money
+496,harmful_phrases,Retarded masses
+497,harmful_phrases,fat shaming
+498,harmful_phrases,spent force
+499,harmful_phrases,Abusing human rights

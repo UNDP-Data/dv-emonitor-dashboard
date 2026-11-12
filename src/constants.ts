@@ -53,12 +53,51 @@ export const DEFENDER_FUNDING_PARTNERS = [
   },
 ];
 
-export const AFFILIATIONS = [
-  'CSO representative',
-  'Politician',
+export const SENTIMENT = ['Positive', 'Negative', 'Neutral'];
+
+export const NO_OF_FOLLOWERS = ['< 100', '100 - 1k', '1k - 5k', '> 5k'];
+
+export const TOPIC = [
+  'Politics',
+  'Environment',
+  'Social issues',
+  'Technology',
+  'Sports/entertainment',
+  'Other',
+];
+
+export const GENDER = ['Women', 'Men', 'Non-binary', 'N/A'];
+
+export const TACTIC = [
+  'Incitement of violence',
+  'Rape threats',
+  'Marginalization and shaming',
+  'Stereotyping',
+  'Disinformation',
+  'Sexual and/or verbal harassment',
+  'Nonconsensual image or video sharing',
+  'Doxing',
+  'Hostile political profiling',
+  'Legal harassment and intimidation',
+  'Other',
+];
+
+export const INTENSITY = [
+  'Disagreement',
+  'Negative actions',
+  'Negative characterization',
+  'Demonizing and dehumanizing',
+  'Violence',
+  'Death',
+  'Other',
+];
+
+export const AFFILIATION = [
   'Journalist',
-  'WEHRD',
   'Religious figure',
-  'Emerging voice / activist',
+  'Politician',
+  'Academic',
+  'Government employee/public office holders',
+  'CSO representative',
   'Other',
 ];

@@ -5,10 +5,12 @@ import { DonutChart } from '@undp/data-viz/DonutChart';
 import { SimpleLineChart } from '@undp/data-viz/SimpleLineChart';
 import { numberFormattingFunction } from '@undp/data-viz/utils';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
+import { SegmentedControl } from '@undp/design-system-react/SegmentedControl';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { StatCardDescription } from '@undp/design-system-react/StatCard';
 import { H5, H6, P } from '@undp/design-system-react/Typography';
 import { useMemo, useState } from 'react';
+import { AFFILIATION, GENDER, INTENSITY, TACTIC } from '@/constants';
 import {
   useAnalysisType,
   useContainsHateSpeech,
@@ -36,6 +38,7 @@ export function TFGBVAnalysisDashboard() {
   const containsHateSpeech = useContainsHateSpeech();
   const selectedAffiliation = useSelectedAffiliation();
   const { data, isLoading, isError } = useCountryMessagesData(selectedCountry.value, analysisType);
+  const [harmfulContentType, setHarmfulContentType] = useState<'words' | 'phrases'>('words');
   const [coreEventWordCloudHover, setCoreEventWordCloudHover] = useState<
     { word: string; frequency: number } | undefined
   >(undefined);
@@ -83,7 +86,21 @@ export function TFGBVAnalysisDashboard() {
       .map((d) => {
         return {
           word: d.name,
-          frequency: filteredData.filter((f) => f.harmful_keyword === d.name).length,
+          frequency: filteredData.filter((f) => f.harmful_keyword.includes(d.name)).length,
+        };
+      })
+      .sort((a, b) => b.frequency - a.frequency);
+  }, [filteredData, data]);
+
+  const harmfulPhrasesWordCloudData = useMemo(() => {
+    if (!filteredData || !data) return undefined;
+
+    return data.lookupData
+      .filter((d) => d.column === 'harmful_phrases')
+      .map((d) => {
+        return {
+          word: d.name,
+          frequency: filteredData.filter((f) => f.harmful_phrases.includes(d.name)).length,
         };
       })
       .sort((a, b) => b.frequency - a.frequency);
@@ -180,33 +197,33 @@ export function TFGBVAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <DonutChart
-                data={data.lookupData
-                  .filter((d) => d.column === 'target_gender')
-                  .map((d) => {
-                    return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f.target_gender === d.name).length,
-                    };
-                  })}
+                data={GENDER.map((d) => {
+                  return {
+                    label: d === 'N/A' ? 'N?A or Unclear' : d,
+                    size: filteredData.filter((f) =>
+                      d === 'N/A'
+                        ? f.target_gender === d || !f.target_gender
+                        : f.target_gender === d,
+                    ).length,
+                  };
+                })}
                 backgroundColor='var(--background)'
                 graphTitle='Gender of the target of hate speech'
                 animate={false}
                 strokeWidth={50}
-                colors={['#E2BC3B', '#776992', '#F4EEE7']}
+                colors={['#E2BC3B', '#776992', '#F4EEE7', '#FAFAFA']}
               />
             </div>
           </GridItem>
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <CirclePackingGraph
-                data={data.lookupData
-                  .filter((d) => d.column === 'target_affiliation')
-                  .map((d) => {
-                    return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f.target_affiliation === d.name).length,
-                    };
-                  })}
+                data={AFFILIATION.map((d) => {
+                  return {
+                    label: d,
+                    size: filteredData.filter((f) => f.target_affiliation === d).length,
+                  };
+                })}
                 backgroundColor='var(--background)'
                 graphTitle='Target Affiliation'
               />
@@ -250,14 +267,12 @@ export function TFGBVAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <SimpleBarGraph
-                data={data.lookupData
-                  .filter((d) => d.column === 'incitement_techniques')
-                  .map((d) => {
-                    return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f.incitement_techniques === d.name).length,
-                    };
-                  })}
+                data={TACTIC.map((d) => {
+                  return {
+                    label: d,
+                    size: filteredData.filter((f) => f.incitement_techniques === d).length,
+                  };
+                })}
                 backgroundColor='var(--background)'
                 graphTitle='Incitement tactics'
                 animate={false}
@@ -265,6 +280,10 @@ export function TFGBVAnalysisDashboard() {
                 showTicks={false}
                 valueColor='var(--foreground)'
                 colors='#A8071A'
+                leftMargin={125}
+                topMargin={0}
+                bottomMargin={0}
+                truncateBy={25}
               />
             </div>
           </GridItem>
@@ -272,46 +291,52 @@ export function TFGBVAnalysisDashboard() {
             <div className='h-auto bg-background p-4 md:h-120'>
               <div className='undp-scrollbar flex h-full flex-col'>
                 <P size='lg'>Core events driving attacks</P>
-                <div className='flex flex-wrap items-center gap-x-4 gap-y-0'>
-                  {coreEventsWordCloudData.map((word) => (
-                    // biome-ignore lint/a11y/noStaticElementInteractions: Here the div just have a mouse over effect
-                    <div
-                      key={word.word}
-                      className='cursor-pointer'
-                      style={{
-                        ...getStyleFromFrequency(
-                          word.frequency,
-                          coreEventsWordCloudData[0].frequency,
-                        ),
-                        opacity: coreEventWordCloudHover
-                          ? coreEventWordCloudHover.word === word.word
-                            ? 1
-                            : 0.4
-                          : 1,
-                      }}
-                      onMouseEnter={(e) => {
-                        setCoreEventWordCloudHover({
-                          word: word.word,
-                          frequency: word.frequency,
-                        });
-                        setMouseXPos(e.clientX);
-                        setMouseYPos(e.clientY);
-                      }}
-                      onMouseMove={(e) => {
-                        setCoreEventWordCloudHover({
-                          word: word.word,
-                          frequency: word.frequency,
-                        });
-                        setMouseXPos(e.clientX);
-                        setMouseYPos(e.clientY);
-                      }}
-                      onMouseLeave={() => {
-                        setCoreEventWordCloudHover(undefined);
-                      }}
-                    >
-                      {word.word}
+                <div className='flex h-full flex-wrap items-center gap-x-4 gap-y-0'>
+                  {analysisType === 'ai' ? (
+                    <div className='flex h-full w-full items-center justify-center p-6 text-base text-content-tertiary'>
+                      Only available for human analysis
                     </div>
-                  ))}
+                  ) : (
+                    coreEventsWordCloudData.map((word) => (
+                      // biome-ignore lint/a11y/noStaticElementInteractions: Here the div just have a mouse over effect
+                      <div
+                        key={word.word}
+                        className='cursor-pointer'
+                        style={{
+                          ...getStyleFromFrequency(
+                            word.frequency,
+                            coreEventsWordCloudData[0].frequency,
+                          ),
+                          opacity: coreEventWordCloudHover
+                            ? coreEventWordCloudHover.word === word.word
+                              ? 1
+                              : 0.4
+                            : 1,
+                        }}
+                        onMouseEnter={(e) => {
+                          setCoreEventWordCloudHover({
+                            word: word.word,
+                            frequency: word.frequency,
+                          });
+                          setMouseXPos(e.clientX);
+                          setMouseYPos(e.clientY);
+                        }}
+                        onMouseMove={(e) => {
+                          setCoreEventWordCloudHover({
+                            word: word.word,
+                            frequency: word.frequency,
+                          });
+                          setMouseXPos(e.clientX);
+                          setMouseYPos(e.clientY);
+                        }}
+                        onMouseLeave={() => {
+                          setCoreEventWordCloudHover(undefined);
+                        }}
+                      >
+                        {word.word}
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
             </div>
@@ -327,17 +352,35 @@ export function TFGBVAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto bg-background p-4 md:h-120'>
               <div className='undp-scrollbar flex h-full flex-col'>
-                <P size='xl'>Harmful keywords</P>
-                <div className='flex flex-wrap items-center gap-x-4 gap-y-0'>
-                  {harmfulKeywordWordCloudData.map((word) => (
+                <div className='mb-4 flex items-center justify-between gap-2 pr-2'>
+                  <P size='xl' marginBottom='none'>
+                    Harmful keywords/phrases
+                  </P>
+                  <SegmentedControl
+                    options={[
+                      { value: 'words', label: 'Keywords' },
+                      { value: 'phrases', label: 'Phrases' },
+                    ]}
+                    onValueChange={(val) => setHarmfulContentType(val as 'words' | 'phrases')}
+                    value={harmfulContentType}
+                    variant='light'
+                  />
+                </div>
+                <div className='flex flex-wrap items-center gap-4'>
+                  {(harmfulContentType === 'words'
+                    ? harmfulKeywordWordCloudData
+                    : harmfulPhrasesWordCloudData
+                  )?.map((word) => (
                     // biome-ignore lint/a11y/noStaticElementInteractions: Here the div just have a mouse over effect
                     <div
                       key={word.word}
-                      className='cursor-pointer'
+                      className='cursor-pointer leading-[1]'
                       style={{
                         ...getStyleFromFrequency(
                           word.frequency,
-                          harmfulKeywordWordCloudData[0].frequency,
+                          (harmfulContentType === 'words'
+                            ? harmfulKeywordWordCloudData
+                            : harmfulPhrasesWordCloudData)?.[0].frequency || 0,
                         ),
                         opacity: harmfulKeywordWordCloudHover
                           ? harmfulKeywordWordCloudHover.word === word.word
@@ -375,15 +418,13 @@ export function TFGBVAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <SimpleBarGraph
-                data={data.lookupData
-                  .filter((d) => d.column === 'speech_intensity')
-                  .map((d) => {
-                    return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f.speech_intensity === d.name).length,
-                      color: d.name,
-                    };
-                  })}
+                data={INTENSITY.filter((d) => d !== 'Other').map((d) => {
+                  return {
+                    label: d,
+                    size: filteredData.filter((f) => f.speech_intensity === d).length,
+                    color: d,
+                  };
+                })}
                 backgroundColor='var(--background)'
                 graphTitle='Intensity of hate speech'
                 animate={false}
@@ -399,22 +440,21 @@ export function TFGBVAnalysisDashboard() {
           </GridItem>
         </Grid>
       </section>
-      {(harmfulKeywordWordCloudHover || coreEventWordCloudHover) && (
-        <div
-          className='graph-tooltip fixed z-1000 block bg-surface p-2'
-          style={{
-            top: `${mouseYpos < window.innerHeight / 2 ? mouseYpos - 10 : mouseYpos + 10}px`,
-            left: `${mouseXpos > window.innerWidth / 2 ? mouseXpos - 10 : mouseXpos + 10}px`,
-            transform: `translate(${
-              mouseXpos > window.innerWidth / 2 ? '-100%' : '0%'
-            },${mouseYpos > window.innerHeight / 2 ? '-100%' : '0%'})`,
-          }}
-        >
-          <div className='m-0 text-content-primary text-xl leading-normal'>
-            {(harmfulKeywordWordCloudHover || coreEventWordCloudHover)?.frequency}
-          </div>
+      <div
+        className='graph-tooltip fixed z-1000 block bg-surface p-2'
+        style={{
+          top: `${mouseYpos < window.innerHeight / 2 ? mouseYpos - 10 : mouseYpos + 10}px`,
+          left: `${mouseXpos > window.innerWidth / 2 ? mouseXpos - 10 : mouseXpos + 10}px`,
+          transform: `translate(${
+            mouseXpos > window.innerWidth / 2 ? '-100%' : '0%'
+          },${mouseYpos > window.innerHeight / 2 ? '-100%' : '0%'})`,
+        }}
+      >
+        <div className='m-0 text-content-primary text-xl leading-normal'>
+          {(harmfulKeywordWordCloudHover || coreEventWordCloudHover)?.frequency}
         </div>
-      )}
+      </div>
+      );
     </>
   );
 }

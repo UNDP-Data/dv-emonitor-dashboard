@@ -7,6 +7,7 @@ import { Spacer } from '@undp/design-system-react/Spacer';
 import { StatCardDescription } from '@undp/design-system-react/StatCard';
 import { H5, H6 } from '@undp/design-system-react/Typography';
 import { useMemo } from 'react';
+import { NO_OF_FOLLOWERS, SENTIMENT, TOPIC } from '@/constants';
 import {
   useAnalysisType,
   useContainsHateSpeech,
@@ -128,14 +129,12 @@ export function GeneralAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <DonutChart
-                data={data.lookupData
-                  .filter((d) => d.column === 'no_of_followers')
-                  .map((d) => {
-                    return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f?.no_of_followers === d.name).length,
-                    };
-                  })}
+                data={NO_OF_FOLLOWERS.map((d) => {
+                  return {
+                    label: d,
+                    size: filteredData.filter((f) => f?.no_of_followers === d).length,
+                  };
+                })}
                 backgroundColor='var(--background)'
                 graphTitle='Virality potential of authors'
                 animate={false}
@@ -213,19 +212,25 @@ export function GeneralAnalysisDashboard() {
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
               <DonutChart
-                data={data.lookupData
-                  .filter((d) => d.column === 'overall_sentiment')
-                  .map((d) => {
+                data={[
+                  ...SENTIMENT.map((d) => {
                     return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f.overall_sentiment === d.name).length,
+                      label: d,
+                      size: filteredData.filter((f) => f.overall_sentiment === d).length,
                     };
-                  })}
+                  }),
+                  {
+                    label: 'N/A',
+                    size: filteredData.filter(
+                      (f) => f.overall_sentiment === undefined || f.overall_sentiment === null,
+                    ).length,
+                  },
+                ]}
                 backgroundColor='var(--background)'
                 graphTitle='Overall sentiment'
                 animate={false}
                 strokeWidth={50}
-                colors={['#776992', '#E2BC3B', '#F4EEE7']}
+                colors={['#776992', '#E2BC3B', '#F4EEE7', '#FAFAFA']}
               />
             </div>
           </GridItem>
@@ -239,14 +244,12 @@ export function GeneralAnalysisDashboard() {
           >
             <div className='h-auto md:h-120'>
               <SimpleBarGraph
-                data={data.lookupData
-                  .filter((d) => d.column === 'topic')
-                  .map((d) => {
-                    return {
-                      label: d.name,
-                      size: filteredData.filter((f) => f.topic === d.name).length,
-                    };
-                  })}
+                data={TOPIC.map((d) => {
+                  return {
+                    label: d,
+                    size: filteredData.filter((f) => f.topic === d).length,
+                  };
+                })}
                 backgroundColor='var(--background)'
                 graphTitle='Most common topics'
                 animate={false}

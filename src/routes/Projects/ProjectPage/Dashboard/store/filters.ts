@@ -28,7 +28,7 @@ export const useFilterStore = create<Store>((set) => ({
   containsHateSpeech: false,
   isTFGBV: false,
   selectedAffiliation: [],
-  analysisType: 'human',
+  analysisType: 'ai',
   actions: {
     setSelectedCountry: (selectedCountry: { value: string; label: string }) =>
       set({ selectedCountry }),

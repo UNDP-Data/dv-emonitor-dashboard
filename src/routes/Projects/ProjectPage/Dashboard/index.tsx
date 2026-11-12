@@ -6,7 +6,7 @@ import { Spacer } from '@undp/design-system-react/Spacer';
 import { Switch } from '@undp/design-system-react/Switch';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@undp/design-system-react/Tabs';
 import { H3, H5, H6, P } from '@undp/design-system-react/Typography';
-import { AFFILIATIONS } from '@/constants';
+import { AFFILIATION } from '@/constants';
 import { GeneralAnalysisDashboard } from './generalAnalysis';
 import {
   useAnalysisType,
@@ -142,7 +142,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
                   Affiliation of the target
                 </P>
                 <DropdownSelect
-                  options={AFFILIATIONS.map((d) => ({ value: d, label: d }))}
+                  options={AFFILIATION.map((d) => ({ value: d, label: d }))}
                   value={selectedAffiliation}
                   onChange={(v) => setSelectedAffiliation(v as { label: string; value: string }[])}
                   isSearchable={false}
