@@ -152,6 +152,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
                   variant='light'
                   showCheck
                   isMulti
+                  isDisabled={selectedCountry.value === 'IRQ' && analysisType === 'ai'}
                 />
               </div>
             </div>

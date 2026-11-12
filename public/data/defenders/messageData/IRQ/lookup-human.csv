@@ -1,0 +1,148 @@
+﻿id,column,name
+1,core_event,الاوضاع السياسية في العراق والبلاد المجاورة
+2,core_event,اغتيال رئيسة منظمة
+3,core_event,اغتيال رئيس منظمة حرية المرأة ينار محمد
+4,core_event,رمضان
+5,core_event,عيد نوروز
+6,core_event,تخرج دفعة 2026
+7,core_event,رفع رواتب المعلمين
+8,core_event,اتهام عميد في الشرطة باتهام غير اخلاقي
+9,core_event,اختيار رئيس الوزراء
+10,core_event,تحصين الحدود مع سوريا
+11,core_event,تعديل سلم رواتب الموضفيين
+12,core_event,تعيين خريجي المجموعة الطبية
+13,core_event,اغتيال النساء في العراق
+14,core_event,القانون الجعفري
+15,core_event,تعديل قانون الاحوال المدنية
+16,core_event,فضائح المشاهير
+17,core_event,الانتخابات
+18,core_event,احتفالات رأس السنة
+19,core_event,نزع السلاح في البلد
+20,core_event,تجاوزات على الرموز الدينية
+21,core_event,"افتتاح وكالة عطور ""ماتش"""
+22,core_event,اعياد ميلاد رأس السنه 2026
+23,core_event,Execution of Saddam Hussein
+24,core_event,حظر اللعبة لودو
+25,core_event,افتتاح ماتش
+26,core_event,تخرج الجامعات
+27,core_event,حفل تخرج مجندات عراقيات
+28,core_event,لعبة المنتخب العراقي
+29,core_event,لعبة العراق والاردن
+30,core_event,سقوط بغداد
+31,core_event,التحرير من داعش
+32,core_event,undefined
+33,core_event,مقتل حسين كامل
+34,core_event,الغرفة الزجاجية (تبرع للفقراء بواسطة صناع المحتوى )
+35,core_event,حملة الـ16 يوم لمناهضة العنف ضد النساء
+36,core_event,افتتاح وكالة سعودية (هاف مليون)
+37,core_event,اغتيال طالب سهيل التميمي
+38,core_event,ثورة تشرين
+39,core_event,تصفيات كأس العالم
+40,core_event,اتفاقية سيداو 2026
+41,core_event,Protests against Iranian influence in Iraq.
+42,core_event,احداث غزة
+43,core_event,احداث تنظيم داعش، الانتخابات
+44,core_event,قرار العفو العام
+45,core_event,the colapso of the bridge
+1,harmful_keyword,بلبربوك
+2,harmful_keyword,المنحرفة
+3,harmful_keyword,الزبالة
+4,harmful_keyword,بربوك
+5,harmful_keyword,المتصهينة
+6,harmful_keyword,جمل
+7,harmful_keyword,"""كذابة"""
+8,harmful_keyword,(n/a)
+9,harmful_keyword,Unclear
+10,harmful_keyword,تناحة
+11,harmful_keyword,جاهلة
+12,harmful_keyword,تافهة
+13,harmful_keyword,المتحرشين
+14,harmful_keyword,الولائية
+15,harmful_keyword,الفاشلة
+16,harmful_keyword,الفيلسوفة
+17,harmful_keyword,فاحش
+18,harmful_keyword,تخرف
+19,harmful_keyword,القايب
+20,harmful_keyword,ضياع
+21,harmful_keyword,حمضيات
+22,harmful_keyword,زرابة
+23,harmful_keyword,تلطم
+24,harmful_keyword,سيداو
+25,harmful_keyword,اكسكلوزمي
+26,harmful_keyword,احمار
+27,harmful_keyword,كواجة
+28,harmful_keyword,ئلئنيقه
+29,harmful_keyword,العفوية
+30,harmful_keyword,ولائية
+31,harmful_keyword,بالرزايل
+32,harmful_keyword,زورو
+33,harmful_keyword,الحرباية
+34,harmful_keyword,الغوغائية
+35,harmful_keyword,وقواقه
+36,harmful_keyword,ساقطة
+37,harmful_keyword,عنوز
+38,harmful_keyword,عوانس
+39,harmful_keyword,undefined
+40,harmful_keyword,الكوادة
+41,harmful_keyword,sارقة
+42,harmful_keyword,بهصلة
+43,harmful_keyword,بوفية
+44,harmful_keyword,#شيعة_مناكيح_الفرس
+45,harmful_keyword,المسلعين
+46,harmful_keyword,شهل
+47,harmful_keyword,افكس
+48,harmful_keyword,[n/a]
+49,harmful_keyword,جاريات
+50,harmful_keyword,الحجاب
+51,harmful_keyword,يلكحبه
+52,harmful_keyword,"""تجارة"""
+53,harmful_keyword,الكدية
+1,harmful_phrases,لو تاركة الصلاه ولا هاي الدكة
+2,harmful_phrases,الفضائح اللااخلاقية
+3,harmful_phrases,مجانين فلكس
+4,harmful_phrases,ام حلك فكاكة
+5,harmful_phrases,"""جبناء"" (cowards)"
+6,harmful_phrases,"""ابناء عهر"" (sons of whoredom)"
+7,harmful_phrases,"""عقائدي متشدد"""
+8,harmful_phrases,الشذوذ الجنسية
+9,harmful_phrases,نزع الملابس
+10,harmful_phrases,"""شلة ذكور"""
+11,harmful_phrases,طلع رقم الشاصي
+12,harmful_phrases,“الإباحة المطلقة”
+13,harmful_phrases,Kبرانة وعجوز
+14,harmful_phrases,بربوك ولائية
+15,harmful_phrases,Not applicable
+16,harmful_phrases,شلالات دم
+17,harmful_phrases,شرف مطشر
+18,harmful_phrases,وجه الشياطين
+19,harmful_phrases,انبش كبره
+20,harmful_phrases,"هي هاي هم ""بنيه"""
+21,harmful_phrases,امهات الدود
+22,harmful_phrases,عباد الطشة
+23,harmful_phrases,أنحطاط وسقوط المجتمع
+24,harmful_phrases,مغتصب (rapist)
+25,harmful_phrases,"""مغروره"" (arrogant)"
+26,harmful_phrases,سود الله وجهك
+27,harmful_phrases,not specified
+28,harmful_phrases,لاعبه بخلقتج لعب وتارسه وجهج سليكون وصايره وجه السعلوه .. اللّٰه شاهد لو تطلعيلي بالليل يمكن أنهزم دنعل أبوج لابو الي خلاج بالخارجية شوف ياكواد وشوف ياكَواد ألي حد هسه عايفج بالخارجية لازم يطردوج على هالشكل المقرف عوذه وجه الكَوادة يكرم اللّه..!! #تهي_بهي
+29,harmful_phrases,برابيكك يا عراق
+30,harmful_phrases,اشبعوا كلاوات
+31,harmful_phrases,الباس ابو الخيط وسيت
+32,harmful_phrases,"""كلمات طائفية مسيئة"""
+33,harmful_phrases,القردة الفارسية
+34,harmful_phrases,Not provided
+35,harmful_phrases,[Not specified]
+36,harmful_phrases,"""عبايه الحصر والتضاريس الواضحة"""
+37,harmful_phrases,العهر السياسي
+38,harmful_phrases,فطاحلة العراق
+39,harmful_phrases,يعني ثنو ثاب عمرك 30 ثنة مو مليونير
+40,harmful_phrases,انتخبوها ادللكم دلال
+41,harmful_phrases,بغداد شوكت صارت سنية؟
+42,harmful_phrases,ام حلك اعوج؟
+43,harmful_phrases,تسقطون بي
+44,harmful_phrases,سياقة المرأة لا تمر دون ضرر
+45,harmful_phrases,اسماء دنفش
+46,harmful_phrases,افلام اباحية
+47,harmful_phrases,سمراء بغداد
+48,harmful_phrases,second wife
+49,harmful_phrases,تتمنى تاخذ صورة مع السيد مقتدى الصدر

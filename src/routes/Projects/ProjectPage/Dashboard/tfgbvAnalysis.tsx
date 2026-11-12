@@ -60,9 +60,18 @@ export function TFGBVAnalysisDashboard() {
         (!containsHateSpeech || item.is_hate_speech) &&
         item.is_tfgbv &&
         (!filterByAffiliation ||
-          (item.target_affiliation !== undefined && affiliationSet.has(item.target_affiliation))),
+          (item.target_affiliation !== undefined && affiliationSet.has(item.target_affiliation)) ||
+          (selectedCountry.value === 'IRQ' && analysisType === 'ai')),
     );
-  }, [data, fromDate, toDate, containsHateSpeech, selectedAffiliation]);
+  }, [
+    data,
+    fromDate,
+    toDate,
+    containsHateSpeech,
+    selectedAffiliation,
+    selectedCountry.value,
+    analysisType,
+  ]);
 
   const coreEventsWordCloudData = useMemo(() => {
     if (!filteredData || !data) return undefined;
@@ -222,18 +231,35 @@ export function TFGBVAnalysisDashboard() {
             </div>
           </GridItem>
           <GridItem noOfColSpan={1}>
-            <div className='h-auto md:h-120'>
-              <CirclePackingGraph
-                data={AFFILIATION.map((d) => {
-                  return {
-                    label: d,
-                    size: filteredData.filter((f) => f.target_affiliation === d).length,
-                  };
-                })}
-                backgroundColor='var(--background)'
-                graphTitle='Target Affiliation'
-              />
-            </div>
+            {selectedCountry.value === 'IRQ' && analysisType === 'ai' ? (
+              <div className='h-auto bg-background p-4 md:h-120'>
+                <P size='xl' marginBottom='xl'>
+                  Target Affiliation
+                </P>
+                <div className='flex h-full w-full items-center justify-center'>
+                  <P
+                    className='w-full grow text-center text-content-secondary'
+                    size='base'
+                    marginBottom='xs'
+                  >
+                    Not available for AI verified data for Iraq
+                  </P>
+                </div>
+              </div>
+            ) : (
+              <div className='h-auto md:h-120'>
+                <CirclePackingGraph
+                  data={AFFILIATION.map((d) => {
+                    return {
+                      label: d,
+                      size: filteredData.filter((f) => f.target_affiliation === d).length,
+                    };
+                  })}
+                  backgroundColor='var(--background)'
+                  graphTitle='Target Affiliation'
+                />
+              </div>
+            )}
           </GridItem>
           <GridItem noOfColSpan={1}>
             <div className='flex h-auto flex-col md:h-120'>
