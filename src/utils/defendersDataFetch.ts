@@ -44,7 +44,15 @@ export async function getCountryData(countryCode: string, analysisType: 'human' 
           item.overall_sentiment !== undefined && item.overall_sentiment !== null
             ? SENTIMENT[item.overall_sentiment]
             : undefined,
-        topic: item.topic !== undefined && item.topic !== null ? TOPIC[item.topic] : undefined,
+        topic:
+          item.topic !== undefined && item.topic !== null
+            ? typeof item.topic === 'string'
+              ? item.topic
+                  .split('|')
+                  .map((d) => TOPIC[Number(d)])
+                  .join('|')
+              : TOPIC[item.topic]
+            : undefined,
         target_gender:
           item.target_gender !== undefined && item.target_gender !== null
             ? item.target_gender === 4

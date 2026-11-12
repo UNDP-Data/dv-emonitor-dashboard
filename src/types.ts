@@ -25,7 +25,7 @@ export interface MessageItem {
   is_event_related?: number;
   total_engagement?: number;
   overall_sentiment?: number;
-  topic?: number | number;
+  topic?: number | string;
   target_gender?: number;
   is_target_wehrd?: number;
   is_target_indigenous?: number;
