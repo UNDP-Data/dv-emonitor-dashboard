@@ -46,7 +46,7 @@ import { VizCarousel } from '@undp/design-system-react/VizCarousel';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/Section';
-import { DEFENDER_COUNTRIES, DEFENDER_FUNDING_PARTNERS } from '@/constants';
+import { DEFENDER_COUNTRIES } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
 import { Dashboard } from './Dashboard';
 
@@ -176,8 +176,13 @@ export function ProjectsPage() {
               Funding partners
             </P>
             <div className='flex flex-wrap items-center gap-3'>
-              {DEFENDER_FUNDING_PARTNERS.map((partner) => (
-                <img key={partner.name} src={partner.flag} alt={partner.name} className='h-12' />
+              {['DK', 'LU', 'KR'].map((partner) => (
+                <img
+                  key={partner}
+                  src={`/imgs/Partners/${partner}.svg`}
+                  alt={`${partner} flag`}
+                  className='h-12'
+                />
               ))}
             </div>
             <Spacer size='sm' />
