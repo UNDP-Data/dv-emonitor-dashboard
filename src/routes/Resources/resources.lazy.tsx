@@ -12,6 +12,7 @@ import {
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { H1 } from '@undp/design-system-react/Typography';
 import { useTranslation } from 'react-i18next';
+import { Section } from '@/components/Section';
 
 export function Resource() {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ export function Resource() {
     url: string;
   }[];
   return (
-    <div className='mx-auto my-8 w-full max-w-[1920px] px-4'>
+    <Section>
       <H1 size='sm'>{t('resources')}</H1>
       <Spacer size='2xl' />
       <Grid noOfCol={{ base: 1, sm: 2, md: 4, lg: 6 }}>
@@ -41,7 +42,7 @@ export function Resource() {
           </GridItem>
         ))}
       </Grid>
-    </div>
+    </Section>
   );
 }
 

@@ -14,13 +14,13 @@ import HeaderEl from './components/Header';
 import { DEFAULT_LANGUAGE, LANGUAGES } from './constants';
 import i18n from './i18n';
 import * as TanStackQueryProvider from './integration/tanstack-query';
+import createAboutRoute from './routes/About/about.routes';
+import createDefendersPageRoute from './routes/Projects/Defenders/defendersPage.routes';
+import createProjectsRoute from './routes/Projects/projects.routes';
 import createResourceRoute from './routes/Resources/resources.routes';
 
 import './styles/fonts.css';
 import './styles/style.css';
-import createAboutRoute from './routes/About/about.routes';
-import createProjectPageRoute from './routes/Projects/ProjectPage/projectPage.routes';
-import createProjectsRoute from './routes/Projects/projects.routes';
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,
@@ -64,7 +64,7 @@ const routeTree = rootRoute.addChildren([
     createAboutRoute(localeRoute),
     createResourceRoute(localeRoute),
     createProjectsRoute(localeRoute),
-    createProjectPageRoute(localeRoute),
+    createDefendersPageRoute(localeRoute),
   ]),
 ]);
 

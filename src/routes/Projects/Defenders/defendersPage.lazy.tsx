@@ -3,6 +3,7 @@ import { createLazyRoute } from '@tanstack/react-router';
 import { SimpleBarGraph, StackedBarGraph } from '@undp/data-viz/BarGraph';
 import { fetchAndParseCSV } from '@undp/data-viz/fetchAndParseData';
 import { transformDataForGraph } from '@undp/data-viz/transformData';
+import { numberFormattingFunction } from '@undp/data-viz/utils';
 import {
   Accordion,
   AccordionContent,
@@ -66,6 +67,10 @@ function useTargetAffiliationData() {
       >,
   });
 }
+
+const TOTAL_POSTS = 255586;
+const TOTAL_HATE_POST = 75809;
+const TOTAL_POSTS_TARGETING_WEHRD = 16804;
 
 const ATTACK_TWEETS = [
   {
@@ -208,21 +213,25 @@ export function ProjectsPage() {
           <GridItem noOfColSpan={1}>
             <div className='flex h-full flex-col gap-4'>
               <div className='flex grow flex-col justify-center bg-surface p-6'>
-                <StatCardValue>255K</StatCardValue>
+                <StatCardValue>{numberFormattingFunction(TOTAL_POSTS)}</StatCardValue>
                 <StatCardDescription>
                   <strong>Social media posts analysed</strong> across five countries, coming from
                   close to 80,000 unique authors.
                 </StatCardDescription>
               </div>
               <div className='flex grow flex-col justify-center bg-surface p-6'>
-                <StatCardValue>40%</StatCardValue>
+                <StatCardValue>
+                  {numberFormattingFunction((TOTAL_HATE_POST * 100) / TOTAL_POSTS, undefined, 1)}%
+                </StatCardValue>
                 <StatCardDescription>
                   <strong>Contained some level of violence</strong> as identified with AI models
                   prompted by UNDP.
                 </StatCardDescription>
               </div>
               <div className='flex grow flex-col justify-center bg-surface p-6'>
-                <StatCardValue>4.5K</StatCardValue>
+                <StatCardValue>
+                  {numberFormattingFunction(TOTAL_POSTS_TARGETING_WEHRD)}
+                </StatCardValue>
                 <StatCardDescription>
                   <strong>Incidents of violence against women</strong> environment defenders, vetted
                   and reported by trained monitors.
@@ -462,6 +471,7 @@ export function ProjectsPage() {
                         ])}
                         colorDomain={['Inorganic', 'Organic']}
                         maxValue={100}
+                        numberDisplayOptions={{ suffix: '%' }}
                         showValues
                         showTicks={false}
                         topMargin={0}
@@ -527,6 +537,7 @@ export function ProjectsPage() {
                           { columnId: 'value', chartConfigId: 'size' },
                         ])}
                         showValues
+                        showTicks={false}
                         topMargin={0}
                         bottomMargin={0}
                         graphTitle='Target Affiliation'
@@ -569,6 +580,8 @@ export function ProjectsPage() {
                   <div className='flex flex-col'>
                     <H4 weight='medium'>{el.country_name}</H4>
                     <P marginBottom='none'>{el.country_snapshot}</P>
+                    <Spacer size='3xl' />
+                    <Separator color='surface-md' />
                     <Spacer size='2xl' />
                     <Grid noOfCol={2}>
                       <GridItem noOfColSpan={1}>
@@ -576,7 +589,18 @@ export function ProjectsPage() {
                           <H4 marginBottom='none' weight='bold'>
                             {el.total_posts}
                           </H4>
-                          <P size='base'>posts collected</P>
+                          <P size='base'>
+                            posts monitored with eMonitor
+                            <br />
+                            <strong>
+                              {numberFormattingFunction(
+                                (el.tfgbv_posts_ai_assisted * 100) / el.total_posts,
+                                undefined,
+                                1,
+                              )}
+                              % showed signs of TFGBV
+                            </strong>
+                          </P>
                         </div>
                       </GridItem>
                       <GridItem noOfColSpan={1}>
@@ -584,7 +608,19 @@ export function ProjectsPage() {
                           <H4 marginBottom='none' weight='bold'>
                             {el.tfgbv_posts_human_validated}
                           </H4>
-                          <P size='base'>human-verified TFGBV cases</P>
+                          <P size='base'>
+                            human-verified TFGBV cases
+                            <br />
+                            <strong>
+                              {numberFormattingFunction(
+                                (el.event_tfgbv_posts_human_validated * 100) /
+                                  el.tfgbv_posts_human_validated,
+                                undefined,
+                                1,
+                              )}
+                              % event-based attacks
+                            </strong>
+                          </P>
                         </div>
                       </GridItem>
                     </Grid>

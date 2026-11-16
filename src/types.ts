@@ -4,6 +4,7 @@ export interface DefenderCountriesDataRow {
   total_posts: number;
   tfgbv_posts_ai_assisted: number;
   tfgbv_posts_human_validated: number;
+  event_tfgbv_posts_human_validated: number;
   behavior_inorganic: number;
   behavior_organic: number;
   country_snapshot: string;

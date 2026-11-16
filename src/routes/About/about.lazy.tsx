@@ -2,11 +2,12 @@ import { createLazyRoute } from '@tanstack/react-router';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { H1, P } from '@undp/design-system-react/Typography';
 import { useTranslation } from 'react-i18next';
+import { Section } from '@/components/Section';
 
 export function About() {
   const { t } = useTranslation();
   return (
-    <div className='mx-auto my-8 w-full max-w-[1920px] px-4'>
+    <Section>
       <H1 size='sm'>{t('about')}</H1>
       <Spacer size='2xl' />
       <P>
@@ -55,7 +56,7 @@ export function About() {
         enim quis, pellentesque magna. Morbi feugiat, metus at rutrum auctor, nulla ligula blandit
         est, vitae finibus eros diam a turpis.
       </P>
-    </div>
+    </Section>
   );
 }
 
