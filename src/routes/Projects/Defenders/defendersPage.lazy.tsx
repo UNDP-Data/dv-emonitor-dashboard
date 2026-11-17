@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { createLazyRoute } from '@tanstack/react-router';
-import { SimpleBarGraph, StackedBarGraph } from '@undp/data-viz/BarGraph';
+import { SimpleBarGraph } from '@undp/data-viz/BarGraph';
 import { fetchAndParseCSV } from '@undp/data-viz/fetchAndParseData';
 import { transformDataForGraph } from '@undp/data-viz/transformData';
 import { numberFormattingFunction } from '@undp/data-viz/utils';
@@ -26,26 +26,22 @@ import {
   BreadcrumbSeparator,
 } from '@undp/design-system-react/Breadcrumb';
 import { Button } from '@undp/design-system-react/Button';
+import { DropdownSelect } from '@undp/design-system-react/DropdownSelect';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
+import { Modal } from '@undp/design-system-react/Modal';
 import { PageHeader, PageHeaderContent } from '@undp/design-system-react/PageHeader';
-import {
-  ResourceCard,
-  ResourceCardContent,
-  ResourceCardDescription,
-  ResourceCardFooter,
-  ResourceCardImage,
-  ResourceCardTitle,
-} from '@undp/design-system-react/ResourceCard';
 import { SegmentedControl } from '@undp/design-system-react/SegmentedControl';
 import { Separator } from '@undp/design-system-react/Separator';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { Spinner } from '@undp/design-system-react/Spinner';
-import { StatCardDescription, StatCardValue } from '@undp/design-system-react/StatCard';
+import { StatCardDescription } from '@undp/design-system-react/StatCard';
 import { Switch } from '@undp/design-system-react/Switch';
-import { H1, H2, H3, H4, H5, P } from '@undp/design-system-react/Typography';
+import { A, H1, H2, H3, H4, H5, H6, P } from '@undp/design-system-react/Typography';
 import { VizCarousel } from '@undp/design-system-react/VizCarousel';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import MetricHighlights from '@/components/MetricHighlights';
 import { Section } from '@/components/Section';
 import { DEFENDER_COUNTRIES } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
@@ -74,14 +70,31 @@ const TOTAL_POSTS_TARGETING_WEHRD = 16804;
 
 const ATTACK_TWEETS = [
   {
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing  do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    dateTime: 'Jun 2 • 08:14',
+    translation:
+      '“Well, on Facebook the news says the woman was living together without marriage, that’s why she got beaten up.”',
+    original: 'lah ini di FB beritanya si ibu kumpul kebo makanya di keroyok',
   },
   {
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing  do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    dateTime: 'Jun 2 • 08:14',
+    translation:
+      '“You are one of the reasons this country is falling apart… are you still not aware?”',
+    original: 'Anda salah satu penyebab hancur nya negeri ini.... Masih gak sadar',
+  },
+  {
+    translation: (
+      <>
+        “Hahaha… serves this bastard right, the face of this asshole, already chased away that old
+        woman (
+        <HoverCard openDelay={0}>
+          <HoverCardTrigger className='underline decoration-dotted'>nenek gayung</HoverCardTrigger>
+          <HoverCardContent className='bg-background shadow'>
+            in Indonesia, “nenek gayung” does not refer to an ordinary elderly woman. It is
+            associated with a ghost from local folklore.
+          </HoverCardContent>
+        </HoverCard>
+        ), lol.”
+      </>
+    ),
+    original: 'Whahaha ..... mampus muka bajingan satu ini udah usir nenek gayung wkwk ...',
   },
 ];
 
@@ -99,17 +112,20 @@ export function ProjectsPage() {
   const { t } = useTranslation();
   const [TFGBVTab, setTFGBVTab] = useState<'human_validated' | 'ai_assisted'>('human_validated');
   const [showContent, setShowContent] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [resourceCardCountryFilter, setResourceCardCountryFilter] = useState<
+    undefined | { value: string; label: string }
+  >(undefined);
   const resourceCards = t('resourceCards', { returnObjects: true }) as {
     title: string;
     text: string;
-    image: string;
     url: string;
   }[];
   return (
     <div className='w-full antialiased'>
       <PageHeader
         className='h-auto px-0 sm:px-2 md:h-[calc(100vh-115px)]'
-        backgroundImage='/imgs/header_img.webp'
+        backgroundImage='/imgs/defenders_header_img.webp'
         contentMode='light'
         variant='secondary'
       >
@@ -135,6 +151,9 @@ export function ProjectsPage() {
             Supporting influence & safety of Women Environment Human Rights Defender and Civil
             Society Organisations
           </H5>
+          <a href='#explore-data'>
+            <Button endIcon='none'>Explore the data</Button>
+          </a>
         </PageHeaderContent>
       </PageHeader>
       <Banner
@@ -158,7 +177,9 @@ export function ProjectsPage() {
               reveals that TFGBV is systemic, targeted and increasing. This page shows how UNDP
               transforms data into evidence for protection, accountability and policy reform.
             </H5>
-            <Spacer size='xl' />
+            <Spacer size='5xl' />
+            <img src='/imgs/defender_video.webp' className='w-full' alt='video cover' />
+            <Spacer size='5xl' />
             <P size='xs' weight='semibold' marginBottom='xs' className='uppercase tracking-wider'>
               Project countries
             </P>
@@ -174,7 +195,7 @@ export function ProjectsPage() {
                 </Badge>
               ))}
             </div>
-            <Spacer size='2xl' />
+            <Spacer size='3xl' />
             <Separator color='background' thickness='xs' className='opacity-30' />
             <Spacer size='2xl' />
             <P size='xs' weight='semibold' marginBottom='2xs' className='uppercase tracking-wider'>
@@ -191,11 +212,11 @@ export function ProjectsPage() {
               ))}
             </div>
             <Spacer size='sm' />
-            <P size='lg' marginBottom='none'>
+            <H5 marginBottom='none' className='opacity-70'>
               Thanks to Denmark, Luxembourg and the Republic of Korea, partners to UNDP’s 
               Governance, Peacebuilding, Crisis and Resilience (GCPR) Funding Window, for making
               this work possible.
-            </P>
+            </H5>
           </BannerBodyContent>
         </BannerBody>
       </Banner>
@@ -213,25 +234,23 @@ export function ProjectsPage() {
           <GridItem noOfColSpan={1}>
             <div className='flex h-full flex-col gap-4'>
               <div className='flex grow flex-col justify-center bg-surface p-6'>
-                <StatCardValue>{numberFormattingFunction(TOTAL_POSTS)}</StatCardValue>
+                <H3 weight='bold'>{numberFormattingFunction(TOTAL_POSTS)}</H3>
                 <StatCardDescription>
                   <strong>Social media posts analysed</strong> across five countries, coming from
                   close to 80,000 unique authors.
                 </StatCardDescription>
               </div>
               <div className='flex grow flex-col justify-center bg-surface p-6'>
-                <StatCardValue>
+                <H3 weight='bold'>
                   {numberFormattingFunction((TOTAL_HATE_POST * 100) / TOTAL_POSTS, undefined, 1)}%
-                </StatCardValue>
+                </H3>
                 <StatCardDescription>
                   <strong>Contained some level of violence</strong> as identified with AI models
                   prompted by UNDP.
                 </StatCardDescription>
               </div>
               <div className='flex grow flex-col justify-center bg-surface p-6'>
-                <StatCardValue>
-                  {numberFormattingFunction(TOTAL_POSTS_TARGETING_WEHRD)}
-                </StatCardValue>
+                <H3 weight='bold'>{numberFormattingFunction(TOTAL_POSTS_TARGETING_WEHRD)}</H3>
                 <StatCardDescription>
                   <strong>Incidents of violence against women</strong> environment defenders, vetted
                   and reported by trained monitors.
@@ -325,7 +344,7 @@ export function ProjectsPage() {
         </H3>
         <Spacer size='2xl' />
         <Accordion type='single' variant='secondary' collapsible defaultValue='item-1'>
-          <AccordionItem value='item-1' className='bg-background'>
+          <AccordionItem value='item-1'>
             <AccordionTrigger className='text-[1.25rem] normal-case'>
               Why attacks happen
             </AccordionTrigger>
@@ -333,94 +352,79 @@ export function ProjectsPage() {
               <Grid noOfCol={{ base: 1, md: 2 }}>
                 <GridItem noOfColSpan={1}>
                   <div className='flex flex-col'>
-                    <H5 weight='semibold' className='text-secondary' marginBottom='none'>
-                      There is strong evidence suggesting the use of TFGBV as a mechanism to push
-                      women environment defenders towards self-censorship and to discredit their
-                      work.
-                    </H5>
+                    <H4 weight='bold' marginBottom='none'>
+                      TFGBV is used to push women environment defenders into self-censorship and to
+                      discredit their work
+                    </H4>
                     <Spacer size='2xl' />
                     <P marginBottom='none'>
-                      About{' '}
-                      <span className='font-bold text-secondary'>
-                        40% of all attacks vetted by human monitors were produced as a reaction to
-                        specific events
-                      </span>
-                      : an ongoing policy debate, a right defenders' participation in public fora,
-                      amongst others.
+                      Attacks rise when defenders are most visible, such as during a policy debate
+                      or when they speak in public. The aim is to make them step back, or to
+                      undermine their advocacy with stereotypes.
                     </P>
                     <Spacer size='2xl' />
-                    <Separator color='surface-sm' />
+                    <Separator color='surface-md' />
                     <Spacer size='2xl' />
-                    <P marginBottom='none'>
-                      These findings align with wider evidence showing that{' '}
-                      <span className='font-bold text-secondary'>
-                        92% of environmental defenders experience online abuse
-                      </span>
-                      , with women defenders often facing gendered, sexualized and identity-based
-                      attacks that seek to silence their participation and advocacy.
-                    </P>
+                    <MetricHighlights
+                      items={[
+                        {
+                          value: '40%',
+                          description: 'of vetted attacks were reactions to specific events',
+                        },
+                        {
+                          value: '92%',
+                          description: (
+                            <>
+                              of environmental defenders experience online abuse (
+                              <A
+                                href='https://globalwitness.org/en/campaigns/digital-threats/toxic-platforms-broken-planet/'
+                                target='_blank'
+                                rel='noopener'
+                              >
+                                Global Witness
+                              </A>
+                              )
+                            </>
+                          ),
+                        },
+                      ]}
+                    />
                   </div>
                 </GridItem>
                 <GridItem noOfColSpan={1}>
-                  <div className='flex h-full min-h-95 flex-col bg-surface p-6'>
-                    <div className='flex w-full items-center justify-between gap-4'>
-                      <P size='xl' marginBottom='none'>
-                        Anonymised examples of attacks
-                      </P>
-                      <div className='flex items-center gap-2'>
-                        <P size='sm' marginBottom='none'>
-                          Show content
+                  <div className='h-full px-6'>
+                    <div className='flex h-full w-full flex-col justify-between gap-4 bg-background p-6'>
+                      <H6 marginBottom='none'>A case from Indonesia</H6>
+                      <div className='justify-center'>
+                        <H5 marginBottom='none'>
+                          Assaulted for opposing illegal mining, then attacked again online
+                        </H5>
+                        <Spacer size='3xl' />
+                        <P size='base' marginBottom='none'>
+                          An elderly woman who spoke out against illegal mining was physically
+                          assaulted. As the news spread, eMonitor+ found a second wave of abuse
+                          online: posts that blamed her, mocked the attack and spread false claims
+                          about her private life to hide why she was targeted.
                         </P>
-                        <Switch
-                          size='small'
-                          color='secondary'
-                          onCheckedChange={(d) => {
-                            setShowContent(d);
-                          }}
-                          checked={showContent}
-                        />
                       </div>
+                      <Button
+                        endIcon='arrow'
+                        variant='link'
+                        onClick={() => {
+                          setOpenModal(true);
+                        }}
+                        padding='none'
+                        className='w-fit'
+                      >
+                        Read more
+                      </Button>
                     </div>
-                    {showContent ? (
-                      <div className='flex flex-col items-center gap-4'>
-                        <Spacer size='2xl' />
-                        {ATTACK_TWEETS.map((tweet, i) => (
-                          <div
-                            // biome-ignore lint/suspicious/noArrayIndexKey: index is not going to change
-                            key={i}
-                            className='w-full rounded-lg border border-stroke bg-background p-4'
-                          >
-                            <P marginBottom='none' size='base'>
-                              {tweet.content}
-                            </P>
-                            <Spacer size='xl' />
-                            <Separator color='surface-md' />
-                            <Spacer size='xl' />
-                            <P className='text-content-tertiary' size='sm' marginBottom='none'>
-                              {tweet.dateTime}
-                            </P>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className='flex grow items-center justify-center'>
-                        <P
-                          className='mx-auto w-full max-w-75 text-center text-content-tertiary'
-                          size='sm'
-                        >
-                          <strong>Sensitive content hidden</strong>
-                          <br />
-                          This section may contain offensive language. Switch the toggle to view the
-                          content.
-                        </P>
-                      </div>
-                    )}
                   </div>
                 </GridItem>
               </Grid>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-2' className='bg-background'>
+          <AccordionItem value='item-2'>
             <AccordionTrigger className='text-[1.25rem] normal-case'>
               How attacks are amplified
             </AccordionTrigger>
@@ -428,30 +432,33 @@ export function ProjectsPage() {
               <Grid noOfCol={{ base: 1, md: 2 }}>
                 <GridItem noOfColSpan={1}>
                   <div className='flex flex-col'>
-                    <H5 weight='semibold' className='text-secondary' marginBottom='none'>
+                    <H4 weight='bold' marginBottom='none'>
                       TFGBV is enhanced through coordinated strategies of inorganic content
-                      production, distribution, and engagement.
-                    </H5>
+                      production, distribution, and engagement
+                    </H4>
                     <Spacer size='2xl' />
                     <P marginBottom='none'>
-                      <span className='font-bold text-secondary'>
-                        About one in three of the violent attacks vetted by human monitors had
-                        strong indications of being produced or enhanced through inorganic behavior,
-                      </span>{' '}
-                      which refers to artificial, automated, or paid activity that pushes engagement
-                      into more polarizing and/or violent narratives or content.
+                      Inorganic behaviour is artificial, automated or paid activity that pushes
+                      engagement towards more polarising or violent narratives. How often it appears
+                      varies widely between countries; Iraq is where most of these cases were vetted
+                      by human monitors.
                     </P>
                     <Spacer size='2xl' />
-                    <Separator color='surface-sm' />
+                    <Separator color='surface-md' />
                     <Spacer size='2xl' />
-                    <P marginBottom='none'>
-                      The identification of these strategies widely varies across countries, with
-                      Iraq being the one where most of these cases were vetted by human monitors.
-                    </P>
+                    <MetricHighlights
+                      items={[
+                        {
+                          value: '1 in 3',
+                          description:
+                            'vetted violent attacks showed strong signs of inorganic behaviour',
+                        },
+                      ]}
+                    />
                   </div>
                 </GridItem>
                 <GridItem noOfColSpan={1}>
-                  <div className='flex h-full min-h-95 flex-col bg-surface p-6'>
+                  <div className='flex h-full min-h-95 flex-col bg-surface px-6'>
                     {isCountryDataError ? (
                       <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
                         <P className='text-error'>Error loading country data</P>
@@ -461,24 +468,24 @@ export function ProjectsPage() {
                         <Spinner />
                       </div>
                     ) : (
-                      <StackedBarGraph
-                        data={transformDataForGraph(countryData ?? [], 'stackedBarChart', [
+                      <SimpleBarGraph
+                        data={transformDataForGraph(countryData ?? [], 'barChart', [
                           { columnId: 'country_name', chartConfigId: 'label' },
                           {
-                            columnId: ['behavior_inorganic', 'behavior_organic'],
+                            columnId: 'behavior_inorganic',
                             chartConfigId: 'size',
                           },
                         ])}
                         colorDomain={['Inorganic', 'Organic']}
                         maxValue={100}
                         numberDisplayOptions={{ suffix: '%' }}
+                        trackColor='var(--gray-300)'
+                        graphTitle='Share of vetted attacks with strong signs of inorganic behaviour'
                         showValues
                         showTicks={false}
+                        backgroundColor='var(--background)'
                         topMargin={0}
                         bottomMargin={0}
-                        graphTitle='Behavior breakdown'
-                        showTotalValue={false}
-                        colors={['var(--blue-600)', 'var(--azure-600)']}
                         orientation='horizontal'
                       />
                     )}
@@ -487,7 +494,7 @@ export function ProjectsPage() {
               </Grid>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-3' className='bg-background'>
+          <AccordionItem value='item-3'>
             <AccordionTrigger className='text-[1.25rem] normal-case'>
               Who is targeted
             </AccordionTrigger>
@@ -495,33 +502,36 @@ export function ProjectsPage() {
               <Grid noOfCol={{ base: 1, md: 2 }}>
                 <GridItem noOfColSpan={1}>
                   <div className='flex flex-col'>
-                    <H5 weight='semibold' className='text-secondary' marginBottom='none'>
-                      TFGBV is used to discredit established women environment defenders and
-                      intimidate newer voices, making advocacy harder to sustain.
-                    </H5>
+                    <H4 weight='semibold' marginBottom='none'>
+                      TFGBV discredits established women defenders, and also persecutes newer
+                      leaders and activism itself
+                    </H4>
                     <Spacer size='2xl' />
                     <P marginBottom='none'>
-                      <span className='font-bold text-secondary'>
-                        62% of violent attacks vetted by human monitors targeted women with
-                        established leadership roles,
-                      </span>{' '}
-                      including CSO representatives, politicians, journalists, religious figures and
-                      women environment human rights defenders.
+                      Attacks also target activism, feminism and environmental justice as ideas.
+                      When advocacy is framed as a place of inherent violence, new activism becomes
+                      harder to foster.
                     </P>
                     <Spacer size='2xl' />
                     <Separator color='surface-sm' />
                     <Spacer size='2xl' />
-                    <P marginBottom='none'>
-                      <span className='font-bold text-secondary'>
-                        The remaining 38% targeted lesser-known voices or activism itself.
-                      </span>{' '}
-                      These emerging leaders may be less equipped to respond to TFGBV, increasing
-                      their vulnerability and potentially limiting their future advocacy.
-                    </P>
+                    <MetricHighlights
+                      items={[
+                        {
+                          value: '62%',
+                          description:
+                            'of vetted violent attacks targeted women with established leadership',
+                        },
+                        {
+                          value: '38%',
+                          description: 'targeted lesser-known voices or activism itself',
+                        },
+                      ]}
+                    />
                   </div>
                 </GridItem>
                 <GridItem noOfColSpan={1}>
-                  <div className='flex h-full min-h-95 flex-col bg-surface p-6'>
+                  <div className='flex h-full min-h-95 flex-col bg-surface px-6'>
                     {isTargetAffiliationDataError ? (
                       <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
                         <P className='text-error'>Error loading target affiliation data</P>
@@ -540,6 +550,7 @@ export function ProjectsPage() {
                         showTicks={false}
                         topMargin={0}
                         bottomMargin={0}
+                        backgroundColor='var(--background)'
                         graphTitle='Target Affiliation'
                         orientation='horizontal'
                       />
@@ -578,52 +589,50 @@ export function ProjectsPage() {
               slides={countryData.map((el) => ({
                 content: (
                   <div className='flex flex-col'>
-                    <H4 weight='medium'>{el.country_name}</H4>
+                    <H4 weight='bold'>{el.country_name}</H4>
                     <P marginBottom='none'>{el.country_snapshot}</P>
                     <Spacer size='3xl' />
                     <Separator color='surface-md' />
                     <Spacer size='2xl' />
-                    <Grid noOfCol={2}>
-                      <GridItem noOfColSpan={1}>
-                        <div>
-                          <H4 marginBottom='none' weight='bold'>
-                            {el.total_posts}
-                          </H4>
-                          <P size='base'>
-                            posts monitored with eMonitor
-                            <br />
-                            <strong>
-                              {numberFormattingFunction(
-                                (el.tfgbv_posts_ai_assisted * 100) / el.total_posts,
-                                undefined,
-                                1,
-                              )}
-                              % showed signs of TFGBV
-                            </strong>
-                          </P>
-                        </div>
-                      </GridItem>
-                      <GridItem noOfColSpan={1}>
-                        <div>
-                          <H4 marginBottom='none' weight='bold'>
-                            {el.tfgbv_posts_human_validated}
-                          </H4>
-                          <P size='base'>
-                            human-verified TFGBV cases
-                            <br />
-                            <strong>
-                              {numberFormattingFunction(
-                                (el.event_tfgbv_posts_human_validated * 100) /
-                                  el.tfgbv_posts_human_validated,
-                                undefined,
-                                1,
-                              )}
-                              % event-based attacks
-                            </strong>
-                          </P>
-                        </div>
-                      </GridItem>
-                    </Grid>
+                    <MetricHighlights
+                      items={[
+                        {
+                          value: el.total_posts,
+                          description: (
+                            <>
+                              posts monitored with eMonitor
+                              <br />
+                              <strong>
+                                {numberFormattingFunction(
+                                  (el.tfgbv_posts_ai_assisted * 100) / el.total_posts,
+                                  undefined,
+                                  1,
+                                )}
+                                % showed signs of TFGBV
+                              </strong>
+                            </>
+                          ),
+                        },
+                        {
+                          value: el.tfgbv_posts_human_validated,
+                          description: (
+                            <>
+                              human-verified TFGBV cases
+                              <br />
+                              <strong>
+                                {numberFormattingFunction(
+                                  (el.event_tfgbv_posts_human_validated * 100) /
+                                    el.tfgbv_posts_human_validated,
+                                  undefined,
+                                  1,
+                                )}
+                                % event-based attacks
+                              </strong>
+                            </>
+                          ),
+                        },
+                      ]}
+                    />
                   </div>
                 ),
                 viz: (
@@ -654,24 +663,171 @@ export function ProjectsPage() {
         )}
       </Section>
       <Section id='resources'>
-        <H3>Resources</H3>
-        <Grid noOfCol={{ base: 1, sm: 2, md: 4, lg: 6 }}>
-          {resourceCards.map((card) => (
-            <GridItem key={card.title}>
-              <ResourceCard href={card.url}>
-                <ResourceCardImage imageSrc={card.image} aspectRatio='portrait' />
-                <ResourceCardContent>
-                  <ResourceCardTitle>{card.title}</ResourceCardTitle>
-                  <ResourceCardDescription>{card.text}</ResourceCardDescription>
-                </ResourceCardContent>
-                <ResourceCardFooter>
-                  <Button variant='link'>{t('readMore')}</Button>
-                </ResourceCardFooter>
-              </ResourceCard>
-            </GridItem>
-          ))}
+        <H5>From Evidence to Accountability</H5>
+        <H3>Data is most powerful when used for action</H3>
+        <Spacer className='3xl' />
+        <div className='flex items-center justify-between gap-4'>
+          <div>
+            <P size='sm' marginBottom='2xs'>
+              Filter by country
+            </P>
+            <DropdownSelect
+              variant='light'
+              value={resourceCardCountryFilter}
+              onChange={(v) => setResourceCardCountryFilter(v as { value: string; label: string })}
+              options={[...new Set(resourceCards.map((el) => el.title))].map((el) => ({
+                value: el,
+                label: el,
+              }))}
+              isSearchable={false}
+              isClearable
+              className='min-w-60'
+            />
+          </div>
+          <P size='sm' className='hidden text-content-secondary md:block' marginBottom='none'>
+            {
+              resourceCards.filter(
+                (el) => !resourceCardCountryFilter || el.title === resourceCardCountryFilter?.value,
+              ).length
+            }{' '}
+            resource(s)
+          </P>
+        </div>
+        <Spacer size='3xl' />
+        <Grid noOfCol={{ base: 1, sm: 2, md: 3 }}>
+          {resourceCards
+            .filter(
+              (el) => !resourceCardCountryFilter || el.title === resourceCardCountryFilter?.value,
+            )
+            .map((card) => (
+              <GridItem key={`${card.title}_${card.text}`}>
+                <a href={card.url} target='_blank' rel='noopener'>
+                  <div className='group flex h-full min-h-60 flex-col bg-surface p-6 hover:bg-surface-hover'>
+                    <H6 marginBottom='none'>{card.title}</H6>
+                    <Spacer size='xl' />
+                    <P size='lg' marginBottom='none' className='line-clamp-3 grow'>
+                      {card.text}
+                    </P>
+                    <Spacer size='xl' />
+                    <Button variant='link' padding='none' endIcon='arrow' className='w-fit'>
+                      {t('readMore')}
+                    </Button>
+                  </div>
+                </a>
+              </GridItem>
+            ))}
         </Grid>
       </Section>
+      <Modal
+        onClose={() => {
+          setOpenModal(false);
+        }}
+        open={openModal}
+      >
+        <div>
+          <H6 marginBottom='none'>A case from Indonesia</H6>
+          <Spacer size='2xl' />
+          <H5 marginBottom='none'>
+            Assaulted for opposing illegal mining, then attacked again online
+          </H5>
+          <Spacer size='2xl' />
+          <div className='bg-surface p-4'>
+            <P marginBottom='none' size='base' className='text-content-secondary'>
+              <strong>Content warning</strong>: this story contains descriptions of gender-based
+              violence, including comments that could be considered sexist and abusive, that some
+              readers may find distressing.
+            </P>
+          </div>
+          <Spacer size='2xl' />
+          <P size='base' className='text-content-secondary'>
+            An elderly woman in Indonesia who opposed illegal mining in her area was physically
+            assaulted. News of the attack spread quickly online and drew strong public reactions,
+            including many messages of solidarity.
+          </P>
+          <P size='base' className='text-content-secondary'>
+            Monitoring with eMonitor+ also found repeated technology-facilitated gender-based
+            violence targeting her after the assault. Posts included derogatory remarks and
+            victim-blaming, and some mocked or celebrated the violence against her.
+          </P>
+          <P marginBottom='none' size='base' className='text-content-secondary'>
+            Several posts accused her of harming the nation. Others tried to justify the assault
+            with gendered disinformation, claiming she was attacked because of “kumpul kebo” (living
+            together outside marriage). These claims deliberately hid the fact that she was targeted
+            for opposing illegal mining.
+          </P>
+          <Spacer size='2xl' />
+          <Separator color='surface-md' />
+          <Spacer size='2xl' />
+          <div className='flex w-full items-center justify-between gap-4'>
+            <div>
+              <P size='base' marginBottom='none'>
+                What the posts said
+              </P>
+              <P size='sm' marginBottom='none' className='text-content-secondary'>
+                Examples identified by eMonitor+, translated from Indonesian
+              </P>
+            </div>
+            <div className='flex items-center gap-2'>
+              <P size='sm' marginBottom='none'>
+                Show content
+              </P>
+              <Switch
+                size='small'
+                color='secondary'
+                onCheckedChange={(d) => {
+                  setShowContent(d);
+                }}
+                checked={showContent}
+              />
+            </div>
+          </div>
+          <Spacer size='2xl' />
+          {showContent ? (
+            <Grid noOfCol={{ sm: 1, md: 2, lg: 3 }} gap='16px'>
+              {ATTACK_TWEETS.map((el, i) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: not changing
+                <GridItem noOfColSpan={1} key={i}>
+                  <div className='bg-surface p-4'>
+                    <P size='base' marginBottom='base'>
+                      {el.translation}
+                    </P>
+                    <P size='sm' marginBottom='none' className='text-content-secondary'>
+                      <strong>Original (Indonesian)</strong>: {el.original}
+                    </P>
+                  </div>
+                </GridItem>
+              ))}
+            </Grid>
+          ) : (
+            <div className='flex min-h-50 grow items-center justify-center bg-surface'>
+              <P className='mx-auto w-full text-center text-content-tertiary' size='sm'>
+                <strong>Sensitive content hidden</strong>
+                <br />
+                This section may contain offensive language. Switch the toggle to view the content.
+              </P>
+            </div>
+          )}
+          <Spacer size='2xl' />
+          <Separator color='surface-md' />
+          <Spacer size='2xl' />
+          <P size='base' marginBottom='none' weight='bold'>
+            Narratives like these trivialise the physical violence she endured and normalise harm
+            against women environment human rights defenders. They show how digital spaces are used
+            to extend and legitimise physical violence.
+          </P>
+          <Spacer size='2xl' />
+          <Separator color='surface-md' />
+          <Spacer size='2xl' />
+          <P size='base' marginBottom='none' className='text-content-secondary'>
+            Source: Indonesia eMonitor+ report,{' '}
+            <span className='italic'>
+              Understanding Digital Risks Faced by Women Environmental Human Rights Defenders:
+              Insights from eMonitor+ Monitoring of Technology-Facilitated Gender-Based Violence
+              (September 2025 – June 2026)
+            </span>
+          </P>
+        </div>
+      </Modal>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { SegmentedControl } from '@undp/design-system-react/SegmentedControl';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { Switch } from '@undp/design-system-react/Switch';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@undp/design-system-react/Tabs';
-import { H3, H5, H6, P } from '@undp/design-system-react/Typography';
+import { A, H3, H5, H6, P } from '@undp/design-system-react/Typography';
 import { AFFILIATION } from '@/constants';
 import { GeneralAnalysisDashboard } from './generalAnalysis';
 import {
@@ -59,6 +59,20 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
             indicatorSeparator: () => 'hidden',
           }}
         />
+      </div>
+      <Spacer size='xl' />
+      <div className='flex gap-8'>
+        <P size='base'>
+          <strong>Data collection period:</strong>
+        </P>
+        <P size='base'>
+          <strong>Human vetting performed by:</strong>
+        </P>
+        <P size='base'>
+          <A target='_blank' href='#' className='font-bold'>
+            About the methodology
+          </A>
+        </P>
       </div>
       <Spacer size='2xl' />
       <Grid

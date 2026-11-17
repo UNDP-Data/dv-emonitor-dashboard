@@ -26,10 +26,17 @@
     {"value":"29.5K","text":"Lorem ipsum dolor sit amet","title":"people"}
   ],
   "resourceCards":[
-    {"title":"Resource 1", "text":"PDF (830kb)","image":"/imgs/resource-01.webp", "url":"https://www.undp.org/"},
-    {"title":"Resource 2","text":"PDF (830kb)","image":"/imgs/resource-02.webp", "url":"https://www.undp.org/"},
-    {"title":"Resource 3","text":"PDF (830kb)","image":"/imgs/resource-03.webp", "url":"https://www.undp.org/"},
-    {"title":"Resource 4","text":"PDF (830kb)","image":"/imgs/resource-04.webp", "url":"https://www.undp.org/"}
+    {"title":"Global", "text":"Women Human Rights Defenders powering climate justice","url":"https://www.undp.org/"},
+    {"title":"Philippines", "text":"Policy Brief and Recommendations: Strengthening Women's Civil Society and WEHRDs' Political Participation and Influence for a Just, Green Future","url":"https://www.undp.org/"},
+    {"title":"Philippines", "text":"WEHRDs in the Philippines: Mechanisms and Gaps","url":"https://www.undp.org/"},
+    {"title":"Uganda", "text":"Climate Justice Toolkit","url":"https://www.undp.org/"},
+    {"title":"Kenya", "text":"Assessment Of The Legal, Policy And Social Impact Of Climate Change Laws On Women Defenders Assessment","url":"https://www.undp.org/"},
+    {"title":"Kenya", "text":"Strengthening Women’s Civil Society Environmental Influence for a Just, Green Future. | United Nations Development Programme ","url":"https://www.undp.org/"},
+    {"title":"Indonesia", "text":"Ministry of Human Rights and UNDP Convene Strategic Public Consultations to Fortify Protection for Women and Environmental Human Rights Defenders in Indonesia","url":"https://www.undp.org/"},
+    {"title":"Indonesia", "text":"Komnas Perempuan and UNDP Conclude National Consultation to Strengthen Protection Policies for Women Environmental Human Rights Defenders in Indonesia","url":"https://www.undp.org/"},
+    {"title":"Indonesia", "text":"UNDP Launches New Initiative to Protect and Empower Women Environmental Defenders in Indonesia","url":"https://www.undp.org/"},
+    {"title":"Iraq", "text":"Climate Justice Toolkit","url":"https://www.undp.org/"},
+    {"title":"Iraq", "text":"Join us - Be an example of turning challenge into opportunity","url":"https://www.undp.org/"}
   ],
   "quote":"[A placeholder for quote] Lorem ipsum dolor sit amet consectetur. Accumsan volutpat id hac tincidunt rhoncus sollicitudin amet vel ut. Non suspendisse pellentesque tincidunt at. Cras habitant libero sed in nec senectus interdum eu ultrices.", 
   "mapTitle":"Projects by country",
