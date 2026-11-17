@@ -1,13 +1,6 @@
-import { Link, useParams } from '@tanstack/react-router';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@undp/design-system-react/DropdownMenu';
+import { useParams } from '@tanstack/react-router';
 import {
   Header,
-  HeaderActions,
   HeaderLogoUnit,
   HeaderMainNavUnit,
   HeaderMenuDropdown,
@@ -16,7 +9,6 @@ import {
 } from '@undp/design-system-react/Header';
 import { useTranslation } from 'react-i18next';
 import { DEFAULT_LANGUAGE, LANGUAGES } from '@/constants';
-import { ChevronDown, LanguageSwitcherIcon } from '@/Icons';
 
 export default function HeaderEl() {
   const params = useParams({ strict: false });
@@ -62,34 +54,6 @@ export default function HeaderEl() {
             {t('about')}
           </HeaderMenuLink>
         </HeaderMenuUnit>
-        <HeaderActions>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <div className='flex h-9 cursor-pointer items-center justify-between gap-2 whitespace-nowrap bg-transparent p-0 font-semibold text-secondary text-sm uppercase hover:text-blue-400 disabled:cursor-not-allowed disabled:opacity-50 data-placeholder:text-muted-foreground dark:text-primary-white dark:hover:text-primary-white rtl:[direction:rtl] [&>span]:line-clamp-1 [&[data-state=open]>.chevron-down]:rotate-180'>
-                <LanguageSwitcherIcon />
-                {LANGUAGES.find((d) => d.id === locale)?.label}
-                <ChevronDown />
-              </div>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {LANGUAGES.map((d) => (
-                <DropdownMenuItem key={d.id} asChild>
-                  <Link
-                    to='.'
-                    params={{
-                      ...params,
-                      locale: d.id,
-                    }}
-                    preload={false}
-                    className='w-full'
-                  >
-                    {d.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </HeaderActions>
       </HeaderMainNavUnit>
     </Header>
   );

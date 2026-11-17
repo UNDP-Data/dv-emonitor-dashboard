@@ -40,10 +40,9 @@ import { Switch } from '@undp/design-system-react/Switch';
 import { A, H1, H2, H3, H4, H5, H6, P } from '@undp/design-system-react/Typography';
 import { VizCarousel } from '@undp/design-system-react/VizCarousel';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import MetricHighlights from '@/components/MetricHighlights';
 import { Section } from '@/components/Section';
-import { DEFENDER_COUNTRIES } from '@/constants';
+import { DEFENDER_COUNTRIES, DEFENDER_RESOURCES } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
 import { Dashboard } from './Dashboard';
 
@@ -109,18 +108,12 @@ export function ProjectsPage() {
     isLoading: isTargetAffiliationDataLoading,
     isError: isTargetAffiliationDataError,
   } = useTargetAffiliationData();
-  const { t } = useTranslation();
   const [TFGBVTab, setTFGBVTab] = useState<'human_validated' | 'ai_assisted'>('human_validated');
   const [showContent, setShowContent] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [resourceCardCountryFilter, setResourceCardCountryFilter] = useState<
     undefined | { value: string; label: string }
   >(undefined);
-  const resourceCards = t('resourceCards', { returnObjects: true }) as {
-    title: string;
-    text: string;
-    url: string;
-  }[];
   return (
     <div className='w-full antialiased'>
       <PageHeader
@@ -145,7 +138,7 @@ export function ProjectsPage() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <H5>{t('pageTitleSub')}</H5>
+          <H5>eMonitor+</H5>
           <H1 size='sm'>Women’s leadership for a just, healthy planet</H1>
           <H5>
             Supporting influence & safety of Women Environment Human Rights Defender and Civil
@@ -167,7 +160,7 @@ export function ProjectsPage() {
       >
         <BannerBody>
           <BannerBodySidebar>
-            <H2>{t('aboutTitle')}</H2>
+            <H2>About</H2>
           </BannerBodySidebar>
           <BannerBodyContent>
             <H5>
@@ -675,7 +668,7 @@ export function ProjectsPage() {
               variant='light'
               value={resourceCardCountryFilter}
               onChange={(v) => setResourceCardCountryFilter(v as { value: string; label: string })}
-              options={[...new Set(resourceCards.map((el) => el.title))].map((el) => ({
+              options={[...new Set(DEFENDER_RESOURCES.map((el) => el.title))].map((el) => ({
                 value: el,
                 label: el,
               }))}
@@ -686,7 +679,7 @@ export function ProjectsPage() {
           </div>
           <P size='sm' className='hidden text-content-secondary md:block' marginBottom='none'>
             {
-              resourceCards.filter(
+              DEFENDER_RESOURCES.filter(
                 (el) => !resourceCardCountryFilter || el.title === resourceCardCountryFilter?.value,
               ).length
             }{' '}
@@ -695,27 +688,25 @@ export function ProjectsPage() {
         </div>
         <Spacer size='3xl' />
         <Grid noOfCol={{ base: 1, sm: 2, md: 3 }}>
-          {resourceCards
-            .filter(
-              (el) => !resourceCardCountryFilter || el.title === resourceCardCountryFilter?.value,
-            )
-            .map((card) => (
-              <GridItem key={`${card.title}_${card.text}`}>
-                <a href={card.url} target='_blank' rel='noopener'>
-                  <div className='group flex h-full min-h-60 flex-col bg-surface p-6 hover:bg-surface-hover'>
-                    <H6 marginBottom='none'>{card.title}</H6>
-                    <Spacer size='xl' />
-                    <P size='lg' marginBottom='none' className='line-clamp-3 grow'>
-                      {card.text}
-                    </P>
-                    <Spacer size='xl' />
-                    <Button variant='link' padding='none' endIcon='arrow' className='w-fit'>
-                      {t('readMore')}
-                    </Button>
-                  </div>
-                </a>
-              </GridItem>
-            ))}
+          {DEFENDER_RESOURCES.filter(
+            (el) => !resourceCardCountryFilter || el.title === resourceCardCountryFilter?.value,
+          ).map((card) => (
+            <GridItem key={`${card.title}_${card.text}`}>
+              <a href={card.url} target='_blank' rel='noopener'>
+                <div className='group flex h-full min-h-60 flex-col bg-surface p-6 hover:bg-surface-hover'>
+                  <H6 marginBottom='none'>{card.title}</H6>
+                  <Spacer size='xl' />
+                  <P size='lg' marginBottom='none' className='line-clamp-3 grow'>
+                    {card.text}
+                  </P>
+                  <Spacer size='xl' />
+                  <Button variant='link' padding='none' endIcon='arrow' className='w-fit'>
+                    Read more
+                  </Button>
+                </div>
+              </a>
+            </GridItem>
+          ))}
         </Grid>
       </Section>
       <Modal
