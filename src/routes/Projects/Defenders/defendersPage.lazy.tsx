@@ -20,7 +20,6 @@ import {
   BreadcrumbSeparator,
 } from '@undp/design-system-react/Breadcrumb';
 import { Button } from '@undp/design-system-react/Button';
-import { DropdownSelect } from '@undp/design-system-react/DropdownSelect';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
 import { Modal } from '@undp/design-system-react/Modal';
@@ -34,12 +33,12 @@ import { StatCardDescription } from '@undp/design-system-react/StatCard';
 import { Switch } from '@undp/design-system-react/Switch';
 import { A, H1, H2, H3, H4, H5, H6, P } from '@undp/design-system-react/Typography';
 import { VizCarousel } from '@undp/design-system-react/VizCarousel';
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import MetricHighlights from '@/components/MetricHighlights';
+import { RenderWhenVisible } from '@/components/RenderWhenVisible';
 import { Section } from '@/components/Section';
 import { DEFENDER_COUNTRIES, DEFENDER_RESOURCES } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
-import { Dashboard } from './Dashboard';
 
 function useCountryData() {
   return useQuery({
@@ -91,6 +90,12 @@ const ATTACK_TWEETS = [
     original: 'Whahaha ..... mampus muka bajingan satu ini udah usir nenek gayung wkwk ...',
   },
 ];
+
+const DropdownSelect = lazy(() =>
+  import('@undp/design-system-react/DropdownSelect').then((m) => ({ default: m.DropdownSelect })),
+);
+
+const Dashboard = lazy(() => import('./Dashboard').then((m) => ({ default: m.Dashboard })));
 
 export function ProjectsPage() {
   const {
@@ -144,7 +149,7 @@ export function ProjectsPage() {
           </a>
         </PageHeaderContent>
       </PageHeader>
-      <PageSection backgroundColor='secondary' containerClassName='max-w-auto'>
+      <PageSection backgroundColor='secondary'>
         <Grid noOfCol={{ base: 1, sm: 3 }}>
           <GridItem noOfColSpan={1}>
             <H2>About</H2>
@@ -640,9 +645,25 @@ export function ProjectsPage() {
             <Spinner />
           </div>
         ) : (
-          <Dashboard
-            countryList={countryData.map((d) => ({ label: d.country_name, value: d.iso_code }))}
-          />
+          <RenderWhenVisible
+            fallback={
+              <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
+                <Spinner />
+              </div>
+            }
+          >
+            <Suspense
+              fallback={
+                <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
+                  <Spinner />
+                </div>
+              }
+            >
+              <Dashboard
+                countryList={countryData.map((d) => ({ label: d.country_name, value: d.iso_code }))}
+              />
+            </Suspense>
+          </RenderWhenVisible>
         )}
       </Section>
       <Section id='resources'>
@@ -654,18 +675,22 @@ export function ProjectsPage() {
             <P size='sm' marginBottom='2xs'>
               Filter by country
             </P>
-            <DropdownSelect
-              variant='light'
-              value={resourceCardCountryFilter}
-              onChange={(v) => setResourceCardCountryFilter(v as { value: string; label: string })}
-              options={[...new Set(DEFENDER_RESOURCES.map((el) => el.title))].map((el) => ({
-                value: el,
-                label: el,
-              }))}
-              isSearchable={false}
-              isClearable
-              className='min-w-60'
-            />
+            <Suspense fallback={<div className='h-12 w-full animate-pulse bg-surface' />}>
+              <DropdownSelect
+                variant='light'
+                value={resourceCardCountryFilter}
+                onChange={(v) =>
+                  setResourceCardCountryFilter(v as { value: string; label: string })
+                }
+                options={[...new Set(DEFENDER_RESOURCES.map((el) => el.title))].map((el) => ({
+                  value: el,
+                  label: el,
+                }))}
+                isSearchable={false}
+                isClearable
+                className='min-w-60'
+              />
+            </Suspense>
           </div>
           <P size='sm' className='hidden text-content-secondary md:block' marginBottom='none'>
             {

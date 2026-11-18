@@ -32,7 +32,7 @@ import {
 } from '@undp/design-system-react/StatCard';
 import { Blockquote, H1, H2, H4, H5, P } from '@undp/design-system-react/Typography';
 import { lazy, Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
+import { RenderWhenVisible } from './components/RenderWhenVisible';
 
 const DotDensityMap = lazy(() =>
   import('@undp/data-viz/DotDensityMap').then((m) => ({ default: m.DotDensityMap })),
@@ -43,14 +43,15 @@ const DropdownSelect = lazy(() =>
 );
 
 function App() {
-  const { t } = useTranslation();
-  const projectCards = t('projectCards', { returnObjects: true }) as {
-    title: string;
-    id: string;
-    text: string;
-    image: string;
-    url: string;
-  }[];
+  const projectCards = [
+    {
+      title: 'UNDP Defenders Project',
+      id: 'defenders',
+      text: "Supporting Women's Leadership for a Just, Healthy Planet",
+      image: '/imgs/projects-01.webp',
+      url: 'https://www.undp.org/',
+    },
+  ];
   return (
     <div className='flex flex-col antialiased'>
       <PageHeader
@@ -59,8 +60,8 @@ function App() {
         contentMode='dark'
       >
         <PageHeaderContent className='max-w-full sm:max-w-[50%]'>
-          <H5>{t('pageTitleSub')}</H5>
-          <H1 size='sm'>{t('pageTitle')}</H1>
+          <H5>eMonitor+</H5>
+          <H1 size='sm'>Placeholder for title</H1>
         </PageHeaderContent>
       </PageHeader>
       <section id='about'>
@@ -74,10 +75,14 @@ function App() {
         >
           <BannerBody>
             <BannerBodySidebar>
-              <H2>{t('aboutTitle')}</H2>
+              <H2>About</H2>
             </BannerBodySidebar>
             <BannerBodyContent>
-              <H4>{t('aboutText')}</H4>
+              <H4>
+                Lorem ipsum dolor sit amet consectetur. Faucibus venenatis lorem nunc egestas. Nisl
+                faucibus mi eget ac cras amet a. Facilisi arcu duis dapibus elementum arcu. Pulvinar
+                tortor egestas tortor orci.
+              </H4>
             </BannerBodyContent>
           </BannerBody>
         </Banner>
@@ -87,41 +92,41 @@ function App() {
         id='stats'
         className='mx-auto flex w-full max-w-[1920px] flex-col gap-10 px-4 sm:px-6 lg:px-8'
       >
-        <H2>{t('keyStats')}</H2>
+        <H2>Key stats</H2>
         <Grid gap='24px' noOfCol={{ base: 1, sm: 2, md: 4 }}>
           <GridItem noOfColSpan={{ base: 1, sm: 2 }}>
             <StatCard hoverColor='yellow'>
-              <StatCardValue>{t('keyStatsCards.0.value')}</StatCardValue>
-              <StatCardTitle>{t('keyStatsCards.0.title')}</StatCardTitle>
-              <StatCardDescription>{t('keyStatsCards.0.text')}</StatCardDescription>
+              <StatCardValue>25%</StatCardValue>
+              <StatCardTitle>people</StatCardTitle>
+              <StatCardDescription>Lorem ipsum dolor sit amet</StatCardDescription>
             </StatCard>
           </GridItem>
           <GridItem noOfColSpan={1}>
             <StatCard hoverColor='yellow'>
-              <StatCardValue>{t('keyStatsCards.0.value')}</StatCardValue>
-              <StatCardTitle>{t('keyStatsCards.0.title')}</StatCardTitle>
-              <StatCardDescription>{t('keyStatsCards.0.text')}</StatCardDescription>
+              <StatCardValue>25%</StatCardValue>
+              <StatCardTitle>people</StatCardTitle>
+              <StatCardDescription>Lorem ipsum dolor sit amet</StatCardDescription>
             </StatCard>
           </GridItem>
           <GridItem noOfColSpan={1}>
             <StatCard hoverColor='yellow'>
-              <StatCardValue>{t('keyStatsCards.1.value')}</StatCardValue>
-              <StatCardTitle>{t('keyStatsCards.1.title')}</StatCardTitle>
-              <StatCardDescription>{t('keyStatsCards.1.text')}</StatCardDescription>
+              <StatCardValue>25%</StatCardValue>
+              <StatCardTitle>people</StatCardTitle>
+              <StatCardDescription>Lorem ipsum dolor sit amet</StatCardDescription>
             </StatCard>
           </GridItem>
           <GridItem noOfColSpan={1}>
             <StatCard hoverColor='yellow'>
-              <StatCardValue>{t('keyStatsCards.2.value')}</StatCardValue>
-              <StatCardTitle>{t('keyStatsCards.2.title')}</StatCardTitle>
-              <StatCardDescription>{t('keyStatsCards.2.text')}</StatCardDescription>
+              <StatCardValue>25%</StatCardValue>
+              <StatCardTitle>people</StatCardTitle>
+              <StatCardDescription>Lorem ipsum dolor sit amet</StatCardDescription>
             </StatCard>
           </GridItem>
           <GridItem noOfColSpan={1}>
             <StatCard hoverColor='yellow'>
-              <StatCardValue>{t('keyStatsCards.3.value')}</StatCardValue>
-              <StatCardTitle>{t('keyStatsCards.3.title')}</StatCardTitle>
-              <StatCardDescription>{t('keyStatsCards.3.text')}</StatCardDescription>
+              <StatCardValue>25%</StatCardValue>
+              <StatCardTitle>people</StatCardTitle>
+              <StatCardDescription>Lorem ipsum dolor sit amet</StatCardDescription>
             </StatCard>
           </GridItem>
           <GridItem noOfColSpan={{ base: 1, sm: 2 }}>
@@ -130,9 +135,9 @@ function App() {
               size='full'
               className='col-span-1 min-h-45 sm:min-h-60 md:col-span-2'
             >
-              <StatCardValue>{t('keyStatsCards.5.value')}</StatCardValue>
-              <StatCardTitle>{t('keyStatsCards.5.title')}</StatCardTitle>
-              <StatCardDescription>{t('keyStatsCards.5.text')}</StatCardDescription>
+              <StatCardValue>25%</StatCardValue>
+              <StatCardTitle>people</StatCardTitle>
+              <StatCardDescription>Lorem ipsum dolor sit amet</StatCardDescription>
             </StatCard>
           </GridItem>
         </Grid>
@@ -142,7 +147,7 @@ function App() {
         id='projects'
         className='mx-auto flex w-full max-w-[1920px] flex-col gap-10 px-4 sm:px-6 lg:px-8'
       >
-        <H2>{t('projects')}</H2>
+        <H2>Projects</H2>
         <Carousel>
           {projectCards.map((card) => (
             <CarouselItem size='xs' key={card.title}>
@@ -161,7 +166,7 @@ function App() {
                   <CardFooter>
                     <Button padding='none' variant='link'>
                       <a href={card.url} target='_blank' rel='noopener'>
-                        {t('readMore')}
+                        Read more
                       </a>
                     </Button>
                   </CardFooter>
@@ -176,7 +181,11 @@ function App() {
         id='quote'
         className='flex w-3/4 flex-col gap-10 bg-accent-yellow px-4 py-20 sm:px-6 lg:px-20'
       >
-        <H4>{t('quote')}</H4>
+        <H4>
+          [A placeholder for quote] Lorem ipsum dolor sit amet consectetur. Accumsan volutpat id hac
+          tincidunt rhoncus sollicitudin amet vel ut. Non suspendisse pellentesque tincidunt at.
+          Cras habitant libero sed in nec senectus interdum eu ultrices.
+        </H4>
         <Blockquote>— John Doe</Blockquote>
       </section>
       <Spacer size='8xl' />
@@ -184,11 +193,11 @@ function App() {
         <div className='mx-auto w-full max-w-[1920px]'>
           <div className='mb-8 flex flex-wrap items-end justify-between gap-4'>
             <H2 marginBottom='none' className='min-w-60 grow'>
-              {t('mapTitle')}
+              Projects by countries
             </H2>
             <div className='flex min-w-60 grow flex-col gap-2'>
               <P size='sm' marginBottom='none'>
-                {t('filterByProjects')}
+                Filter by projects
               </P>
               <Suspense fallback={<div className='h-12 w-full animate-pulse bg-surface' />}>
                 <DropdownSelect
@@ -209,33 +218,37 @@ function App() {
             </div>
           </div>
           <div className='h-[75vh] w-full'>
-            <Suspense fallback={<div className='h-full w-full animate-pulse bg-surface' />}>
-              <DotDensityMap
-                data={[
-                  {
-                    lat: 20,
-                    long: 10,
-                  },
-                  {
-                    lat: 25,
-                    long: 26,
-                  },
-                  {
-                    lat: 0,
-                    long: 0,
-                  },
-                  {
-                    lat: 15,
-                    long: 5,
-                  },
-                  {
-                    lat: 10,
-                    long: 20,
-                  },
-                ]}
-                showCostalBorder
-              />
-            </Suspense>
+            <RenderWhenVisible
+              fallback={<div className='h-full w-full animate-pulse bg-surface' />}
+            >
+              <Suspense fallback={<div className='h-full w-full animate-pulse bg-surface' />}>
+                <DotDensityMap
+                  data={[
+                    {
+                      lat: 20,
+                      long: 10,
+                    },
+                    {
+                      lat: 25,
+                      long: 26,
+                    },
+                    {
+                      lat: 0,
+                      long: 0,
+                    },
+                    {
+                      lat: 15,
+                      long: 5,
+                    },
+                    {
+                      lat: 10,
+                      long: 20,
+                    },
+                  ]}
+                  showCostalBorder
+                />
+              </Suspense>
+            </RenderWhenVisible>
           </div>
         </div>
       </section>
@@ -244,9 +257,9 @@ function App() {
         <div className='mx-auto grid max-w-[1920px] grid-cols-1 gap-6 md:grid-cols-3'>
           <div className='flex items-start p-8 md:col-start-1 md:row-start-1 md:p-12'>
             <H2 className='font-bold md:text-5xl'>
-              {t('featured')}
+              Featured
               <br />
-              {t('stories')}
+              stories
             </H2>
           </div>
           <a target='_blank' href='https://www.undp.org/' rel='noopener'>
@@ -255,11 +268,14 @@ function App() {
               size='full'
               className='min-h-100 md:col-start-2 md:row-start-1'
             >
-              <FeaturedCardTitle>{t('storyCards.0.title')}</FeaturedCardTitle>
-              <FeaturedCardDescription>{t('storyCards.0.text')}</FeaturedCardDescription>
+              <FeaturedCardTitle>Story 1</FeaturedCardTitle>
+              <FeaturedCardDescription>
+                Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa
+                elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.
+              </FeaturedCardDescription>
               <FeaturedCardFooter>
                 <Button padding='none' variant='link'>
-                  {t('readMore')}
+                  Read more
                 </Button>
               </FeaturedCardFooter>
             </FeaturedCard>
@@ -271,11 +287,14 @@ function App() {
               size='full'
               className='min-h-100 md:col-start-2 md:row-start-1'
             >
-              <FeaturedCardTitle>{t('storyCards.1.title')}</FeaturedCardTitle>
-              <FeaturedCardDescription>{t('storyCards.1.text')}</FeaturedCardDescription>
+              <FeaturedCardTitle>Story 1</FeaturedCardTitle>
+              <FeaturedCardDescription>
+                Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa
+                elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.
+              </FeaturedCardDescription>
               <FeaturedCardFooter>
                 <Button padding='none' variant='link'>
-                  {t('readMore')}
+                  Read more
                 </Button>
               </FeaturedCardFooter>
             </FeaturedCard>
@@ -291,11 +310,14 @@ function App() {
               size='full'
               className='min-h-100 md:col-start-2 md:row-start-1'
             >
-              <FeaturedCardTitle>{t('storyCards.2.title')}</FeaturedCardTitle>
-              <FeaturedCardDescription>{t('storyCards.2.text')}</FeaturedCardDescription>
+              <FeaturedCardTitle>Story 1</FeaturedCardTitle>
+              <FeaturedCardDescription>
+                Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa
+                elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.
+              </FeaturedCardDescription>
               <FeaturedCardFooter>
                 <Button padding='none' variant='link'>
-                  {t('readMore')}
+                  Read more
                 </Button>
               </FeaturedCardFooter>
             </FeaturedCard>
@@ -307,11 +329,14 @@ function App() {
               size='full'
               className='min-h-100 md:col-start-2 md:row-start-1'
             >
-              <FeaturedCardTitle>{t('storyCards.3.title')}</FeaturedCardTitle>
-              <FeaturedCardDescription>{t('storyCards.3.text')}</FeaturedCardDescription>
+              <FeaturedCardTitle>Story 1</FeaturedCardTitle>
+              <FeaturedCardDescription>
+                Lorem ipsum dolor sit amet consectetur. Leo velit in sit leo integer nunc. Massa
+                elementum non in integer. Condimentum eget at eget id nullam vel accumsan tortor.
+              </FeaturedCardDescription>
               <FeaturedCardFooter>
                 <Button padding='none' variant='link'>
-                  {t('readMore')}
+                  Read more
                 </Button>
               </FeaturedCardFooter>
             </FeaturedCard>

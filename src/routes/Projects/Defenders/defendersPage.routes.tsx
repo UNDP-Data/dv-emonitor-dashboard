@@ -12,7 +12,6 @@ export default function createDefendersPageRoute(parentRoute: AnyRoute) {
         title: 'UNDP Defenders Project | eMonitor+',
         description:
           'Track and analyze online abuse, hate speech, and technology-facilitated gender-based violence (TFGBV) targeting women environmental human rights defenders (WEHRDs) and civil society leaders.',
-        locale: params.locale,
       }),
     beforeLoad: ({ params }) => {
       if (params.projectId !== 'defenders') throw notFound();

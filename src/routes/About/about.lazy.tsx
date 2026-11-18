@@ -1,14 +1,12 @@
 import { createLazyRoute } from '@tanstack/react-router';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import { H1, P } from '@undp/design-system-react/Typography';
-import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/Section';
 
 export function About() {
-  const { t } = useTranslation();
   return (
     <Section>
-      <H1 size='sm'>{t('about')}</H1>
+      <H1 size='sm'>About</H1>
       <Spacer size='2xl' />
       <P>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies mauris vitae enim

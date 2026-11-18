@@ -5,11 +5,10 @@ import { metaDataDefinition } from '@/utils/metaDataDefinition';
 export default function createAboutRoute(parentRoute: AnyRoute) {
   return createRoute({
     path: '/about',
-    head: ({ params }) =>
+    head: () =>
       metaDataDefinition({
         path: '/about',
         description: 'About eMonitor+',
-        locale: params.locale,
       }),
     getParentRoute: () => parentRoute,
   }).lazy(() => import('./about.lazy').then((d) => d.Route));

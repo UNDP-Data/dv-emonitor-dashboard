@@ -77,8 +77,8 @@ export default defineConfig({
   },
   build: {
     manifest: true,
-    cssCodeSplit: false,
-    rollupOptions: {
+    cssCodeSplit: true,
+    rolldownOptions: {
       output: {
         codeSplitting: {
           groups: [{ name: 'react', test: /node_modules[\\/]react/ }],

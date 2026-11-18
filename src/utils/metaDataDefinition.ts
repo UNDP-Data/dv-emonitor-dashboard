@@ -1,15 +1,7 @@
-import { DEFAULT_LANGUAGE } from '@/constants';
-
 const SITE_URL = 'SITE_URL';
 const SITE_NAME = 'eMonitor+';
 const DEFAULT_DESC =
   'AI-powered technology to promote access to reliable information and reduce the impact of harmful content';
-
-const OG_LOCALES: Record<string, string> = {
-  en: 'en_US',
-  fr: 'fr_FR',
-  es: 'es_ES',
-};
 
 interface Arg {
   title?: string;
@@ -30,11 +22,8 @@ export function metaDataDefinition({
   imageAlt = SITE_NAME,
   imageHeight = 483,
   imageWidth = 862,
-  locale,
 }: Arg = {}) {
-  const localeLanguage = OG_LOCALES[locale || DEFAULT_LANGUAGE];
-  const url =
-    !locale || locale === DEFAULT_LANGUAGE ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
+  const url = `${SITE_URL}${path}`;
   return {
     meta: [
       { title: title ?? SITE_NAME },
@@ -49,21 +38,9 @@ export function metaDataDefinition({
       { property: 'og:image:height', content: `${imageHeight}` },
       { property: 'og:image:alt', content: imageAlt },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { httpEquiv: 'content-language', content: locale },
-      { property: 'og:locale', content: localeLanguage },
+      { httpEquiv: 'content-language', content: 'en_US' },
+      { property: 'og:locale', content: 'en_US' },
     ],
-    links: [
-      { rel: 'canonical', href: url },
-      ...Object.keys(OG_LOCALES).map((l) => ({
-        rel: 'alternate',
-        hrefLang: l,
-        href: `${SITE_URL}/${l}${path}`,
-      })),
-      {
-        rel: 'alternate',
-        hrefLang: 'x-default',
-        href: `${SITE_URL}/${DEFAULT_LANGUAGE}${path}`,
-      },
-    ],
+    links: [{ rel: 'canonical', href: url }],
   };
 }
