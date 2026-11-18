@@ -91,48 +91,66 @@ export const DEFENDER_RESOURCES = [
   {
     title: 'Global',
     text: 'Women Human Rights Defenders powering climate justice',
-    url: 'https://www.undp.org/',
+    url: 'https://www.undp.org/stories/women-human-rights-defenders-powering-climate-justice',
   },
   {
     title: 'Philippines',
     text: "Policy Brief and Recommendations: Strengthening Women's Civil Society and WEHRDs' Political Participation and Influence for a Just, Green Future",
-    url: 'https://www.undp.org/',
+    url: 'https://www.observatory.ph/2026/01/20/klima-center-launches-strengthening-womens-civil-society-and-women-environmental-human-rights-defenders-political-participation-and-influence-for-a-just-green-future-philippines-with-undp-ph/',
+  },
+  {
+    title: 'Philippines',
+    text: 'e-Monitor+ TFGBV Info Feature',
+    url: 'https://www.instagram.com/p/DV8L9FGgZYY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D',
   },
   {
     title: 'Philippines',
     text: 'WEHRDs in the Philippines: Mechanisms and Gaps',
-    url: 'https://www.undp.org/',
+    url: 'https://www.observatory.ph/2026/01/20/the-philippine-context-women-environmental-human-rights-defenders-in-the-philippines-mechanisms-and-gaps-wehrds/',
   },
-  { title: 'Uganda', text: 'Climate Justice Toolkit', url: 'https://www.undp.org/' },
+  {
+    title: 'Uganda',
+    text: 'Climate Justice Toolkit',
+    url: 'https://undp-my.sharepoint.com/:b:/g/personal/harriet_karusigarira_undp_org/IQCkwVOr_lABS6_zNZetT1VQAREm0bzyrxTG6Vj3pGZ8BBQ',
+  },
   {
     title: 'Kenya',
     text: 'Assessment Of The Legal, Policy And Social Impact Of Climate Change Laws On Women Defenders Assessment',
-    url: 'https://www.undp.org/',
+    url: 'https://www.whrdhub.org/files/publications/documents/1787905153205-Research_Report_of_the_Legal__3_.pdf',
   },
   {
     title: 'Kenya',
     text: 'Strengthening Women’s Civil Society Environmental Influence for a Just, Green Future. | United Nations Development Programme ',
-    url: 'https://www.undp.org/',
+    url: 'https://www.undp.org/kenya/news/strengthening-womens-civil-society-environmental-influence-just-green-future',
   },
   {
     title: 'Indonesia',
     text: 'Ministry of Human Rights and UNDP Convene Strategic Public Consultations to Fortify Protection for Women and Environmental Human Rights Defenders in Indonesia',
-    url: 'https://www.undp.org/',
+    url: 'https://www.undp.org/indonesia/press-releases/ministry-human-rights-and-undp-convene-strategic-public-consultations-fortify-protection-women-and-environmental-human',
   },
   {
     title: 'Indonesia',
     text: 'Komnas Perempuan and UNDP Conclude National Consultation to Strengthen Protection Policies for Women Environmental Human Rights Defenders in Indonesia',
-    url: 'https://www.undp.org/',
+    url: 'https://www.undp.org/indonesia/press-releases/komnas-perempuan-and-undp-conclude-national-consultation-strengthen-protection-policies-women-environmental-human-rights',
   },
   {
     title: 'Indonesia',
     text: 'UNDP Launches New Initiative to Protect and Empower Women Environmental Defenders in Indonesia',
-    url: 'https://www.undp.org/',
+    url: 'https://www.undp.org/indonesia/press-releases/undp-launches-new-initiative-protect-and-empower-women-environmental-defenders-indonesia',
   },
-  { title: 'Iraq', text: 'Climate Justice Toolkit', url: 'https://www.undp.org/' },
   {
     title: 'Iraq',
     text: 'Join us - Be an example of turning challenge into opportunity',
-    url: 'https://www.undp.org/',
+    url: 'https://www.undp.org/iraq/blog/join-us-be-example-turning-challenge-opportunity',
+  },
+  {
+    title: 'Iraq',
+    text: 'From Analysis to Impact: Turning Environmental Challenges into Action',
+    url: 'https://www.undp.org/iraq/blog/analysis-impact-turning-environmental-challenges-action',
+  },
+  {
+    title: 'Iraq',
+    text: 'TFGBV and Democratic Governance',
+    url: 'https://www.undp.org/publications/technology-facilitated-gender-based-violence-tfgbv-and-democratic-governance-agenda-action',
   },
 ];

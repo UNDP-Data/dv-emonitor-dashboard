@@ -1,6 +1,6 @@
 import { SimpleBarGraph } from '@undp/data-viz/BarGraph';
 import { DonutChart } from '@undp/data-viz/DonutChart';
-import { SimpleLineChart } from '@undp/data-viz/SimpleLineChart';
+import { MultiLineChart } from '@undp/data-viz/MultiLineChart';
 import { numberFormattingFunction } from '@undp/data-viz/utils';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { Spacer } from '@undp/design-system-react/Spacer';
@@ -102,10 +102,11 @@ export function GeneralAnalysisDashboard() {
             }}
           >
             <div className='h-auto md:h-120'>
-              <SimpleLineChart
+              <MultiLineChart
                 data={[...new Set(filteredData.map((d) => d.date_string))].map((el) => ({
                   date: el,
-                  y: filteredData.filter((d) => d.date_string === el).length,
+                  y: [filteredData.filter((d) => d.date_string === el).length],
+                  data: { date: el },
                 }))}
                 backgroundColor='var(--background)'
                 graphTitle='Data collected over time'
@@ -113,8 +114,36 @@ export function GeneralAnalysisDashboard() {
                 showDots={false}
                 animate={false}
                 fillArea={true}
-                lineColor='#A9B7CB'
+                lineColors={['#A9B7CB']}
                 dateFormat='yyyy-MM-dd'
+                styles={{
+                  tooltip: {
+                    padding: 0,
+                  },
+                }}
+                tooltip={(d) => {
+                  return (
+                    <div className='flex min-w-56 flex-col gap-1 bg-white px-3 py-2 shadow'>
+                      <P size='sm' weight='semibold' marginBottom='none'>
+                        {d.data.date}
+                      </P>
+                      <P
+                        size='sm'
+                        marginBottom='none'
+                        className='flex items-center justify-between gap-4'
+                      >
+                        No. of posts
+                        <span>
+                          {d.y[0] !== null ? `${numberFormattingFunction(d.y[0])}` : 'N/A'}
+                        </span>
+                      </P>
+                    </div>
+                  );
+                }}
+                labels={['No. of posts']}
+                showColorLegendAtTop
+                showColorScale={false}
+                rightMargin={0}
               />
             </div>
           </GridItem>
@@ -162,20 +191,45 @@ export function GeneralAnalysisDashboard() {
                   animate={false}
                   strokeWidth={50}
                   colors={['#F4EEE7', '#E2BC3B', '#776992', '#006EB5']}
+                  styles={{
+                    tooltip: {
+                      padding: 0,
+                    },
+                  }}
+                  tooltip={(d) => {
+                    return (
+                      <div className='flex min-w-56 flex-col gap-1 bg-white px-3 py-2 shadow'>
+                        <P size='sm' weight='semibold' marginBottom='none'>
+                          {d.label}
+                        </P>
+                        <P
+                          size='sm'
+                          marginBottom='none'
+                          className='flex items-center justify-between gap-4'
+                        >
+                          No. of author
+                          <span>
+                            {d.size !== null ? `${numberFormattingFunction(d.size)}` : 'N/A'}
+                          </span>
+                        </P>
+                      </div>
+                    );
+                  }}
                 />
               </div>
             )}
           </GridItem>
           <GridItem noOfColSpan={1}>
             <div className='h-auto md:h-120'>
-              <SimpleLineChart
+              <MultiLineChart
                 data={[
                   ...new Set(
                     filteredData.filter((d) => d.is_event_related).map((d) => d.month_year),
                   ),
                 ].map((el) => ({
                   date: el,
-                  y: filteredData.filter((d) => d.month_year === el).length,
+                  y: [filteredData.filter((d) => d.month_year === el).length],
+                  data: { date: el },
                 }))}
                 backgroundColor='var(--background)'
                 graphTitle='Event-related posts per month'
@@ -185,6 +239,34 @@ export function GeneralAnalysisDashboard() {
                 fillArea={false}
                 dateFormat='M-yyyy'
                 noOfXTicks={4}
+                labels={['No. of posts']}
+                showColorLegendAtTop
+                showColorScale={false}
+                rightMargin={10}
+                styles={{
+                  tooltip: {
+                    padding: 0,
+                  },
+                }}
+                tooltip={(d) => {
+                  return (
+                    <div className='flex min-w-56 flex-col gap-1 bg-white px-3 py-2 shadow'>
+                      <P size='sm' weight='semibold' marginBottom='none'>
+                        {d.data.date}
+                      </P>
+                      <P
+                        size='sm'
+                        marginBottom='none'
+                        className='flex items-center justify-between gap-4'
+                      >
+                        No. of posts
+                        <span>
+                          {d.y[0] !== null ? `${numberFormattingFunction(d.y[0])}` : 'N/A'}
+                        </span>
+                      </P>
+                    </div>
+                  );
+                }}
               />
             </div>
           </GridItem>
@@ -254,6 +336,30 @@ export function GeneralAnalysisDashboard() {
                 animate={false}
                 strokeWidth={50}
                 colors={['#776992', '#E2BC3B', '#F4EEE7', '#FAFAFA']}
+                styles={{
+                  tooltip: {
+                    padding: 0,
+                  },
+                }}
+                tooltip={(d) => {
+                  return (
+                    <div className='flex min-w-56 flex-col gap-1 bg-white px-3 py-2 shadow'>
+                      <P size='sm' weight='semibold' marginBottom='none'>
+                        {d.label}
+                      </P>
+                      <P
+                        size='sm'
+                        marginBottom='none'
+                        className='flex items-center justify-between gap-4'
+                      >
+                        No. of posts
+                        <span>
+                          {d.size !== null ? `${numberFormattingFunction(d.size)}` : 'N/A'}
+                        </span>
+                      </P>
+                    </div>
+                  );
+                }}
               />
             </div>
           </GridItem>

@@ -38,7 +38,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
     setToDate,
   } = useFilterActions();
   return (
-    <div className='mx-auto w-full max-w-[1920px]'>
+    <>
       <H5>Data Explorer</H5>
       <div className='flex items-center gap-2'>
         <H3 marginBottom='none'>Explore data for</H3>
@@ -79,8 +79,6 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
         gap='32px'
         noOfCol={{
           base: 1,
-          md: 2,
-          lg: 3,
           xl: 4,
           '2xl': 5,
           sm: 1,
@@ -175,8 +173,6 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
         <GridItem
           noOfColSpan={{
             base: 1,
-            md: 1,
-            lg: 2,
             xl: 3,
             '2xl': 4,
             sm: 1,
@@ -196,6 +192,6 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
           </Tabs>
         </GridItem>
       </Grid>
-    </div>
+    </>
   );
 }

@@ -12,12 +12,6 @@ import {
 } from '@undp/design-system-react/Accordion';
 import { Badge } from '@undp/design-system-react/Badge';
 import {
-  Banner,
-  BannerBody,
-  BannerBodyContent,
-  BannerBodySidebar,
-} from '@undp/design-system-react/Banner';
-import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -31,6 +25,7 @@ import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
 import { Modal } from '@undp/design-system-react/Modal';
 import { PageHeader, PageHeaderContent } from '@undp/design-system-react/PageHeader';
+import { PageSection } from '@undp/design-system-react/PageSection';
 import { SegmentedControl } from '@undp/design-system-react/SegmentedControl';
 import { Separator } from '@undp/design-system-react/Separator';
 import { Spacer } from '@undp/design-system-react/Spacer';
@@ -149,20 +144,12 @@ export function ProjectsPage() {
           </a>
         </PageHeaderContent>
       </PageHeader>
-      <Banner
-        backgroundColor='secondary'
-        bodyGap='base'
-        bodyMaxWidth='full'
-        padding='none'
-        sidebarWidth='base'
-        id='about'
-        className='px-4 py-16 sm:px-12 sm:py-24 lg:px-32 lg:py-35'
-      >
-        <BannerBody>
-          <BannerBodySidebar>
+      <PageSection backgroundColor='secondary' containerClassName='max-w-auto'>
+        <Grid noOfCol={{ base: 1, sm: 3 }}>
+          <GridItem noOfColSpan={1}>
             <H2>About</H2>
-          </BannerBodySidebar>
-          <BannerBodyContent>
+          </GridItem>
+          <GridItem noOfColSpan={{ base: 1, sm: 2 }}>
             <H5>
               Technology-facilitated gender-based violence (TFGBV) is a governance and human rights
               issue requiring coordinated national and global responses. Across the five project
@@ -170,9 +157,26 @@ export function ProjectsPage() {
               reveals that TFGBV is systemic, targeted and increasing. This page shows how UNDP
               transforms data into evidence for protection, accountability and policy reform.
             </H5>
-            <Spacer size='5xl' />
-            <img src='/imgs/defender_video.webp' className='w-full' alt='video cover' />
-            <Spacer size='5xl' />
+          </GridItem>
+        </Grid>
+        <Spacer size='5xl' />
+        {/** biome-ignore lint/a11y/useMediaCaption: subtitles embeded in the video */}
+        <video
+          controls
+          preload='metadata'
+          playsInline
+          className='aspect-video h-auto w-full bg-background/10'
+          poster='/imgs/defender_video.webp'
+        >
+          <source
+            src='/eMonitor+ Women Human Rights Defenders 2026 (short version).mp4'
+            type='video/mp4'
+          />
+        </video>
+        <Spacer size='5xl' />
+        <Grid noOfCol={{ base: 1, sm: 3 }}>
+          <GridItem noOfColSpan={1} />
+          <GridItem noOfColSpan={{ base: 1, sm: 2 }}>
             <P size='xs' weight='semibold' marginBottom='xs' className='uppercase tracking-wider'>
               Project countries
             </P>
@@ -191,28 +195,14 @@ export function ProjectsPage() {
             <Spacer size='3xl' />
             <Separator color='background' thickness='xs' className='opacity-30' />
             <Spacer size='2xl' />
-            <P size='xs' weight='semibold' marginBottom='2xs' className='uppercase tracking-wider'>
-              Funding partners
-            </P>
-            <div className='flex flex-wrap items-center gap-3'>
-              {['DK', 'LU', 'KR'].map((partner) => (
-                <img
-                  key={partner}
-                  src={`/imgs/Partners/${partner}.svg`}
-                  alt={`${partner} flag`}
-                  className='h-12'
-                />
-              ))}
-            </div>
-            <Spacer size='sm' />
             <H5 marginBottom='none' className='opacity-70'>
               Thanks to Denmark, Luxembourg and the Republic of Korea, partners to UNDP’s 
               Governance, Peacebuilding, Crisis and Resilience (GCPR) Funding Window, for making
               this work possible.
             </H5>
-          </BannerBodyContent>
-        </BannerBody>
-      </Banner>
+          </GridItem>
+        </Grid>
+      </PageSection>
       <Section id='stats'>
         <H5>Overview</H5>
         <H3 className='content-block'>
