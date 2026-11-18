@@ -76,7 +76,7 @@ export function Dashboard({ countryList }: { countryList: { value: string; label
       </div>
       <Spacer size='2xl' />
       <Grid
-        gap='32px'
+        gap='16px'
         noOfCol={{
           base: 1,
           xl: 4,

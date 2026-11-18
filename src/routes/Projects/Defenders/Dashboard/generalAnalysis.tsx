@@ -63,7 +63,7 @@ export function GeneralAnalysisDashboard() {
             base: 1,
             md: 2,
             lg: 3,
-            xl: 4,
+            '2xl': 3,
             sm: 1,
           }}
         >
@@ -97,7 +97,7 @@ export function GeneralAnalysisDashboard() {
               base: 1,
               md: 1,
               lg: 2,
-              xl: 3,
+              '2xl': 2,
               sm: 1,
             }}
           >
@@ -121,6 +121,7 @@ export function GeneralAnalysisDashboard() {
                     padding: 0,
                   },
                 }}
+                noOfXTicks={4}
                 tooltip={(d) => {
                   return (
                     <div className='flex min-w-56 flex-col gap-1 bg-white px-3 py-2 shadow'>
