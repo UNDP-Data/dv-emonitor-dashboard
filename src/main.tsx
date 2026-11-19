@@ -2,6 +2,7 @@ import {
   createRootRoute,
   createRoute,
   createRouter,
+  HeadContent,
   Outlet,
   RouterProvider,
 } from '@tanstack/react-router';
@@ -21,15 +22,18 @@ import './styles/style.css';
 
 const rootRoute = createRootRoute({
   component: () => (
-    <div className='flex min-h-screen flex-col gap-0'>
-      <HeaderEl />
-      <main className='flex grow flex-col justify-center'>
-        <div className='flex flex-col justify-center'>
-          <Outlet />
-        </div>
-      </main>
-      <FooterEl />
-    </div>
+    <>
+      <HeadContent />
+      <div className='flex min-h-screen flex-col gap-0'>
+        <HeaderEl />
+        <main className='flex grow flex-col justify-center'>
+          <div className='flex flex-col justify-center'>
+            <Outlet />
+          </div>
+        </main>
+        <FooterEl />
+      </div>
+    </>
   ),
 });
 
