@@ -22,6 +22,7 @@ import {
 import { Button } from '@undp/design-system-react/Button';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@undp/design-system-react/HoverCard';
+import { LazyMount } from '@undp/design-system-react/LazyMount';
 import { Modal } from '@undp/design-system-react/Modal';
 import { PageHeader, PageHeaderContent } from '@undp/design-system-react/PageHeader';
 import { PageSection } from '@undp/design-system-react/PageSection';
@@ -35,7 +36,6 @@ import { A, H1, H2, H3, H4, H5, H6, P } from '@undp/design-system-react/Typograp
 import { VizCarousel } from '@undp/design-system-react/VizCarousel';
 import { lazy, Suspense, useState } from 'react';
 import MetricHighlights from '@/components/MetricHighlights';
-import { RenderWhenVisible } from '@/components/RenderWhenVisible';
 import { Section } from '@/components/Section';
 import { DEFENDER_COUNTRIES, DEFENDER_RESOURCES } from '@/constants';
 import type { DefenderCountriesDataRow } from '@/types';
@@ -645,13 +645,7 @@ export function ProjectsPage() {
             <Spinner />
           </div>
         ) : (
-          <RenderWhenVisible
-            fallback={
-              <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
-                <Spinner />
-              </div>
-            }
-          >
+          <LazyMount>
             <Suspense
               fallback={
                 <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
@@ -663,7 +657,7 @@ export function ProjectsPage() {
                 countryList={countryData.map((d) => ({ label: d.country_name, value: d.iso_code }))}
               />
             </Suspense>
-          </RenderWhenVisible>
+          </LazyMount>
         )}
       </Section>
       <Section id='resources'>

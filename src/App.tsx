@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router';
+import { Skeleton } from '@undp/design-system-react';
 import {
   Banner,
   BannerBody,
@@ -22,6 +23,7 @@ import {
   FeaturedCardTitle,
 } from '@undp/design-system-react/FeaturedCard';
 import { Grid, GridItem } from '@undp/design-system-react/Grid';
+import { LazyMount } from '@undp/design-system-react/LazyMount';
 import { PageHeader, PageHeaderContent } from '@undp/design-system-react/PageHeader';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import {
@@ -32,7 +34,6 @@ import {
 } from '@undp/design-system-react/StatCard';
 import { Blockquote, H1, H2, H4, H5, P } from '@undp/design-system-react/Typography';
 import { lazy, Suspense } from 'react';
-import { RenderWhenVisible } from './components/RenderWhenVisible';
 
 const DotDensityMap = lazy(() =>
   import('@undp/data-viz/DotDensityMap').then((m) => ({ default: m.DotDensityMap })),
@@ -218,10 +219,8 @@ function App() {
             </div>
           </div>
           <div className='h-[75vh] w-full'>
-            <RenderWhenVisible
-              fallback={<div className='h-full w-full animate-pulse bg-surface' />}
-            >
-              <Suspense fallback={<div className='h-full w-full animate-pulse bg-surface' />}>
+            <LazyMount>
+              <Suspense fallback={<Skeleton />}>
                 <DotDensityMap
                   data={[
                     {
@@ -248,7 +247,7 @@ function App() {
                   showCostalBorder
                 />
               </Suspense>
-            </RenderWhenVisible>
+            </LazyMount>
           </div>
         </div>
       </section>
